@@ -68,15 +68,78 @@ services:
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.docker.network=proxy"
 
+  pve-exporter:
+    image: prompve/prometheus-pve-exporter:latest
+    container_name: pve-exporter
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /docker/pve-exporter:/etc/pve-exporter   
+    configs:
+    - source: pve.yaml
+      target: /etc/pve-exporter/pve.yaml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.pve-exporter.rule=Host(`pve-exporter.binarybraids.com`)"
+      - "traefik.http.routers.pve-exporter.entrypoints=https"
+      - "traefik.http.routers.pve-exporter.tls=true"
+      - "traefik.http.routers.pve-exporter.service=pve-exporter"
+      - "traefik.http.services.pve-exporter.loadbalancer.server.port=9221"
+      - "traefik.docker.network=proxy"      
+
 configs:
   prometheus.yaml:
     content: |
       global:
-        scrape_interval: 15s
+        scrape_interval: 15m
+
+      rule_files:
+        - "rules.yaml"
+
+      alerting:
+        alertmanagers:
+        - static_configs:
+          - targets:
+            - https://alertmanager.binarybraids.com
+
       scrape_configs:
-        - job_name: 'apache'
+        - job_name: 'prometheus'
           static_configs:
-            - targets: ['web_server:80']
+            - targets: ['https://prometheus.binarybraids.com']
+        - job_name: 'node'
+          static_configs:
+            - targets: ['vm-prod-dkr-01.ad.binarybraids.com']
+        - job_name: 'pve'
+          static_configs:
+          - targets:
+            - prod-host-01.binarybraids.com
+            - prod-host-02.binarybraids.com
+          metrics_path: /pve
+          params:
+            module: [default]
+          relabel_configs:
+          - source_labels: [__address__]
+            target_label: __param_target
+          - source_labels: [__param_target]
+            target_label: instance
+          - target_label: __address__
+            replacement: https://pve-exporter.binarybraids.com
+  alerts.yaml:
+    content: |
+      groups:
+      - name: alert_rules
+        rules:
+        - alert: InstanceDown
+          expr: up == 0
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Instance {{ $labels.instance }} down"
+            description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes."  
   alertmanager.yaml:
     content: |
         global:
@@ -90,6 +153,12 @@ configs:
           repeat_interval: 12h
         receivers:
         - name: "null"
+  pve.yaml:
+    content: |
+      default:
+          user: monitor@pve
+          token_name: "exporter"
+          token_value: "${PVE_EXPORTER_TOKEN}"
 
 networks:
   proxy:
