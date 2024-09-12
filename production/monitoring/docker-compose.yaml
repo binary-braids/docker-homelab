@@ -13,10 +13,10 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /docker/prometheus:/etc/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yaml'
+      - '--config.file=/etc/prometheus/prometheus.yml'
     configs:
-    - source: prometheus.yaml
-      target: /etc/prometheus/prometheus.yaml
+    - source: prometheus.yml
+      target: /etc/prometheus/prometheus.yml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.binarybraids.com`)"
@@ -37,10 +37,10 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /docker/alertmanager:/etc/alertmanager
     command:
-      - '--config.file=/etc/alertmanager/alertmanager.yaml'
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
     configs:
-    - source: alertmanager.yaml
-      target: /etc/alertmanager/alertmanager.yaml
+    - source: alertmanager.yml
+      target: /etc/alertmanager/alertmanager.yml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.alertmanager.rule=Host(`alertmanager.binarybraids.com`)"
@@ -79,8 +79,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /docker/pve-exporter:/etc/prometheus/  
     configs:
-    - source: pve.yaml
-      target: /etc/prometheus/pve.yaml
+    - source: pve.yml
+      target: /etc/prometheus/pve.yml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.pve-exporter.rule=Host(`pve-exporter.binarybraids.com`)"
@@ -91,7 +91,7 @@ services:
       - "traefik.docker.network=proxy"      
 
 configs:
-  prometheus.yaml:
+  prometheus.yml:
     content: |
       global:
         scrape_interval: 15m
@@ -127,7 +127,7 @@ configs:
             target_label: instance
           - target_label: __address__
             replacement: https://pve-exporter.binarybraids.com
-  alerts.yaml:
+  alerts.yml:
     content: |
       groups:
       - name: alert_rules
@@ -140,7 +140,7 @@ configs:
           annotations:
             summary: "Instance {{ $labels.instance }} down"
             description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes."  
-  alertmanager.yaml:
+  alertmanager.yml:
     content: |
         global:
           resolve_timeout: 5m
@@ -153,7 +153,7 @@ configs:
           repeat_interval: 12h
         receivers:
         - name: "null"
-  pve.yaml:
+  pve.yml:
     content: |
       default:
           user: monitor@pve
