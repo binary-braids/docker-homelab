@@ -112,14 +112,27 @@ configs:
         - job_name: 'node'
           static_configs:
             - targets: ['vm-prod-dkr-01.ad.binarybraids.com']
-        - job_name: 'pve'
+        - job_name: 'prod-host-01'
           static_configs:
           - targets:
             - prod-host-01.binarybraids.com
+          metrics_path: /pve
+          params:
+            module: [prod-host-01]
+          relabel_configs:
+          - source_labels: [__address__]
+            target_label: __param_target
+          - source_labels: [__param_target]
+            target_label: instance
+          - target_label: __address__
+            replacement: pve-exporter.binarybraids.com
+        - job_name: 'prod-host-02'
+          static_configs:
+          - targets:
             - prod-host-02.binarybraids.com
           metrics_path: /pve
           params:
-            module: [default]
+            module: [prod-host-02]
           relabel_configs:
           - source_labels: [__address__]
             target_label: __param_target
@@ -155,10 +168,14 @@ configs:
         - name: "null"
   pve.yml:
     content: |
-      default:
+      prod-host-01:
           user: monitor@pve
           token_name: "exporter"
-          token_value: "${PVE_EXPORTER_TOKEN}"
+          token_value: "${PROD_HOST_01_EXPORTER_TOKEN}"
+      prod-host-02:
+          user: monitor@pve
+          token_name: "exporter"
+          token_value: "${PROD_HOST_02_EXPORTER_TOKEN}"
 
 networks:
   proxy:
