@@ -15,7 +15,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yaml'
     configs:
-    - source: prometheus.yml
+    - source: prometheus.yaml
       target: /etc/prometheus/prometheus.yaml
     labels:
       - "traefik.enable=true"
@@ -39,8 +39,8 @@ services:
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yaml'
     configs:
-    - source: alertmanager.yml
-      target: /etc/alertmanager/alertmanager.yml
+    - source: alertmanager.yaml
+      target: /etc/alertmanager/alertmanager.yaml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.alertmanager.rule=Host(`alertmanager.binarybraids.com`)"
