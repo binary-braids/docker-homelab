@@ -16,7 +16,7 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yaml'
     configs:
     - source: prometheus.yml
-      target: /etc/prometheus/prometheus.yml
+      target: /etc/prometheus/prometheus.yaml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.binarybraids.com`)"
