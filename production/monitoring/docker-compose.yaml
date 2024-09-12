@@ -103,12 +103,12 @@ configs:
         alertmanagers:
         - static_configs:
           - targets:
-            - https://alertmanager.binarybraids.com
+            - alertmanager.binarybraids.com
 
       scrape_configs:
         - job_name: 'prometheus'
           static_configs:
-            - targets: ['https://prometheus.binarybraids.com']
+            - targets: ['prometheus.binarybraids.com']
         - job_name: 'node'
           static_configs:
             - targets: ['vm-prod-dkr-01.ad.binarybraids.com']
@@ -126,7 +126,7 @@ configs:
           - source_labels: [__param_target]
             target_label: instance
           - target_label: __address__
-            replacement: https://pve-exporter.binarybraids.com
+            replacement: pve-exporter.binarybraids.com
   alerts.yml:
     content: |
       groups:
