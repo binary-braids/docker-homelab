@@ -77,10 +77,10 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /docker/pve-exporter:/etc/pve-exporter   
+      - /docker/pve-exporter:/etc/prometheus/pve-exporter   
     configs:
     - source: pve.yaml
-      target: /etc/pve-exporter/pve.yaml
+      target: /etc/pve-exporter/prometheus/pve.yaml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.pve-exporter.rule=Host(`pve-exporter.binarybraids.com`)"
