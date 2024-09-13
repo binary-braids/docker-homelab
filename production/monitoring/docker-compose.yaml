@@ -98,10 +98,10 @@ configs:
   prometheus.yml:
     content: |
       global:
-        scrape_interval: 15m
+        scrape_interval: 5m
 
       rule_files:
-        - "rules.yaml"
+        - "rules.yml"
 
       alerting:
         alertmanagers:
