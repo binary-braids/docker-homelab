@@ -19,7 +19,7 @@ services:
       - /docker/semaphore-db/var/lib/mysql:/var/lib/mysql
 
   semaphore:
-    image: semaphoreui/semaphore:latest
+    image: ghcr.io/binary-braids/ansible-semaphore:latest
     container_name: semaphore
     restart: unless-stopped
     environment:
