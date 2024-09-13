@@ -156,7 +156,7 @@ configs:
           labels:
             severity: warning
           annotations:
-            summary: Windows Server CPU Usage (instance {{ $labels.instance }})
+            summary: "Windows Server CPU Usage (instance {{ $labels.instance }})"
             description: "CPU Usage is more than 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
         - alert: WindowsServerMemoryUsage
           expr: 100 - ((windows_os_physical_memory_free_bytes / windows_cs_physical_memory_bytes) * 100) > 90
@@ -164,7 +164,7 @@ configs:
           labels:
             severity: warning
           annotations:
-            summary: Windows Server memory Usage (instance {{ $labels.instance }})
+            summary: "Windows Server memory Usage (instance {{ $labels.instance }})"
             description: "Memory usage is more than 90%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
         - alert: WindowsServerDiskSpaceUsage
           expr: 100.0 - 100 * ((windows_logical_disk_free_bytes / 1024 / 1024 ) / (windows_logical_disk_size_bytes / 1024 / 1024)) > 80
@@ -172,7 +172,7 @@ configs:
           labels:
             severity: critical
           annotations:
-            summary: Windows Server disk Space Usage (instance {{ $labels.instance }})
+            summary: "Windows Server disk Space Usage (instance {{ $labels.instance }})"
             description: "Disk usage is more than 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
 
 
