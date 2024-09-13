@@ -110,9 +110,6 @@ configs:
         - job_name: 'prometheus'
           static_configs:
             - targets: ['prometheus.binarybraids.com']
-        - job_name: 'node'
-          static_configs:
-            - targets: ['vm-prod-dkr-01.ad.binarybraids.com']
         - job_name: 'pve'
           static_configs:
           - targets:
@@ -131,8 +128,8 @@ configs:
         - job_name: 'windows'
           static_configs:
           - targets:
-            - vm-prod-dc01.ad.binarybraids.com:9182
-            - vm-prod-dc02.ad.binarybraids.com:9182
+            - vm-prod-dc-01.ad.binarybraids.com:9182
+            - vm-prod-dc-02.ad.binarybraids.com:9182
             - vm-prod-bkp-01.ad.binarybraids.com:9182
           metrics_path: /metrics
   alerts.yml:
