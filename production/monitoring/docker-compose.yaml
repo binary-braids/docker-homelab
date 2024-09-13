@@ -131,9 +131,9 @@ configs:
         - job_name: 'windows'
           static_configs:
           - targets:
-            - vm-prod-dc01.ad.binarybraids.com
-            - vm-prod-dc02.ad.binarybraids.com
-            - vm-prod-bkp-01.ad.binarybraids.com
+            - vm-prod-dc01.ad.binarybraids.com:9182
+            - vm-prod-dc02.ad.binarybraids.com:9182
+            - vm-prod-bkp-01.ad.binarybraids.com:9182
           metrics_path: /metrics
   alerts.yml:
     content: |
