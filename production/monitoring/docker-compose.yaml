@@ -134,7 +134,11 @@ configs:
             - vm-prod-dc-01.ad.binarybraids.com:9182
             - vm-prod-dc-02.ad.binarybraids.com:9182
             - vm-prod-bkp-01.ad.binarybraids.com:9182
-          metrics_path: /metrics
+          relabel_configs:
+          - source_labels: [__address__]
+            regex: ([^:]+):\d+
+            target_label: instance
+            replacement: ${1}
   rules.yml:
     content: |
       groups:
