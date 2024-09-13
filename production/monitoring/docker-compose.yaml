@@ -171,12 +171,7 @@ configs:
     content: |
       default:
           user: monitor@pve
-          token_name: "exporter"
-          token_value: "${PROD_HOST_01_EXPORTER_TOKEN}"
-      default:
-          user: monitor@pve
-          token_name: "exporter"
-          token_value: "${PROD_HOST_02_EXPORTER_TOKEN}"
+          password: "${PROXMOX_EXPORTER_PASSWORD}"
 
 networks:
   proxy:
