@@ -128,6 +128,13 @@ configs:
             target_label: instance
           - target_label: __address__
             replacement: pve-exporter.binarybraids.com
+        - job_name: 'windows'
+          static_configs:
+          - targets:
+            - vm-prod-dc01.ad.binarybraids.com
+            - vm-prod-dc02.ad.binarybraids.com
+            - vm-prod-bkp-01.ad.binarybraids.com
+          metrics_path: /metrics
   alerts.yml:
     content: |
       groups:
