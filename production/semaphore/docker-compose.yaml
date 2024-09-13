@@ -34,9 +34,6 @@ services:
       - SEMAPHORE_DB_PORT=3306
     networks:
       - proxy
-    configs:
-    - source: requirements.txt
-      target: /etc/semaphore/requirements.txt
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
