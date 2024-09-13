@@ -142,6 +142,7 @@ configs:
             - vm-prod-kube-03.ad.binarybraids.com:9100
             - vm-prod-dkr-01.ad.binarybraids.com:9100
             - vm-prod-fs-01.ad.binarybraids.com:9100
+
   rules.yml:
     content: |
       groups:
@@ -229,7 +230,7 @@ configs:
             summary: Host out of memory (instance {{ $$labels.instance }})
             description: "Node memory is filling up (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
         - alert: HostOutOfDiskSpace
-          expr: ((node_filesystem_avail_bytes * 100) / node_filesystem_size_bytes < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          expr: ((node_filesystem_avail_bytes{fstype!="cifs"} * 100) / node_filesystem_size_bytes{fstype!="cifs"} < 10 and node_filesystem_readonly{fstype!="cifs"} == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
           for: 2m
           labels:
             severity: warning
@@ -237,21 +238,22 @@ configs:
             summary: Host out of disk space (instance {{ $$labels.instance }})
             description: "Disk is almost full (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
 
-
-
   alertmanager.yml:
     content: |
         global:
           resolve_timeout: 5m
         route:
-          receiver: "null"
-          group_by:
-          - job
+          receiver: "discord"
+          group_by: ['alertname', 'job']
           group_wait: 30s
           group_interval: 5m
           repeat_interval: 12h
+
         receivers:
-        - name: "null"
+        - name: "discord"
+          discord_configs:
+          - webhook_url: ${ALERTMANAGER_WEBHOOK_URI}
+
   pve.yml:
     content: |
       default:
