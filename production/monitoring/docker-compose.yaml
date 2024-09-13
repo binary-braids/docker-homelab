@@ -181,3 +181,6 @@ configs:
 networks:
   proxy:
     external: true
+
+volumes:
+  grafana:
