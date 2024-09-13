@@ -18,6 +18,8 @@ services:
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
+    - source: rules.yml
+      target: /etc/prometheus/rules.yml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.binarybraids.com`)"
@@ -133,7 +135,7 @@ configs:
             - vm-prod-dc-02.ad.binarybraids.com:9182
             - vm-prod-bkp-01.ad.binarybraids.com:9182
           metrics_path: /metrics
-  alerts.yml:
+  rules.yml:
     content: |
       groups:
       - name: instance_down
