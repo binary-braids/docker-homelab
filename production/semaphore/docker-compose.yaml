@@ -45,7 +45,7 @@ services:
       - "traefik.http.routers.semaphore.rule=Host(`semaphore.binarybraids.com`)"
       - "traefik.http.routers.semaphore.entrypoints=https"
       - "traefik.http.routers.semaphore.tls=true"
-      - "traefik.http.routers.semaphore.service=asemaphore"
+      - "traefik.http.routers.semaphore.service=semaphore"
       - "traefik.http.services.semaphore.loadbalancer.server.port=3000"
       - "traefik.docker.network=proxy"
 
