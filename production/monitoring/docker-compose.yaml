@@ -134,11 +134,14 @@ configs:
             - vm-prod-dc-01.ad.binarybraids.com:9182
             - vm-prod-dc-02.ad.binarybraids.com:9182
             - vm-prod-bkp-01.ad.binarybraids.com:9182
-          relabel_configs:
-          - source_labels: [__address__]
-            regex: ([^:]+):\d+
-            target_label: instance
-            replacement: $${1}
+        - job_name: 'linux'
+          static_configs:
+          - targets:
+            - vm-prod-kube-01.ad.binarybraids.com:9100
+            - vm-prod-kube-02.ad.binarybraids.com:9100
+            - vm-prod-kube-03.ad.binarybraids.com:9100
+            - vm-prod-dkr-01.ad.binarybraids.com:9100
+            - vm-prod-fs-01.ad.binarybraids.com:9100
   rules.yml:
     content: |
       groups:
@@ -151,7 +154,35 @@ configs:
             severity: critical
           annotations:
             summary: "Instance {{ $$labels.instance }} down"
-            description: "{{ $labels.instance }} of job {{ $$labels.job }} has been down for more than 5 minutes."  
+            description: "{{ $labels.instance }} of job {{ $$labels.job }} has been down for more than 5 minutes."
+
+      - name: prometheus
+        rules:
+        - alert: PrometheusJobMissing
+          expr: absent(up{job="prometheus"})
+          for: 0m
+          labels:
+            severity: warning
+          annotations:
+            summary: Prometheus job missing (instance {{ $$labels.instance }})
+            description: "A Prometheus job has disappeared\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: PrometheusTargetMissing
+          expr: up == 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Prometheus target missing (instance {{ $$labels.instance }})
+            description: "A Prometheus target has disappeared. An exporter might be crashed.\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: PrometheusAllTargetsMissing
+          expr: sum by (job) (up) == 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Prometheus all targets missing (instance {{ $$labels.instance }})
+            description: "A Prometheus job does not have living target anymore.\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+                  
       - name: windows
         rules:
         - alert: WindowsServerCpuUsage
@@ -178,6 +209,34 @@ configs:
           annotations:
             summary: "Windows Server disk Space Usage (instance {{ $$labels.instance }})"
             description: "Disk usage is more than 80%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+
+      - name: linux
+        rules:
+        - alert: HostHighCpuLoad
+          expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.8) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host high CPU load (instance {{ $$labels.instance }})
+            description: "CPU load is > 80%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: HostOutOfMemory
+          expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host out of memory (instance {{ $$labels.instance }})
+            description: "Node memory is filling up (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: HostOutOfDiskSpace
+          expr: ((node_filesystem_avail_bytes * 100) / node_filesystem_size_bytes < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host out of disk space (instance {{ $$labels.instance }})
+            description: "Disk is almost full (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+
 
 
   alertmanager.yml:
