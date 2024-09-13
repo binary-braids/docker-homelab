@@ -53,7 +53,7 @@ configs:
   requirements.txt:
     content: |
       netaddr
-      pywinrm[kerberos]
+      pywinrm
 
 networks:
   proxy:
