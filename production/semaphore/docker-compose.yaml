@@ -1,0 +1,60 @@
+name: semaphore
+
+services:
+
+  semaphore-db:
+    image: mysql:8.0@sha256:7cd8c3640577ec4c7a337d2376517832100a8df15b898e1cd4556750029804ae
+    container_name: semaphore-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=semaphore
+      - MYSQL_USER=semaphore
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /docker/semaphore-db/var/lib/mysql:/var/lib/mysql
+
+  semaphore:
+    image: semaphoreui/semaphore:latest
+    container_name: semaphore
+    restart: unless-stopped
+    environment:
+      - SEMAPHORE_ACCESS_KEY_ENCRYPTION=${SEMAPHORE_ACCESS_KEY_ENCRYPTION}
+      - SEMAPHORE_ADMIN=semaphore-admin
+      - SEMAPHORE_ADMIN_NAME="Semaphore Admin"
+      - SEMAPHORE_ADMIN_PASSWORD=${SEMAPHORE_ADMIN_PASSWORD}
+      - SEMAPHORE_DB=semaphore
+      - SEMAPHORE_DB_DIALECT=mysql
+      - SEMAPHORE_DB_HOST=semaphore-db
+      - SEMAPHORE_DB_PASS=${SEMAPHORE_DB_PASS}
+      - SEMAPHORE_DB_PORT=3306
+    networks:
+      - proxy
+    configs:
+    - source: requirements.txt
+      target: /etc/semaphore/requirements.txt
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.semaphore.rule=Host(`semaphore.binarybraids.com`)"
+      - "traefik.http.routers.semaphore.entrypoints=https"
+      - "traefik.http.routers.semaphore.tls=true"
+      - "traefik.http.routers.semaphore.service=asemaphore"
+      - "traefik.http.services.semaphore.loadbalancer.server.port=3000"
+      - "traefik.docker.network=proxy"
+
+configs:
+  requirements.txt:
+    content: |
+      netaddr
+      pywinrm[kerberos]
+
+networks:
+  proxy:
+    external: true
