@@ -13,8 +13,6 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs:
-      - build_and_test
 
     outputs:
       skipped: ${{ steps.changelog.outputs.skipped }}
