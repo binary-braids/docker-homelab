@@ -3,7 +3,7 @@ name: semaphore
 services:
 
   semaphore-db:
-    image: mysql:8.0
+    image: mysql:8.0@sha256:59ffecdae8d42a45fb9429d81524273e0e237f82f8335234bc4c65dfa3588975
     container_name: semaphore-db
     restart: unless-stopped
     environment:
@@ -19,7 +19,7 @@ services:
       - /docker/semaphore-db/var/lib/mysql:/var/lib/mysql
 
   semaphore:
-    image: ghcr.io/binary-braids/ansible-semaphore:latest
+    image: ghcr.io/binary-braids/ansible-semaphore:latest@sha256:c594594826cb253120912a25526a9297268a973d3a36bcaa8dfbceb8db1f3968
     container_name: semaphore
     restart: unless-stopped
     environment:
