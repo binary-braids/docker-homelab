@@ -2,7 +2,7 @@
 
 # [binary-braids/docker-homelab](https://github.com/binary-braids/docker-homelab)
 
-[![HitCount](https://hits.dwyl.com/binary-braids/docker-homelab.svg?style=flat-square&show=unique)](http://hits.dwyl.com/binary-braids/docker-homelab)
+![GitHub Actions](https://github.com/binary-braids/docker_homelab/actions/workflows/ci.yml/badge.svg)
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovate)](https://github.com/renovatebot/renovate)
 
 <img src="./src/img/docker_logo.png" width=25% height=25%>
