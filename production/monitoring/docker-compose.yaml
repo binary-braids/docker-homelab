@@ -15,6 +15,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
+      - '--web.enable-remote-write-receiver'
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
@@ -113,6 +114,7 @@ configs:
         - job_name: 'prometheus'
           static_configs:
             - targets: ['prometheus.binarybraids.com']
+
         - job_name: 'pve'
           static_configs:
           - targets:
@@ -128,12 +130,19 @@ configs:
             target_label: instance
           - target_label: __address__
             replacement: pve-exporter.binarybraids.com
+
         - job_name: 'windows'
           static_configs:
           - targets:
             - vm-prod-dc-01.ad.binarybraids.com:9182
             - vm-prod-dc-02.ad.binarybraids.com:9182
             - vm-prod-bkp-01.ad.binarybraids.com:9182
+          relabel_configs:
+          - source_labels: [__address__]
+            target_label: instance
+            regex: "([^:]+).*"
+            replacement: '$${1}'
+
         - job_name: 'linux'
           static_configs:
           - targets:
@@ -142,6 +151,11 @@ configs:
             - vm-prod-kube-03.ad.binarybraids.com:9100
             - vm-prod-dkr-01.ad.binarybraids.com:9100
             - vm-prod-fs-01.ad.binarybraids.com:9100
+          relabel_configs:
+          - source_labels: [__address__]
+            target_label: instance
+            regex: "([^:]+).*"
+            replacement: '$${1}'
 
   rules.yml:
     content: |
