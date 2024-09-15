@@ -1,4 +1,14 @@
-# 0.1.0 (2024-09-14)
+## [0.1.1](https://github.com/binary-braids/docker-homelab/compare/v0.1.0...v0.1.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* add relabel config for prometheus to remove port numbers ([db887b9](https://github.com/binary-braids/docker-homelab/commit/db887b9f2e174d3953f93fc21e4ae580833cd332))
+* enable remote write and add relabel config for node exporter ([e4bd9d5](https://github.com/binary-braids/docker-homelab/commit/e4bd9d51942d1eb23e9cff9ff48de79f34011c8a))
+
+
+
+# [0.1.0](https://github.com/binary-braids/docker-homelab/compare/f488fb61f513c95aa04590766c90d0497841668d...v0.1.0) (2024-09-14)
 
 
 ### Bug Fixes
