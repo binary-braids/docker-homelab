@@ -15,6 +15,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
+      - '--web.enable-remote-write-receiver'
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
