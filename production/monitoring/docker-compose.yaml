@@ -157,6 +157,11 @@ configs:
             regex: "([^:]+).*"
             replacement: '$${1}'
 
+        - job_name: 'kube-state-metrics'
+          static_configs:
+          - targets:
+            - kube-state-metrics.binarybraids.com
+
   rules.yml:
     content: |
       groups:
