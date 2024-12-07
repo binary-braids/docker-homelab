@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/binary-braids/docker-homelab/compare/v0.1.2...v0.1.3) (2024-12-07)
+
+
+### Bug Fixes
+
+* add escape character to prometheus alerts ([589a718](https://github.com/binary-braids/docker-homelab/commit/589a71813212848c98351c208ad69f0faf21fa00))
+
+
+
 ## [0.1.2](https://github.com/binary-braids/docker-homelab/compare/v0.1.1...v0.1.2) (2024-09-15)
 
 
