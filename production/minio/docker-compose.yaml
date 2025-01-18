@@ -1,0 +1,40 @@
+name: minio
+
+services:
+
+  minio:
+    image: minio/minio:RELEASE.2025-01-18T00-31-37Z-cpuv1
+    container_name: minio
+    restart: always
+    command:
+      - server
+      - /data
+      - --console-address
+      - :9001 
+    environment:
+      - MINIO_SERVER_URL=https://minio.binarybraids.com
+      - MINIO_BROWSER_REDIRECT_URL=https://minio.binarybraids.com
+      - MINIO_ROOT_USER=minio-admin
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /docker/minio:/data
+    labels:
+      -  "traefik.enable=true"
+      -  "traefik.http.routers.minio-api.entrypoints=https"
+      -  "traefik.http.routers.minio-api.rule=Host(`minio.binarybraids.com`)"
+      -  "traefik.http.routers.minio-api.tls=true"
+      -  "traefik.http.routers.minio-api.service=minio-api"
+      -  "traefik.http.services.minio-api.loadbalancer.server.port=9000"
+      -  "traefik.http.routers.minio.entrypoints=https"
+      -  "traefik.http.routers.minio.rule=Host(`minio-console.binarybraids.com`)"
+      -  "traefik.http.routers.minio.tls=true"
+      -  "traefik.http.routers.minio.service=minio"
+      -  "traefik.http.services.minio.loadbalancer.server.port=9001"
+      -  "traefik.docker.network=proxy"
+
+networks:
+  proxy:
+    external: true
