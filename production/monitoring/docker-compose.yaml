@@ -3,7 +3,7 @@ name: monitoring
 services:
 
   prometheus:
-    image: prom/prometheus:latest@sha256:f6639335d34a77d9d9db382b92eeb7fc00934be8eae81dbc03b31cfe90411a94
+    image: prom/prometheus:latest@sha256:5888c188cf09e3f7eebc97369c3b2ce713e844cdbd88ccf36f5047c958aea120
     container_name: prometheus
     restart: unless-stopped
     networks:
