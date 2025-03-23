@@ -1,3 +1,19 @@
+# [0.2.0](https://github.com/binary-braids/docker-homelab/compare/v0.1.3...v0.2.0) (2025-03-23)
+
+
+### Bug Fixes
+
+* update docker-compose for Home Assistant service configuration ([c00567a](https://github.com/binary-braids/docker-homelab/commit/c00567a966ffef46c959161f085efe5fc6348f93))
+* update trusted proxies in Home Assistant docker-compose configuration ([2630597](https://github.com/binary-braids/docker-homelab/commit/2630597784a667fe5466dd5bb962f6ac2e4f7f10))
+
+
+### Features
+
+* add configuration for Home Assistant service in docker-compose ([281ab7b](https://github.com/binary-braids/docker-homelab/commit/281ab7b585c6bd618202982fa9c7308da50a585b))
+* add docker-compose configuration for Home Assistant ([c6b10ab](https://github.com/binary-braids/docker-homelab/commit/c6b10ab3ea2f1e84e8fe70a959e6b161bdd4cd05))
+
+
+
 ## [0.1.3](https://github.com/binary-braids/docker-homelab/compare/v0.1.2...v0.1.3) (2024-12-07)
 
 
