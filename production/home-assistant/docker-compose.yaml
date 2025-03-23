@@ -1,0 +1,41 @@
+name: home-assistant
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  home-assistant-data:
+    name: home-assistant-data
+
+services:
+  home-assistant:
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    container_name: home-assistant
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /home-assistant-data:/config
+      - /etc/localtime:/etc/localtime:ro
+    configs:
+      - source: configuration.yaml
+        target: /config/configuration.yaml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.home-assistant.entrypoints=https"
+      - "traefik.http.routers.home-assistant.rule=Host(`home-assistant.binarybraids.com`)"
+      - "traefik.http.routers.home-assistant.tls=true"
+      - "traefik.http.routers.home-assistant.service=home-assistant"
+      - "traefik.http.services.home-assistant.loadbalancer.server.port=8123"
+      - "traefik.docker.network=proxy" 
+
+configs:
+  configuration.yaml:
+    content: |
+      http:
+        use_x_forwarded_for: true
+        trusted_proxies:
+          - 127.0.0.1
+          - ::1
+          - 172.21.0.0/16
