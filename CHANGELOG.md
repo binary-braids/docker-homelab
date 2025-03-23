@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/binary-braids/docker-homelab/compare/v0.2.0...v0.2.1) (2025-03-23)
+
+
+### Bug Fixes
+
+* update volume path for Home Assistant in docker-compose configuration ([ba84d72](https://github.com/binary-braids/docker-homelab/commit/ba84d720f0ae8d7cff694ffb44030425d82749d5))
+
+
+
 # [0.2.0](https://github.com/binary-braids/docker-homelab/compare/v0.1.3...v0.2.0) (2025-03-23)
 
 
