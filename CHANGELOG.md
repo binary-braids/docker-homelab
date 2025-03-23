@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/binary-braids/docker-homelab/compare/v0.2.1...v0.2.2) (2025-03-23)
+
+
+### Bug Fixes
+
+* add mobile_app configuration to Home Assistant docker-compose ([041dc54](https://github.com/binary-braids/docker-homelab/commit/041dc5469a86561c7ee589aa53b3b2981cc6dff9))
+
+
+
 ## [0.2.1](https://github.com/binary-braids/docker-homelab/compare/v0.2.0...v0.2.1) (2025-03-23)
 
 
