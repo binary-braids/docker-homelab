@@ -16,7 +16,7 @@ services:
     networks:
       - proxy
     volumes:
-      - /home-assistant-data:/config
+      - home-assistant-data:/config
       - /etc/localtime:/etc/localtime:ro
     configs:
       - source: configuration.yaml
