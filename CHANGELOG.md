@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/binary-braids/docker-homelab/compare/v0.3.0...v0.3.1) (2025-03-29)
+
+
+### Bug Fixes
+
+* update Traefik router entrypoint to websecure in docker-compose ([7f730f9](https://github.com/binary-braids/docker-homelab/commit/7f730f955ebf89eeca9d329c30c12d6d1c28581e))
+
+
+
 # [0.3.0](https://github.com/binary-braids/docker-homelab/compare/v0.2.2...v0.3.0) (2025-03-29)
 
 
