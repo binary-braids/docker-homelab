@@ -26,6 +26,7 @@ services:
       - "traefik.http.routers.home-assistant.entrypoints=websecure"
       - "traefik.http.routers.home-assistant.rule=Host(`home-assistant.binarybraids.com`)"
       - "traefik.http.routers.home-assistant.tls=true"
+      - "traefik.http.routers.home-assistant.tls.certresolver=letsencrypt"
       - "traefik.http.routers.home-assistant.service=home-assistant"
       - "traefik.http.services.home-assistant.loadbalancer.server.port=8123"
       - "traefik.docker.network=proxy" 
