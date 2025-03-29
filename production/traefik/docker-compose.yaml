@@ -1,0 +1,73 @@
+name: traefik
+
+volumes:
+  traefik:
+    name: traefik
+  acme:
+    name: acme
+
+services:
+  traefik:
+    image: "traefik:latest@sha256:ec1a82940b8e00eaeef33fb4113aa1d1573b2ebb6440e10c023743fe96f08475"
+    container_name: "traefik"
+    environment:
+      - "CF_API_EMAIL=${CLOUDFLARE_EMAIL}"
+      - "CF_DNS_API_TOKEN=${CLOUDFLARE_API_TOKEN}"
+      - "TRAEFIK_CERTIFICATESRESOLVERS_LE_ACME_STORAGE=/acme/acme.json"
+    ports:  
+      - "80:80"
+      - "443:443"  
+    networks:
+      - proxy
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/etc/localtime:/etc/localtime:ro"
+      - "traefik:/var/log/traefik"
+      - "acme:/acme"
+    configs:
+      - source: traefik.yaml
+        target: /etc/traefik/traefik.yaml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik.tls.domains[0].main=${DOMAIN_NAME}"
+      - "traefik.http.routers.traefik.tls.domains[0].sans=*.${DOMAIN_NAME}"
+
+configs:
+  traefik.yaml:
+    content: |
+      api:
+        dashboard: true
+
+      entryPoints:
+        web:
+          address: ":80"
+          http:
+            redirections:
+              entryPoint:
+                to: websecure
+                scheme: https
+
+        websecure:
+          address: ":443"
+
+      providers:
+        docker:
+          endpoint: "unix:///var/run/docker.sock"
+          exposedByDefault: false
+
+
+      certificatesResolvers:
+        letsencrypt:
+          acme:
+            email: ${CLOUDFLARE_EMAIL}
+            storage: /acme/acme.json
+            dnsChallenge:
+              provider: cloudflare
+
+networks:
+  proxy:
+    name: proxy
