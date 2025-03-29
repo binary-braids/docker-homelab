@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/binary-braids/docker-homelab/compare/v0.2.2...v0.3.0) (2025-03-29)
+
+
+### Features
+
+* add Traefik configuration with Docker Compose ([3eba14f](https://github.com/binary-braids/docker-homelab/commit/3eba14f4d5ea458e6e406a77c806d524cd6aa1d3))
+
+
+
 ## [0.2.2](https://github.com/binary-braids/docker-homelab/compare/v0.2.1...v0.2.2) (2025-03-23)
 
 
