@@ -23,7 +23,7 @@ services:
         target: /config/configuration.yaml
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.home-assistant.entrypoints=websecure"
       - "traefik.http.routers.home-assistant.rule=Host(`home-assistant.binarybraids.com`)"
       - "traefik.http.routers.home-assistant.tls=true"
       - "traefik.http.routers.home-assistant.service=home-assistant"
