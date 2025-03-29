@@ -1,3 +1,12 @@
+## [0.3.4](https://github.com/binary-braids/docker-homelab/compare/v0.3.3...v0.3.4) (2025-03-29)
+
+
+### Bug Fixes
+
+* add TLS certresolver for Home Assistant Traefik router ([71907a6](https://github.com/binary-braids/docker-homelab/commit/71907a67c524de0ba644869431349dd8b8d59828))
+
+
+
 ## [0.3.3](https://github.com/binary-braids/docker-homelab/compare/v0.3.2...v0.3.3) (2025-03-29)
 
 
@@ -83,16 +92,6 @@
 ### Bug Fixes
 
 * add kube-state-metrics scrape config ([939df77](https://github.com/binary-braids/docker-homelab/commit/939df77b377933c8a3c237a91916154061371433))
-
-
-
-## [0.1.1](https://github.com/binary-braids/docker-homelab/compare/v0.1.0...v0.1.1) (2024-09-15)
-
-
-### Bug Fixes
-
-* add relabel config for prometheus to remove port numbers ([db887b9](https://github.com/binary-braids/docker-homelab/commit/db887b9f2e174d3953f93fc21e4ae580833cd332))
-* enable remote write and add relabel config for node exporter ([e4bd9d5](https://github.com/binary-braids/docker-homelab/commit/e4bd9d51942d1eb23e9cff9ff48de79f34011c8a))
 
 
 
