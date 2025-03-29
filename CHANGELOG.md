@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/binary-braids/docker-homelab/compare/v0.3.1...v0.3.2) (2025-03-29)
+
+
+### Bug Fixes
+
+* update Traefik router entrypoint for Home Assistant in docker-compose ([a81e996](https://github.com/binary-braids/docker-homelab/commit/a81e996ef5a48d1b385acb28313c89b152554adb))
+
+
+
 ## [0.3.1](https://github.com/binary-braids/docker-homelab/compare/v0.3.0...v0.3.1) (2025-03-29)
 
 
