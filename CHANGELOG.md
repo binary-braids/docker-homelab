@@ -1,3 +1,12 @@
+## [0.3.5](https://github.com/binary-braids/docker-homelab/compare/v0.3.4...v0.3.5) (2025-03-29)
+
+
+### Bug Fixes
+
+* update Traefik router rule to use subdomain for Home Assistant ([7d21f22](https://github.com/binary-braids/docker-homelab/commit/7d21f22d3f535f3a632577236f24afe50c9a374e))
+
+
+
 ## [0.3.4](https://github.com/binary-braids/docker-homelab/compare/v0.3.3...v0.3.4) (2025-03-29)
 
 
@@ -83,15 +92,6 @@
 ### Bug Fixes
 
 * add escape character to prometheus alerts ([589a718](https://github.com/binary-braids/docker-homelab/commit/589a71813212848c98351c208ad69f0faf21fa00))
-
-
-
-## [0.1.2](https://github.com/binary-braids/docker-homelab/compare/v0.1.1...v0.1.2) (2024-09-15)
-
-
-### Bug Fixes
-
-* add kube-state-metrics scrape config ([939df77](https://github.com/binary-braids/docker-homelab/commit/939df77b377933c8a3c237a91916154061371433))
 
 
 
