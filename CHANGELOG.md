@@ -1,3 +1,12 @@
+## [0.3.6](https://github.com/binary-braids/docker-homelab/compare/v0.3.5...v0.3.6) (2025-03-29)
+
+
+### Bug Fixes
+
+* remove TLS certresolver from Home Assistant Traefik router configuration ([67ea57b](https://github.com/binary-braids/docker-homelab/commit/67ea57b3a323e9786007429092232e6f0187483a))
+
+
+
 ## [0.3.5](https://github.com/binary-braids/docker-homelab/compare/v0.3.4...v0.3.5) (2025-03-29)
 
 
@@ -83,15 +92,6 @@
 
 * add configuration for Home Assistant service in docker-compose ([281ab7b](https://github.com/binary-braids/docker-homelab/commit/281ab7b585c6bd618202982fa9c7308da50a585b))
 * add docker-compose configuration for Home Assistant ([c6b10ab](https://github.com/binary-braids/docker-homelab/commit/c6b10ab3ea2f1e84e8fe70a959e6b161bdd4cd05))
-
-
-
-## [0.1.3](https://github.com/binary-braids/docker-homelab/compare/v0.1.2...v0.1.3) (2024-12-07)
-
-
-### Bug Fixes
-
-* add escape character to prometheus alerts ([589a718](https://github.com/binary-braids/docker-homelab/commit/589a71813212848c98351c208ad69f0faf21fa00))
 
 
 
