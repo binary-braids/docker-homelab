@@ -18,5 +18,6 @@
       "matchDepTypes": ["devDependencies"],
       "automerge": true
     }
-  ]
+  ],
+  "labels": ["dependencies"]
 }
