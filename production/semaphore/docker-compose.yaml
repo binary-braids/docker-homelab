@@ -3,7 +3,7 @@ name: semaphore
 services:
 
   semaphore-db:
-    image: mysql:8.0@sha256:59cc3d706de79eb34945e2c49c8727fd399a1e97dfc222269131b846ca7047da
+    image: mysql:8.4@sha256:0f775a92980b41c87c58f934a204de80431dd4d854057160ec1cb936663eabe9
     container_name: semaphore-db
     restart: unless-stopped
     environment:
