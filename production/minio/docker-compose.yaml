@@ -3,7 +3,7 @@ name: minio
 services:
 
   minio:
-    image: minio/minio:RELEASE.2025-01-18T00-31-37Z-cpuv1
+    image: minio/minio:RELEASE.2025-01-18T00-31-37Z-cpuv1@sha256:de46d5033a654a678ef9a59fa82e72873fc73920ac398a0e7e238d67b6813e54
     container_name: minio
     restart: always
     command:
