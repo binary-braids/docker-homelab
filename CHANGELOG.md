@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/binary-braids/docker-homelab/compare/v0.4.0...v0.5.0) (2025-04-28)
+
+
+### Features
+
+* **config:** add lovelace configuration and resources for HaCasa dashboard ([109477d](https://github.com/binary-braids/docker-homelab/commit/109477d7d40a041a5a979ae02124d5621eb4297e))
+
+
+
 # [0.4.0](https://github.com/binary-braids/docker-homelab/compare/v0.3.6...v0.4.0) (2025-04-28)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add mobile_app configuration to Home Assistant docker-compose ([041dc54](https://github.com/binary-braids/docker-homelab/commit/041dc5469a86561c7ee589aa53b3b2981cc6dff9))
-
-
-
-## [0.2.1](https://github.com/binary-braids/docker-homelab/compare/v0.2.0...v0.2.1) (2025-03-23)
-
-
-### Bug Fixes
-
-* update volume path for Home Assistant in docker-compose configuration ([ba84d72](https://github.com/binary-braids/docker-homelab/commit/ba84d720f0ae8d7cff694ffb44030425d82749d5))
 
 
 
