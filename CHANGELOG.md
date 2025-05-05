@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/binary-braids/docker-homelab/compare/v0.5.0...v0.6.0) (2025-05-05)
+
+
+### Features
+
+* **config:** add history configuration to docker-compose ([3508d50](https://github.com/binary-braids/docker-homelab/commit/3508d503c0a3dfe60132a51044791b414544961f))
+
+
+
 # [0.5.0](https://github.com/binary-braids/docker-homelab/compare/v0.4.0...v0.5.0) (2025-04-28)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Traefik configuration with Docker Compose ([3eba14f](https://github.com/binary-braids/docker-homelab/commit/3eba14f4d5ea458e6e406a77c806d524cd6aa1d3))
-
-
-
-## [0.2.2](https://github.com/binary-braids/docker-homelab/compare/v0.2.1...v0.2.2) (2025-03-23)
-
-
-### Bug Fixes
-
-* add mobile_app configuration to Home Assistant docker-compose ([041dc54](https://github.com/binary-braids/docker-homelab/commit/041dc5469a86561c7ee589aa53b3b2981cc6dff9))
 
 
 
