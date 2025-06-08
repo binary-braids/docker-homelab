@@ -11,6 +11,8 @@ volumes:
     name: searxng-data
   open-webui-data:
     name: open-webui-data
+  stable-diffusion-webui-data:
+    name: stable-diffusion-webui-data
 
 services:
 
@@ -84,4 +86,27 @@ services:
       - "traefik.http.routers.open-webui.tls=true"
       - "traefik.http.routers.open-webui.service=open-webui"
       - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
-      - "traefik.docker.network=proxy"    
+      - "traefik.docker.network=proxy"  
+
+  stable-diffusion-webui:
+    image: universonic/stable-diffusion-webui:minimal
+    container_name: stable-diffusion-webui
+    command: --no-half --no-half-vae --precision full --lowvram
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/extensions
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/models
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/outputs
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/localizations
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ostable-diffusion-webui.rule=Host(`chat.binarybraids.com`)"
+      - "traefik.http.routers.stable-diffusion-webui.entrypoints=https"
+      - "traefik.http.routers.stable-diffusion-webui.tls=true"
+      - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
+      - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy" 
