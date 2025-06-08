@@ -1,7 +1,6 @@
 name: ai
 
 networks:
-  ai:
   proxy:
     external: true
 
@@ -34,7 +33,7 @@ services:
       - "traefik.http.routers.ollama.tls=true"
       - "traefik.http.routers.ollama.service=ollama"
       - "traefik.http.services.ollama.loadbalancer.server.port=11434"
-      - "traefik.docker.network=ai"
+      - "traefik.docker.network=proxy"
 
   searxng:
     image: searxng/searxng:latest@sha256:8c3355b2a3d0d61a2e923e53be355c4704c6c88a70e2d9ee59ed98d652a09582
@@ -53,7 +52,7 @@ services:
       - "traefik.http.routers.searxng.tls=true"
       - "traefik.http.routers.searxng.service=searxng"
       - "traefik.http.services.searxng.loadbalancer.server.port=8080"
-      - "traefik.docker.network=ai"
+      - "traefik.docker.network=proxy"
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:latest@sha256:4583b4336f59227614378a0db8f044d93273d8bd5e990f3845555a6ef410f768
