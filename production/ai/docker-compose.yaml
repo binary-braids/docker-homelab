@@ -104,7 +104,7 @@ services:
       - stable-diffusion-webui-data:/app/stable-diffusion-webui/localizations
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.ostable-diffusion-webui.rule=Host(`chat.binarybraids.com`)"
+      - "traefik.http.routers.ostable-diffusion-webui.rule=Host(`stable-diffusion-webui.binarybraids.com`)"
       - "traefik.http.routers.stable-diffusion-webui.entrypoints=https"
       - "traefik.http.routers.stable-diffusion-webui.tls=true"
       - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
