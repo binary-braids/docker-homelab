@@ -19,7 +19,7 @@ services:
     container_name: ollama
     restart: unless-stopped
     networks:
-      - ai
+      - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
@@ -40,7 +40,7 @@ services:
     container_name: searxng
     restart: unless-stopped
     networks:
-      - ai
+      - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
@@ -59,7 +59,6 @@ services:
     container_name: open-webui
     restart: unless-stopped
     networks:
-      - ai
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
