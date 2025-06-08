@@ -93,6 +93,7 @@ services:
   stable-diffusion-webui:
     image: universonic/stable-diffusion-webui:minimal
     container_name: stable-diffusion-webui
+    runtime: nvidia
     command: --lowvram --api
     restart: unless-stopped
     networks:
