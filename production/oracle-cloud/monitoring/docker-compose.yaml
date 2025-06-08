@@ -1,0 +1,195 @@
+name: monitoring
+
+services:
+
+  prometheus:
+    image: prom/prometheus:latest@sha256:502ad90314c7485892ce696cb14a99fceab9fc27af29f4b427f41bd39701a199
+    container_name: prometheus
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /docker/prometheus:/etc/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.retention.time=7d'
+      - '--web.enable-remote-write-receiver'
+    configs:
+    - source: prometheus.yml
+      target: /etc/prometheus/prometheus.yml
+    - source: rules.yml
+      target: /etc/prometheus/rules.yml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus-oc.binarybraids.com`)"
+      - "traefik.http.routers.prometheus.entrypoints=https"
+      - "traefik.http.routers.prometheus.tls=true"
+      - "traefik.http.routers.prometheus.service=prometheus"
+      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+      - "traefik.docker.network=proxy"
+
+  alertmanager:
+    image: prom/alertmanager:latest@sha256:27c475db5fb156cab31d5c18a4251ac7ed567746a2483ff264516437a39b15ba
+    container_name: alertmanager
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /docker/alertmanager:/etc/alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+    configs:
+    - source: alertmanager.yml
+      target: /etc/alertmanager/alertmanager.yml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.alertmanager.rule=Host(`alertmanager-oc.binarybraids.com`)"
+      - "traefik.http.routers.alertmanager.entrypoints=https"
+      - "traefik.http.routers.alertmanager.tls=true"
+      - "traefik.http.routers.alertmanager.service=alertmanager"
+      - "traefik.http.services.alertmanager.loadbalancer.server.port=9093"
+      - "traefik.docker.network=proxy"
+
+  grafana:
+    image: grafana/grafana:latest@sha256:62d2b9d20a19714ebfe48d1bb405086081bc602aa053e28cf6d73c7537640dfb
+    container_name: grafana
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - grafana:/var/lib/grafana
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(`grafana-oc.binarybraids.com`)"
+      - "traefik.http.routers.grafana.entrypoints=https"
+      - "traefik.http.routers.grafana.tls=true"
+      - "traefik.http.routers.grafana.service=grafana"
+      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+      - "traefik.docker.network=proxy"
+
+configs:
+  prometheus.yml:
+    content: |
+      global:
+        scrape_interval: 5m
+
+      rule_files:
+        - "rules.yml"
+
+      alerting:
+        alertmanagers:
+        - static_configs:
+          - targets:
+            - alertmanager-oc.binarybraids.com
+
+      scrape_configs:
+        - job_name: 'prometheus'
+          static_configs:
+            - targets: ['prometheus-oc.binarybraids.com']
+
+        - job_name: 'linux'
+          static_configs:
+          - targets:
+            - vm-br-prod-fra1-001.khatharsys.net.za:9100
+          relabel_configs:
+          - source_labels: [__address__]
+            target_label: instance
+            regex: "([^:]+).*"
+            replacement: '$${1}'
+
+  rules.yml:
+    content: |
+      groups:
+      - name: instance_down
+        rules:
+        - alert: InstanceDown
+          expr: up == 0
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Instance {{ $$labels.instance }} down"
+            description: "{{ $labels.instance }} of job {{ $$labels.job }} has been down for more than 5 minutes."
+
+      - name: prometheus
+        rules:
+        - alert: PrometheusJobMissing
+          expr: absent(up{job="prometheus"})
+          for: 0m
+          labels:
+            severity: warning
+          annotations:
+            summary: Prometheus job missing (instance {{ $$labels.instance }})
+            description: "A Prometheus job has disappeared\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: PrometheusTargetMissing
+          expr: up == 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Prometheus target missing (instance {{ $$labels.instance }})
+            description: "A Prometheus target has disappeared. An exporter might be crashed.\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: PrometheusAllTargetsMissing
+          expr: sum by (job) (up) == 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Prometheus all targets missing (instance {{ $$labels.instance }})
+            description: "A Prometheus job does not have living target anymore.\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+                  
+      - name: linux
+        rules:
+        - alert: HostHighCpuLoad
+          expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.9) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host high CPU load (instance {{ $$labels.instance }})
+            description: "CPU load is > 90%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: HostOutOfMemory
+          expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host out of memory (instance {{ $$labels.instance }})
+            description: "Node memory is filling up (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+        - alert: HostOutOfDiskSpace
+          expr: ((node_filesystem_avail_bytes{fstype!="cifs"} * 100) / node_filesystem_size_bytes{fstype!="cifs"} < 10 and node_filesystem_readonly{fstype!="cifs"} == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Host out of disk space (instance {{ $$labels.instance }})
+            description: "Disk is almost full (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+
+  alertmanager.yml:
+    content: |
+        global:
+          resolve_timeout: 5m
+        route:
+          receiver: "discord"
+          group_by: ['alertname', 'job']
+          group_wait: 30s
+          group_interval: 5m
+          repeat_interval: 12h
+
+        receivers:
+        - name: "discord"
+          discord_configs:
+          - webhook_url: ${ALERTMANAGER_WEBHOOK_URI}
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  grafana:
