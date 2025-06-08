@@ -16,6 +16,13 @@ services:
 
   ollama:
     image: ollama/ollama:latest@sha256:722ce8caba5f8b8bd2ee654b2e29466415be3071a704e3f4db1702b83c885f76
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     container_name: ollama
     restart: unless-stopped
     networks:
