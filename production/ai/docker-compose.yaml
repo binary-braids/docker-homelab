@@ -101,6 +101,9 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - stable-diffusion-webui-data:/app/stable-diffusion-webui/extensions
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/embeddings
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/inputs
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/textual_inversion_templates
       - stable-diffusion-webui-data:/app/stable-diffusion-webui/models
       - stable-diffusion-webui-data:/app/stable-diffusion-webui/outputs
       - stable-diffusion-webui-data:/app/stable-diffusion-webui/localizations
