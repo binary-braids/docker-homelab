@@ -93,7 +93,7 @@ services:
   stable-diffusion-webui:
     image: universonic/stable-diffusion-webui:minimal
     container_name: stable-diffusion-webui
-    command: --no-half --no-half-vae --precision full --lowvram --api
+    command: --lowvram --api
     restart: unless-stopped
     networks:
       - proxy
