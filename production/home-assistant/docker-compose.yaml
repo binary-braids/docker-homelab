@@ -10,7 +10,7 @@ volumes:
 
 services:
   home-assistant:
-    image: "ghcr.io/home-assistant/home-assistant:stable@sha256:5d510569a2ceaa2fa8f8a34b91bddd36f5f7f03e4cb23e942f245e4a5a98bbef"
+    image: "ghcr.io/home-assistant/home-assistant:stable@sha256:857745bd01589750174e60f2c477a65da1169c4f1c098a58db792baae7f7ada6"
     container_name: home-assistant
     restart: unless-stopped
     networks:
