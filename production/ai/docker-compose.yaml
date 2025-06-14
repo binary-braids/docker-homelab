@@ -90,30 +90,33 @@ services:
       - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
       - "traefik.docker.network=proxy"  
 
-  stable-diffusion-forge-webui:
-    image: ghcr.io/yummiii/sd-webui-forge-docker:cuda-12.4.1
+  stable-diffusion-webui:
+    image: universonic/stable-diffusion-webui:minimal
     deploy:
       resources:
         limits:
           cpus: '1.0'
           memory: 1G
-    container_name: stable-diffusion-forge-webui
+    container_name: stable-diffusion-webui
     runtime: nvidia
+    command: --lowvram --api --always-batch-cond-uncond
     restart: unless-stopped
-    environment:
-      - ARGS=--listen
-      - UI=forge
     networks:
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - stable-diffusion-forge-webui-data:/app/sd-webui
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/extensions
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/embeddings
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/inputsMore actions
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/textual_inversion_templates
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/models
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/outputs
+      - stable-diffusion-webui-data:/app/stable-diffusion-webui/localizations
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.stable-diffusion-webui.rule=Host(`stable-diffusion-webui.binarybraids.com`)"
       - "traefik.http.routers.stable-diffusion-webui.entrypoints=https"
       - "traefik.http.routers.stable-diffusion-webui.tls=true"
       - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
-      - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=7860"
-      - "traefik.docker.network=proxy" 
+      - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=8080"
