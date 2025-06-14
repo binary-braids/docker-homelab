@@ -90,24 +90,25 @@ services:
       - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
       - "traefik.docker.network=proxy"  
 
-  stable-diffusion-webui:
-    image: ghcr.io/ai-dock/stable-diffusion-webui-forge:latest
+  stable-diffusion-forge-webui:
+    image: ghcr.io/yummiii/sd-webui-forge-docker:cuda-12.4.1
     deploy:
       resources:
         limits:
-          cpus: '1.5'
-          memory: 2G
-    container_name: stable-diffusion-webui
+          cpus: '2.0'
+          memory: 3G
+    container_name: stable-diffusion-forge-webui
     runtime: nvidia
     restart: unless-stopped
     environment:
-      - FORGE_ARGS=--api
+      - ARGS=--listen
+      - UI=forge
     networks:
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - stable-diffusion-webui-data:/workspace
+      - stable-diffusion-forge-webui-data:/app/sd-webui
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.stable-diffusion-webui.rule=Host(`stable-diffusion-webui.binarybraids.com`)"
@@ -115,3 +116,4 @@ services:
       - "traefik.http.routers.stable-diffusion-webui.tls=true"
       - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
       - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=7860"
+      - "traefik.docker.network=proxy"
