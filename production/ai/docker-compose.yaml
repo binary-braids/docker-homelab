@@ -92,6 +92,11 @@ services:
 
   stable-diffusion-webui:
     image: universonic/stable-diffusion-webui:minimal
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
     container_name: stable-diffusion-webui
     runtime: nvidia
     command: --lowvram --api --always-batch-cond-uncond
