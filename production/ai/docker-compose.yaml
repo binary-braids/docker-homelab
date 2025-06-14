@@ -94,7 +94,7 @@ services:
     image: universonic/stable-diffusion-webui:minimal
     container_name: stable-diffusion-webui
     runtime: nvidia
-    command: --lowvram --api
+    command: --lowvram --api --opt-split-attention --always-batch-cond-uncond
     restart: unless-stopped
     networks:
       - proxy
