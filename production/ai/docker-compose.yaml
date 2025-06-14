@@ -95,8 +95,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.0'
-          memory: 1G
+          cpus: '1.5'
+          memory: 2G
     container_name: stable-diffusion-webui
     runtime: nvidia
     command: --lowvram --api --always-batch-cond-uncond
