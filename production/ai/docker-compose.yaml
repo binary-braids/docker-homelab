@@ -91,7 +91,7 @@ services:
       - "traefik.docker.network=proxy"  
 
   stable-diffusion-forge-webui:
-    image: ghcr.io/yummiii/sd-webui-forge-docker:cuda-12.4.1
+    image: ghcr.io/yummiii/sd-webui-forge-docker:cuda-12.4.1@sha256:9c1669d8c1e50fc330ec6c26d668f7d6bd5d89d9d34e2288bea7285d9472cb14
     deploy:
       resources:
         limits:
