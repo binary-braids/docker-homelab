@@ -64,7 +64,7 @@ services:
       - "traefik.docker.network=proxy"
 
   open-webui:
-    image: ghcr.io/open-webui/open-webui:latest@sha256:4583b4336f59227614378a0db8f044d93273d8bd5e990f3845555a6ef410f768
+    image: ghcr.io/open-webui/open-webui:latest@sha256:01add1f7940bf57474055aaf34d4ea0ac762c05f309735e183b3712586f0befe
     container_name: open-webui
     restart: unless-stopped
     networks:
