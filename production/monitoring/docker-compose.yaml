@@ -3,7 +3,7 @@ name: monitoring
 services:
 
   prometheus:
-    image: prom/prometheus:latest@sha256:502ad90314c7485892ce696cb14a99fceab9fc27af29f4b427f41bd39701a199
+    image: prom/prometheus:latest@sha256:78ed1f9050eb9eaf766af6e580230b1c4965728650e332cd1ee918c0c4699775
     container_name: prometheus
     restart: unless-stopped
     networks:
@@ -74,7 +74,7 @@ services:
       - "traefik.docker.network=proxy"
 
   pve-exporter:
-    image: prompve/prometheus-pve-exporter:latest@sha256:3dfc633fa4f74482e5469b7571b33c12876d88f3362721675da88ea39bee924a
+    image: prompve/prometheus-pve-exporter:latest@sha256:79a5598906697b1a5a006d09f0200528a77c6ff1568faf018539ac65824454df
     container_name: pve-exporter
     restart: unless-stopped
     networks:
