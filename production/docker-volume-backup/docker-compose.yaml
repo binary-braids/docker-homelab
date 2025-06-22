@@ -1,0 +1,26 @@
+name: docker-volume-backup
+
+networks:
+  isolated:
+    name: isolated
+
+volumes:
+  home-assistant-data:
+    external: true
+
+services:
+  docker-volume-backup:
+    image: "offen/docker-volume-backup:v2.43.4"
+    container_name: docker-volume-backup
+    restart: always
+    networks:
+      - isolated
+    environment:
+      - AWS_ENDPOINT=minio.binarybraids.com
+      - AWS_S3_BUCKET_NAME=docker-volume-backups
+      - AWS_ACCESS_KEY_ID=${MINIO_DOCKER_VOLUME_BACKUP_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${MINIO_DOCKER_VOLUME_BACKUP_SECRET_ACCESS_KEY}
+      - BACKUP_RETENTION_DAYS=7
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - home-assistant-data:/backup/home-assistant-data:ro
