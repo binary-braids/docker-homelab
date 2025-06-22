@@ -1,3 +1,20 @@
+# [0.8.0](https://github.com/binary-braids/docker-homelab/compare/v0.7.0...v0.8.0) (2025-06-22)
+
+
+### Bug Fixes
+
+* correct environment variable name for S3 bucket in docker-compose ([3407754](https://github.com/binary-braids/docker-homelab/commit/3407754643e7ff92e404b6b2eaa9e51f232250b7))
+* update AWS_ENDPOINT to remove protocol in docker-compose ([6d75480](https://github.com/binary-braids/docker-homelab/commit/6d75480f4d1edd23bb4b7e6126ed5a34459c0717))
+
+
+### Features
+
+* add docker-compose configuration for volume backup service ([60d0d87](https://github.com/binary-braids/docker-homelab/commit/60d0d876928437721de7874974012d512d21c4c9))
+* add isolated network configuration to docker-compose for volume backup service ([8285862](https://github.com/binary-braids/docker-homelab/commit/82858629360711cb78ffdd4e1065dd62c742a35a))
+* ensure docker-volume-backup service is connected to the isolated network ([a3ff4cd](https://github.com/binary-braids/docker-homelab/commit/a3ff4cd614bb7f9c3c7c5ceaaed748c9db5bf2cc))
+
+
+
 # [0.7.0](https://github.com/binary-braids/docker-homelab/compare/v0.6.0...v0.7.0) (2025-06-22)
 
 
@@ -101,15 +118,6 @@
 ### Bug Fixes
 
 * update Traefik router entrypoint for Home Assistant in docker-compose ([a81e996](https://github.com/binary-braids/docker-homelab/commit/a81e996ef5a48d1b385acb28313c89b152554adb))
-
-
-
-## [0.3.1](https://github.com/binary-braids/docker-homelab/compare/v0.3.0...v0.3.1) (2025-03-29)
-
-
-### Bug Fixes
-
-* update Traefik router entrypoint to websecure in docker-compose ([7f730f9](https://github.com/binary-braids/docker-homelab/commit/7f730f955ebf89eeca9d329c30c12d6d1c28581e))
 
 
 
