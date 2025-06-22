@@ -1,5 +1,9 @@
 name: docker-volume-backup
 
+networks:
+  isolated:
+    name: isolated
+
 volumes:
   home-assistant-data:
     external: true
