@@ -16,7 +16,7 @@ services:
     networks:
       - isolated
     environment:
-      - AWS_ENDPOINT=https://minio.binarybraids.com
+      - AWS_ENDPOINT=minio.binarybraids.com
       - AWS_S3_BUCKET_NAME=docker-volume-backups
       - AWS_ACCESS_KEY_ID=${MINIO_DOCKER_VOLUME_BACKUP_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${MINIO_DOCKER_VOLUME_BACKUP_SECRET_ACCESS_KEY}
