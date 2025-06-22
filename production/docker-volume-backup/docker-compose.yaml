@@ -18,6 +18,3 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - home-assistant-data:/backup/home-assistant-data:ro
-    configs:
-      - source: configuration.yaml
-        target: /config/configuration.yaml
