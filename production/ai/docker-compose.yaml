@@ -17,7 +17,7 @@ volumes:
 services:
 
   ollama:
-    image: ollama/ollama:latest@sha256:722ce8caba5f8b8bd2ee654b2e29466415be3071a704e3f4db1702b83c885f76
+    image: ollama/ollama:latest@sha256:5d2f63e9e6ba753c8774991d95cf9091b5c35a0f84e1801a530b4f3fcef0e329
     deploy:
       resources:
         reservations:
