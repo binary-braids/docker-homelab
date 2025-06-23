@@ -54,6 +54,8 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - searxng-data:/etc/searxng
+    environment:
+      - SEARXNG_BASE_URL=https://searxng.binarybraids.com
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.searxng.rule=Host(`searxng.binarybraids.com`)"
