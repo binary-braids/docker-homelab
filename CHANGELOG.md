@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/binary-braids/docker-homelab/compare/v0.8.0...v0.9.0) (2025-06-23)
+
+
+### Features
+
+* **searxng:** add SEARXNG_BASE_URL environment variable ([2f1ab99](https://github.com/binary-braids/docker-homelab/commit/2f1ab9908783c4e8ee74474b240ddf89f91b24a2))
+
+
+
 # [0.8.0](https://github.com/binary-braids/docker-homelab/compare/v0.7.0...v0.8.0) (2025-06-22)
 
 
@@ -109,15 +118,6 @@
 ### Bug Fixes
 
 * update trusted_proxies CIDR range in Home Assistant docker-compose ([cb1daf8](https://github.com/binary-braids/docker-homelab/commit/cb1daf8c2dabda32dc9b14b5ef71dbb7f8dbd897))
-
-
-
-## [0.3.2](https://github.com/binary-braids/docker-homelab/compare/v0.3.1...v0.3.2) (2025-03-29)
-
-
-### Bug Fixes
-
-* update Traefik router entrypoint for Home Assistant in docker-compose ([a81e996](https://github.com/binary-braids/docker-homelab/commit/a81e996ef5a48d1b385acb28313c89b152554adb))
 
 
 
