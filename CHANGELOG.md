@@ -1,3 +1,12 @@
+## [0.10.4](https://github.com/binary-braids/docker-homelab/compare/v0.10.3...v0.10.4) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** update MinIO image to RELEASE.2025-06-13T11-33-47Z-cpuv1 ([c11bcd9](https://github.com/binary-braids/docker-homelab/commit/c11bcd9c896bfc4004ff93f02bcfe74d867acd6f))
+
+
+
 ## [0.10.3](https://github.com/binary-braids/docker-homelab/compare/v0.10.2...v0.10.3) (2025-06-28)
 
 
@@ -117,15 +126,6 @@
 ### Features
 
 * **config:** add lovelace configuration and resources for HaCasa dashboard ([109477d](https://github.com/binary-braids/docker-homelab/commit/109477d7d40a041a5a979ae02124d5621eb4297e))
-
-
-
-# [0.4.0](https://github.com/binary-braids/docker-homelab/compare/v0.3.6...v0.4.0) (2025-04-28)
-
-
-### Features
-
-* **config:** add frontend themes configuration to mobile_app ([11a8b1a](https://github.com/binary-braids/docker-homelab/commit/11a8b1a8e3b6715d14c3c6aa8e7a81bc85d2433d))
 
 
 
