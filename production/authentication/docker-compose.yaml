@@ -44,6 +44,8 @@ configs:
     content: |
       theme: dark
 
+      jwt_secret: "${AUTHELIA_JWT_SECRET}"
+
       authentication_backend:
         file:
           path: /config/users_database.yml
@@ -66,7 +68,6 @@ configs:
 
       session:
         name: authelia_session
-        domain: binarybraids.com
         expiration: 1h
         inactivity: 5m
 
