@@ -149,3 +149,4 @@ services:
       - "traefik.http.routers.invokeai.service=invokeai"
       - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
+      - "traefik.http.routers.invokeai.middlewares=authelia@docker"
