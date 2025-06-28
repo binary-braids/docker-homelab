@@ -5,6 +5,10 @@ networks:
     external: true
 
 volumes:
+  prometheus-data:
+    name: prometheus-data
+  alertmanager-data:
+    name: alertmanager-data
   grafana-data:
     name: grafana-data
 
@@ -19,7 +23,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /docker/prometheus:/etc/prometheus
+      - prometheus-data:/etc/prometheus
+      - prometheus-data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
@@ -47,7 +52,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /docker/alertmanager:/etc/alertmanager
+      - alertmanager-data:/etc/alertmanager
+      - alertmanager-data:/alertmanager
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
     configs:
