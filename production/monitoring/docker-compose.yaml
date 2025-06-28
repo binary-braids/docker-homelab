@@ -74,6 +74,7 @@ services:
       - "traefik.docker.network=proxy"
 
   pve-exporter:
+    platform: linux/arm64
     image: prompve/prometheus-pve-exporter:latest@sha256:79a5598906697b1a5a006d09f0200528a77c6ff1568faf018539ac65824454df
     container_name: pve-exporter
     restart: unless-stopped
