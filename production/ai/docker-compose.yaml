@@ -54,6 +54,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - searxng-data:/etc/searxng
+      - searxng-data:/var/cache/searxng
     environment:
       - SEARXNG_BASE_URL=https://searxng.binarybraids.com
     labels:
