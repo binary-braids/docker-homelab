@@ -1,3 +1,12 @@
+## [0.10.1](https://github.com/binary-braids/docker-homelab/compare/v0.10.0...v0.10.1) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** add external volume definitions for prometheus, grafana, and alertmanager ([6e819f2](https://github.com/binary-braids/docker-homelab/commit/6e819f2428753c4a2cf7a35d9357aabeb7179272))
+
+
+
 # [0.10.0](https://github.com/binary-braids/docker-homelab/compare/v0.9.0...v0.10.0) (2025-06-28)
 
 
@@ -117,15 +126,6 @@
 ### Bug Fixes
 
 * update Traefik router rule to use subdomain for Home Assistant ([7d21f22](https://github.com/binary-braids/docker-homelab/commit/7d21f22d3f535f3a632577236f24afe50c9a374e))
-
-
-
-## [0.3.4](https://github.com/binary-braids/docker-homelab/compare/v0.3.3...v0.3.4) (2025-03-29)
-
-
-### Bug Fixes
-
-* add TLS certresolver for Home Assistant Traefik router ([71907a6](https://github.com/binary-braids/docker-homelab/commit/71907a67c524de0ba644869431349dd8b8d59828))
 
 
 
