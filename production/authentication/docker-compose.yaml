@@ -47,8 +47,10 @@ configs:
         port: 9091
       theme: dark
 
-      jwt_secret: "${AUTHELIA_JWT_SECRET}"
-
+      identity_validation:
+        reset_password:
+          jwt_secret: "${AUTHELIA_JWT_SECRET}"
+      
       default_redirection_url: "https://auth.binarybraids.com"
 
       totp:
@@ -75,9 +77,10 @@ configs:
         default_policy: two_factor
 
       session:
-        name: authelia_session
-        expiration: 3600
-        inactivity: 300
+        cookies:
+          name: authelia_session
+          expiration: 3600
+          inactivity: 300
 
       regulation:
         max_retries: 3
