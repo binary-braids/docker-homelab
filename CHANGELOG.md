@@ -1,3 +1,12 @@
+## [0.10.3](https://github.com/binary-braids/docker-homelab/compare/v0.10.2...v0.10.3) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** enable insecure extension access for stable-diffusion-forge-webui ([ab36e30](https://github.com/binary-braids/docker-homelab/commit/ab36e302b4349b5d6620aec599d460023ba188c0))
+
+
+
 ## [0.10.2](https://github.com/binary-braids/docker-homelab/compare/v0.10.1...v0.10.2) (2025-06-28)
 
 
@@ -117,15 +126,6 @@
 ### Features
 
 * **config:** add frontend themes configuration to mobile_app ([11a8b1a](https://github.com/binary-braids/docker-homelab/commit/11a8b1a8e3b6715d14c3c6aa8e7a81bc85d2433d))
-
-
-
-## [0.3.6](https://github.com/binary-braids/docker-homelab/compare/v0.3.5...v0.3.6) (2025-03-29)
-
-
-### Bug Fixes
-
-* remove TLS certresolver from Home Assistant Traefik router configuration ([67ea57b](https://github.com/binary-braids/docker-homelab/commit/67ea57b3a323e9786007429092232e6f0187483a))
 
 
 
