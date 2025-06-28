@@ -13,6 +13,8 @@ volumes:
     #name: open-webui-data
   stable-diffusion-forge-webui-data:
     name: stable-diffusion-forge-webui-data
+  invoke-ai-data:
+    name: invoke-ai-data
 
 services:
   # ollama:
@@ -118,4 +120,27 @@ services:
       - "traefik.http.routers.stable-diffusion-webui.tls=true"
       - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
       - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=7860"
+      - "traefik.docker.network=proxy"
+
+  invoke-ai:
+    image: ghcr.io/invoke-ai/invokeai
+    container_name: invoke-ai
+    runtime: nvidia
+    restart: unless-stopped
+    environment:
+      - INVOKEAI_ROOT=/var/lib/docker/volumes/invoke-ai-data/_data/invokeai
+      - INVOKEAI_ENBABLE_PARTIAL_LOADING=true
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - invoke-ai-data:/invokeai
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.invokeai.rule=Host(`invokeai.binarybraids.com`)"
+      - "traefik.http.routers.invokeai.entrypoints=https"
+      - "traefik.http.routers.invokeai.tls=true"
+      - "traefik.http.routers.invokeai.service=invokeai"
+      - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
