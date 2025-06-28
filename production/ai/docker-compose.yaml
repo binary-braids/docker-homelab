@@ -103,7 +103,7 @@ services:
     runtime: nvidia
     restart: unless-stopped
     environment:
-      - ARGS=--listen
+      - ARGS=--listen --enable-insecure-extension-access
       - UI=forge
     networks:
       - proxy
