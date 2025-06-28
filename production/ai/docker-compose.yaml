@@ -123,7 +123,7 @@ services:
       - "traefik.docker.network=proxy"
 
   invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai
+    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
     container_name: invoke-ai
     runtime: nvidia
     restart: unless-stopped
