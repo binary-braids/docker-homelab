@@ -1,3 +1,12 @@
+## [0.10.5](https://github.com/binary-braids/docker-homelab/compare/v0.10.4...v0.10.5) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** add missing volume mapping for searxng service ([cf2ea52](https://github.com/binary-braids/docker-homelab/commit/cf2ea522a7f017e11b1259701b399a24bb4b062c))
+
+
+
 ## [0.10.4](https://github.com/binary-braids/docker-homelab/compare/v0.10.3...v0.10.4) (2025-06-28)
 
 
@@ -117,15 +126,6 @@
 ### Features
 
 * **config:** add history configuration to docker-compose ([3508d50](https://github.com/binary-braids/docker-homelab/commit/3508d503c0a3dfe60132a51044791b414544961f))
-
-
-
-# [0.5.0](https://github.com/binary-braids/docker-homelab/compare/v0.4.0...v0.5.0) (2025-04-28)
-
-
-### Features
-
-* **config:** add lovelace configuration and resources for HaCasa dashboard ([109477d](https://github.com/binary-braids/docker-homelab/commit/109477d7d40a041a5a979ae02124d5621eb4297e))
 
 
 
