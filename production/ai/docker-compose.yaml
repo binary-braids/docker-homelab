@@ -130,6 +130,7 @@ services:
     environment:
       - INVOKEAI_ROOT=/var/lib/docker/volumes/invoke-ai-data/_data/invokeai
       - INVOKEAI_ENBABLE_PARTIAL_LOADING=true
+      - INVOKE_DEVICE=cuda
     networks:
       - proxy
     volumes:
