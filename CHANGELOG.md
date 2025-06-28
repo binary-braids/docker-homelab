@@ -1,3 +1,20 @@
+# [0.10.0](https://github.com/binary-braids/docker-homelab/compare/v0.9.0...v0.10.0) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** correct grafana volume name in docker-compose configuration ([f2799b4](https://github.com/binary-braids/docker-homelab/commit/f2799b42b9ba0f982b0e9cf7e7ec827080e1231c))
+* **docker-compose:** correct grafana volume reference and clean up network/volume definitions ([008bd8b](https://github.com/binary-braids/docker-homelab/commit/008bd8bd94037ab8fea3bf60ccb8bc2e28ff94b4))
+* **docker-compose:** update entrypoints to use 'websecure' for Traefik routers ([36474d5](https://github.com/binary-braids/docker-homelab/commit/36474d5d6d96315769e91f81ff981f7994270a5f))
+* **docker-compose:** update volume definitions for prometheus and alertmanager services ([cdd8f61](https://github.com/binary-braids/docker-homelab/commit/cdd8f610725d86f2bd0943e5c3178aadca3369e7))
+
+
+### Features
+
+* **docker-compose:** specify platform for pve-exporter service ([47c187e](https://github.com/binary-braids/docker-homelab/commit/47c187e06d0ec7421c7370bab97c4d625b5ca971))
+
+
+
 # [0.9.0](https://github.com/binary-braids/docker-homelab/compare/v0.8.0...v0.9.0) (2025-06-23)
 
 
@@ -109,15 +126,6 @@
 ### Bug Fixes
 
 * add TLS certresolver for Home Assistant Traefik router ([71907a6](https://github.com/binary-braids/docker-homelab/commit/71907a67c524de0ba644869431349dd8b8d59828))
-
-
-
-## [0.3.3](https://github.com/binary-braids/docker-homelab/compare/v0.3.2...v0.3.3) (2025-03-29)
-
-
-### Bug Fixes
-
-* update trusted_proxies CIDR range in Home Assistant docker-compose ([cb1daf8](https://github.com/binary-braids/docker-homelab/commit/cb1daf8c2dabda32dc9b14b5ef71dbb7f8dbd897))
 
 
 
