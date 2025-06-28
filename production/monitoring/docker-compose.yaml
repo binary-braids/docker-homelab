@@ -1,5 +1,17 @@
 name: monitoring
 
+networks:
+  proxy:
+    external: true
+
+volumes:
+  prometheus-data:
+    name: prometheus-data
+  alertmanager-data:
+    name: alertmanager-data
+  grafana-data:
+    name: grafana-data
+
 services:
 
   prometheus:
@@ -11,7 +23,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /docker/prometheus:/etc/prometheus
+      - prometheus-data:/etc/prometheus
+      - prometheus-data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
@@ -24,7 +37,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.binarybraids.com`)"
-      - "traefik.http.routers.prometheus.entrypoints=https"
+      - "traefik.http.routers.prometheus.entrypoints=websecure"
       - "traefik.http.routers.prometheus.tls=true"
       - "traefik.http.routers.prometheus.service=prometheus"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
@@ -39,7 +52,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /docker/alertmanager:/etc/alertmanager
+      - alertmanager-data:/etc/alertmanager
+      - alertmanager-data:/alertmanager
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
     configs:
@@ -48,7 +62,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.alertmanager.rule=Host(`alertmanager.binarybraids.com`)"
-      - "traefik.http.routers.alertmanager.entrypoints=https"
+      - "traefik.http.routers.alertmanager.entrypoints=websecure"
       - "traefik.http.routers.alertmanager.tls=true"
       - "traefik.http.routers.alertmanager.service=alertmanager"
       - "traefik.http.services.alertmanager.loadbalancer.server.port=9093"
@@ -63,17 +77,18 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - grafana:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`grafana.binarybraids.com`)"
-      - "traefik.http.routers.grafana.entrypoints=https"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
       - "traefik.http.routers.grafana.tls=true"
       - "traefik.http.routers.grafana.service=grafana"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.docker.network=proxy"
 
   pve-exporter:
+    platform: linux/arm64
     image: prompve/prometheus-pve-exporter:latest@sha256:79a5598906697b1a5a006d09f0200528a77c6ff1568faf018539ac65824454df
     container_name: pve-exporter
     restart: unless-stopped
@@ -89,7 +104,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.pve-exporter.rule=Host(`pve-exporter.binarybraids.com`)"
-      - "traefik.http.routers.pve-exporter.entrypoints=https"
+      - "traefik.http.routers.pve-exporter.entrypoints=websecure"
       - "traefik.http.routers.pve-exporter.tls=true"
       - "traefik.http.routers.pve-exporter.service=pve-exporter"
       - "traefik.http.services.pve-exporter.loadbalancer.server.port=9221"
@@ -304,8 +319,6 @@ configs:
             summary: Kubernetes pod crash looping (instance {{ $$labels.instance }})
             description: "Pod {{ $$labels.namespace }}/{{ $$labels.pod }} is crash looping\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
 
-
-
   alertmanager.yml:
     content: |
         global:
@@ -328,9 +341,5 @@ configs:
           user: monitor@pve
           password: "${PROXMOX_EXPORTER_PASSWORD}"
 
-networks:
-  proxy:
-    external: true
 
-volumes:
-  grafana:
+
