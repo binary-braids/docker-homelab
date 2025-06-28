@@ -77,8 +77,11 @@ configs:
         default_policy: two_factor
 
       session:
+        secret: "${AUTHELIA_SESSION_SECRET}"
         cookies:
           name: authelia_session
+          domain: "binarybraids.com"
+          authelia_url: "https://auth.binarybraids.com"
           expiration: 3600
           inactivity: 300
 
