@@ -1,5 +1,13 @@
 name: monitoring
 
+networks:
+  proxy:
+    external: true
+
+volumes:
+  grafana:
+    name: grafana-data
+
 services:
 
   prometheus:
@@ -63,7 +71,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - grafana:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`grafana.binarybraids.com`)"
@@ -305,8 +313,6 @@ configs:
             summary: Kubernetes pod crash looping (instance {{ $$labels.instance }})
             description: "Pod {{ $$labels.namespace }}/{{ $$labels.pod }} is crash looping\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
 
-
-
   alertmanager.yml:
     content: |
         global:
@@ -329,9 +335,5 @@ configs:
           user: monitor@pve
           password: "${PROXMOX_EXPORTER_PASSWORD}"
 
-networks:
-  proxy:
-    external: true
 
-volumes:
-  grafana:
+
