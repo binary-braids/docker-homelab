@@ -1,3 +1,12 @@
+## [0.10.2](https://github.com/binary-braids/docker-homelab/compare/v0.10.1...v0.10.2) (2025-06-28)
+
+
+### Bug Fixes
+
+* **docker-compose:** remove platform specification for pve-exporter service ([55bce30](https://github.com/binary-braids/docker-homelab/commit/55bce30aa5828dc6cbb952b20fc80aaf66e00030))
+
+
+
 ## [0.10.1](https://github.com/binary-braids/docker-homelab/compare/v0.10.0...v0.10.1) (2025-06-28)
 
 
@@ -117,15 +126,6 @@
 ### Bug Fixes
 
 * remove TLS certresolver from Home Assistant Traefik router configuration ([67ea57b](https://github.com/binary-braids/docker-homelab/commit/67ea57b3a323e9786007429092232e6f0187483a))
-
-
-
-## [0.3.5](https://github.com/binary-braids/docker-homelab/compare/v0.3.4...v0.3.5) (2025-03-29)
-
-
-### Bug Fixes
-
-* update Traefik router rule to use subdomain for Home Assistant ([7d21f22](https://github.com/binary-braids/docker-homelab/commit/7d21f22d3f535f3a632577236f24afe50c9a374e))
 
 
 
