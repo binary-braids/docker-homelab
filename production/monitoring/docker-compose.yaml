@@ -5,7 +5,7 @@ networks:
     external: true
 
 volumes:
-  grafana:
+  grafana-data:
     name: grafana-data
 
 services:
