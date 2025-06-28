@@ -7,6 +7,12 @@ networks:
 volumes:
   home-assistant-data:
     external: true
+  prometheus-data:
+    external: true
+  grafana-data:
+    external: true
+  alertmanager-data:
+    external: true
 
 services:
   docker-volume-backup:
@@ -24,3 +30,6 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - home-assistant-data:/backup/home-assistant-data:ro
+      - prometheus-data:/backup/prometheus-data:ro
+      - grafana-data:/backup/grafana-data:ro
+      - alertmanager-data:/backup/alertmanager-data:ro
