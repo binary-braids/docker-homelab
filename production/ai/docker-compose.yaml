@@ -148,7 +148,7 @@ services:
       - "traefik.http.routers.secure-invokeai.rule=Host(`secure-invokeai.binarybraids.com`)"
       - "traefik.http.routers.secure-invokeai.entrypoints=https"
       - "traefik.http.routers.secure-invokeai.tls=true"
-      - "traefik.http.routers.secure-invokeai.service=invokeai"
+      - "traefik.http.routers.secure-invokeai.service=secure-invokeai"
       - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
