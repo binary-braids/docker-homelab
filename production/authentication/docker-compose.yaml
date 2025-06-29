@@ -22,14 +22,11 @@ services:
       target: /config/users_database.yml
     networks:
       - proxy
-    ports:
-      - 9091:9091
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.authelia.entrypoints=https"
       - "traefik.http.routers.authelia.rule=Host(`auth.binarybraids.com`)"
       - "traefik.http.routers.authelia.tls=true"
-      - "traefik.http.middlewares.authelia.forwardAuth.address=http://authelia:9091/api/verify?rd=https://auth.binarybraids.com/"
       - "traefik.http.middlewares.authelia.forwardAuth.trustForwardHeader=true"
       - "traefik.http.middlewares.authelia.forwardAuth.authResponseHeaders=Remote-User,Remote-Groups,Remote-Email,Remote-Name"
       - "traefik.http.middlewares.authelia-basic.forwardAuth.address=http://authelia:9091/api/verify?auth=basic"
@@ -43,8 +40,8 @@ configs:
   configuration.yml:
     content: |
       server:
-        host: 0.0.0.0
-        port: 9091
+        address: "tcp://:9091"
+
       theme: dark
 
       identity_validation:
