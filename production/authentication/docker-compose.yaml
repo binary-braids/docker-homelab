@@ -43,8 +43,8 @@ configs:
   configuration.yml:
     content: |
       server:
-        host: 0.0.0.0
-        port: 9091
+        address: "tcp://:9091"
+
       theme: dark
 
       identity_validation:
