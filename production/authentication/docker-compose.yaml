@@ -72,7 +72,7 @@ configs:
               salt_length: 16
 
       access_control:
-        default_policy: two_factor
+        default_policy: one_factor
 
       session:
         secret: "${AUTHELIA_SESSION_SECRET}"
