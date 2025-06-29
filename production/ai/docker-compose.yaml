@@ -11,8 +11,12 @@ volumes:
     #name: searxng-data
   #open-webui-data:
     #name: open-webui-data
-  stable-diffusion-forge-webui-data:
-    name: stable-diffusion-forge-webui-data
+  # stable-diffusion-forge-webui-data:
+  #   name: stable-diffusion-forge-webui-data
+  invoke-ai-data:
+    name: invoke-ai-data
+  secure-invoke-ai-data:
+    name: secure-invoke-ai-data
 
 services:
   # ollama:
@@ -92,30 +96,59 @@ services:
   #     - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
   #     - "traefik.docker.network=proxy"  
 
-  stable-diffusion-forge-webui:
-    image: ghcr.io/yummiii/sd-webui-forge-docker:cuda-12.4.1@sha256:9c1669d8c1e50fc330ec6c26d668f7d6bd5d89d9d34e2288bea7285d9472cb14
+  invoke-ai:
+    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
+    container_name: invoke-ai
     deploy:
       resources:
-        limits:
-          cpus: '2.0'
-          memory: 4G
-    container_name: stable-diffusion-forge-webui
-    runtime: nvidia
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     restart: unless-stopped
     environment:
-      - ARGS=--listen --enable-insecure-extension-access
-      - UI=forge
+      - INVOKEAI_ENABLE_PARTIAL_LOADING=true
     networks:
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - stable-diffusion-forge-webui-data:/app/sd-webui
+      - invoke-ai-data:/invokeai
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.stable-diffusion-webui.rule=Host(`stable-diffusion-webui.binarybraids.com`)"
-      - "traefik.http.routers.stable-diffusion-webui.entrypoints=https"
-      - "traefik.http.routers.stable-diffusion-webui.tls=true"
-      - "traefik.http.routers.stable-diffusion-webui.service=stable-diffusion-webui"
-      - "traefik.http.services.stable-diffusion-webui.loadbalancer.server.port=7860"
+      - "traefik.http.routers.invokeai.rule=Host(`invokeai.binarybraids.com`)"
+      - "traefik.http.routers.invokeai.entrypoints=https"
+      - "traefik.http.routers.invokeai.tls=true"
+      - "traefik.http.routers.invokeai.service=invokeai"
+      - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
+
+  secure-invoke-ai:
+    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
+    container_name: secure-invoke-ai
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - INVOKEAI_ENABLE_PARTIAL_LOADING=true
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - secure-invoke-ai-data:/invokeai
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.secure-invokeai.rule=Host(`secure-invokeai.binarybraids.com`)"
+      - "traefik.http.routers.secure-invokeai.entrypoints=https"
+      - "traefik.http.routers.secure-invokeai.tls=true"
+      - "traefik.http.routers.secure-invokeai.service=secure-invokeai"
+      - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
