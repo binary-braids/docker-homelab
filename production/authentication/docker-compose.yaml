@@ -51,10 +51,8 @@ configs:
         reset_password:
           jwt_secret: "${AUTHELIA_JWT_SECRET}"
       
-      default_redirection_url: "https://auth.binarybraids.com"
-
       totp:
-        issuer: authelia.com
+        issuer: "authelia.com"
 
       authentication_backend:
         file:
@@ -78,8 +76,9 @@ configs:
 
       session:
         secret: "${AUTHELIA_SESSION_SECRET}"
+
         cookies:
-          name: authelia_session
+        - name: authelia_session
           domain: "binarybraids.com"
           authelia_url: "https://auth.binarybraids.com"
           expiration: 3600
