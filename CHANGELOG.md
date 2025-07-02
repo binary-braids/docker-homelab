@@ -1,3 +1,12 @@
+## [0.14.2](https://github.com/binary-braids/docker-homelab/compare/v0.14.1...v0.14.2) (2025-07-02)
+
+
+### Bug Fixes
+
+* **docker-compose:** update image name for secure-swarmui service ([337eb58](https://github.com/binary-braids/docker-homelab/commit/337eb58732a2d984db1754edc3720b88e060c3af))
+
+
+
 ## [0.14.1](https://github.com/binary-braids/docker-homelab/compare/v0.14.0...v0.14.1) (2025-07-02)
 
 
@@ -118,15 +127,6 @@
 ### Bug Fixes
 
 * **docker-compose:** add missing volume mapping for searxng service ([cf2ea52](https://github.com/binary-braids/docker-homelab/commit/cf2ea522a7f017e11b1259701b399a24bb4b062c))
-
-
-
-## [0.10.4](https://github.com/binary-braids/docker-homelab/compare/v0.10.3...v0.10.4) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** update MinIO image to RELEASE.2025-06-13T11-33-47Z-cpuv1 ([c11bcd9](https://github.com/binary-braids/docker-homelab/commit/c11bcd9c896bfc4004ff93f02bcfe74d867acd6f))
 
 
 
