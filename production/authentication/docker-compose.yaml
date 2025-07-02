@@ -58,6 +58,10 @@ configs:
         ldap:
           implementation: "activedirectory"
           address: "ldap://ad.binarybraids.com:389"
+          start_tls: false
+          tls:
+            skip_verify: true
+            minimum_version: "TLS1.2"
           base_dn: "DC=ad,DC=binarybraids,DC=com"
           additional_users_dn: "OU=End Users,OU=BB Users"
           additional_groups_dn: "CN=Authelia Users,OU=User,OU=Security Groups"
