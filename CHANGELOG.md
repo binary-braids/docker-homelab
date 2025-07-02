@@ -1,3 +1,18 @@
+# [0.12.0](https://github.com/binary-braids/docker-homelab/compare/v0.11.1...v0.12.0) (2025-07-02)
+
+
+### Bug Fixes
+
+* **authentication:** update session configuration for authelia service ([3d41a64](https://github.com/binary-braids/docker-homelab/commit/3d41a6428b8968d88f1d9b18ef3d20970fbfa279))
+* **docker-compose:** remove stable-diffusion-forge-webui service configuration ([eb777a4](https://github.com/binary-braids/docker-homelab/commit/eb777a4d950f2fd2e1a005be1ee40922d8b2ae1b))
+
+
+### Features
+
+* **docker-compose:** add stable-diffusion-forge-webui service configuration ([47f8d02](https://github.com/binary-braids/docker-homelab/commit/47f8d0265758f62db1c851800c560d69a8274a49))
+
+
+
 ## [0.11.1](https://github.com/binary-braids/docker-homelab/compare/v0.11.0...v0.11.1) (2025-06-29)
 
 
@@ -104,23 +119,6 @@
 ### Features
 
 * **searxng:** add SEARXNG_BASE_URL environment variable ([2f1ab99](https://github.com/binary-braids/docker-homelab/commit/2f1ab9908783c4e8ee74474b240ddf89f91b24a2))
-
-
-
-# [0.8.0](https://github.com/binary-braids/docker-homelab/compare/v0.7.0...v0.8.0) (2025-06-22)
-
-
-### Bug Fixes
-
-* correct environment variable name for S3 bucket in docker-compose ([3407754](https://github.com/binary-braids/docker-homelab/commit/3407754643e7ff92e404b6b2eaa9e51f232250b7))
-* update AWS_ENDPOINT to remove protocol in docker-compose ([6d75480](https://github.com/binary-braids/docker-homelab/commit/6d75480f4d1edd23bb4b7e6126ed5a34459c0717))
-
-
-### Features
-
-* add docker-compose configuration for volume backup service ([60d0d87](https://github.com/binary-braids/docker-homelab/commit/60d0d876928437721de7874974012d512d21c4c9))
-* add isolated network configuration to docker-compose for volume backup service ([8285862](https://github.com/binary-braids/docker-homelab/commit/82858629360711cb78ffdd4e1065dd62c742a35a))
-* ensure docker-volume-backup service is connected to the isolated network ([a3ff4cd](https://github.com/binary-braids/docker-homelab/commit/a3ff4cd614bb7f9c3c7c5ceaaed748c9db5bf2cc))
 
 
 
