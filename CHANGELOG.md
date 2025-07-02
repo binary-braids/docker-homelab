@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/binary-braids/docker-homelab/compare/v0.13.2...v0.14.0) (2025-07-02)
+
+
+### Features
+
+* **docker-compose:** add swarm-ui service configuration with Traefik labels ([53d4f3a](https://github.com/binary-braids/docker-homelab/commit/53d4f3ab08320ced4f37b320b365df76f762f7f0))
+
+
+
 ## [0.13.2](https://github.com/binary-braids/docker-homelab/compare/v0.13.1...v0.13.2) (2025-07-02)
 
 
@@ -118,15 +127,6 @@
 ### Bug Fixes
 
 * **docker-compose:** enable insecure extension access for stable-diffusion-forge-webui ([ab36e30](https://github.com/binary-braids/docker-homelab/commit/ab36e302b4349b5d6620aec599d460023ba188c0))
-
-
-
-## [0.10.2](https://github.com/binary-braids/docker-homelab/compare/v0.10.1...v0.10.2) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** remove platform specification for pve-exporter service ([55bce30](https://github.com/binary-braids/docker-homelab/commit/55bce30aa5828dc6cbb952b20fc80aaf66e00030))
 
 
 
