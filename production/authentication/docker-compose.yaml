@@ -77,7 +77,7 @@ configs:
           - domain:
               - "binarybraids.com"
             policy: one_factor
-            subjects:
+            subject:
               - "group:CN=Authelia Users"
 
       session:
