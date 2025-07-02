@@ -79,7 +79,7 @@ configs:
         default_policy: deny
         rules:
           - domain:
-              - "binarybraids.com"
+              - "*.binarybraids.com"
             policy: one_factor
             subject:
               - "group:CN=Authelia Users"
