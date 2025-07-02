@@ -82,7 +82,7 @@ configs:
               - "*.binarybraids.com"
             policy: one_factor
             subject:
-              - "group:authelia users"
+              - "group:Authelia Users"
 
       session:
         secret: "${AUTHELIA_SESSION_SECRET}"
