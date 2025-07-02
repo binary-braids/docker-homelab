@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/binary-braids/docker-homelab/compare/v0.13.0...v0.13.1) (2025-07-02)
+
+
+### Bug Fixes
+
+* **authentication:** remove users_database.yml configuration from docker-compose ([76b7985](https://github.com/binary-braids/docker-homelab/commit/76b7985d3388cefdfa79b40bde814930aff03e47))
+
+
+
 # [0.13.0](https://github.com/binary-braids/docker-homelab/compare/v0.12.0...v0.13.0) (2025-07-02)
 
 
@@ -118,23 +127,6 @@
 ### Bug Fixes
 
 * **docker-compose:** add external volume definitions for prometheus, grafana, and alertmanager ([6e819f2](https://github.com/binary-braids/docker-homelab/commit/6e819f2428753c4a2cf7a35d9357aabeb7179272))
-
-
-
-# [0.10.0](https://github.com/binary-braids/docker-homelab/compare/v0.9.0...v0.10.0) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** correct grafana volume name in docker-compose configuration ([f2799b4](https://github.com/binary-braids/docker-homelab/commit/f2799b42b9ba0f982b0e9cf7e7ec827080e1231c))
-* **docker-compose:** correct grafana volume reference and clean up network/volume definitions ([008bd8b](https://github.com/binary-braids/docker-homelab/commit/008bd8bd94037ab8fea3bf60ccb8bc2e28ff94b4))
-* **docker-compose:** update entrypoints to use 'websecure' for Traefik routers ([36474d5](https://github.com/binary-braids/docker-homelab/commit/36474d5d6d96315769e91f81ff981f7994270a5f))
-* **docker-compose:** update volume definitions for prometheus and alertmanager services ([cdd8f61](https://github.com/binary-braids/docker-homelab/commit/cdd8f610725d86f2bd0943e5c3178aadca3369e7))
-
-
-### Features
-
-* **docker-compose:** specify platform for pve-exporter service ([47c187e](https://github.com/binary-braids/docker-homelab/commit/47c187e06d0ec7421c7370bab97c4d625b5ca971))
 
 
 
