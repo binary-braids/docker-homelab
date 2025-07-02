@@ -81,8 +81,10 @@ configs:
         - name: authelia_session
           domain: "binarybraids.com"
           authelia_url: "https://auth.binarybraids.com"
-          expiration: 3600
-          inactivity: 300
+          same_site: "lax"
+          expiration: "1h"
+          inactivity: "10m"
+          remember_me: "1d"
 
       regulation:
         max_retries: 3

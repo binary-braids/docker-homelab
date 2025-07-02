@@ -11,8 +11,8 @@ volumes:
     #name: searxng-data
   #open-webui-data:
     #name: open-webui-data
-  # stable-diffusion-forge-webui-data:
-  #   name: stable-diffusion-forge-webui-data
+  #stable-diffusion-forge-webui-data:
+    #name: stable-diffusion-forge-webui-data
   invoke-ai-data:
     name: invoke-ai-data
   secure-invoke-ai-data:
