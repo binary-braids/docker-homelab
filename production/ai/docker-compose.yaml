@@ -154,7 +154,7 @@ services:
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
 
   secure-swarmui:
-    image: secure-swarmui
+    image: swarmui
     container_name: secure-swarmui
     deploy:
       resources:
