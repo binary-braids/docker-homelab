@@ -46,7 +46,7 @@ configs:
         address: "tcp://:9091"
 
       theme: dark
-
+      
       identity_validation:
         reset_password:
           jwt_secret: "${AUTHELIA_JWT_SECRET}"
@@ -55,24 +55,32 @@ configs:
         issuer: "authelia.com"
 
       authentication_backend:
-        file:
-          path: /config/users_database.yml
-          watch: false
-          search:
-            email: false
-            case_insensitive: false
-          password:
-            algorithm: argon2
-            argon2:
-              variant: argon2id
-              iterations: 1
-              memory: 65536
-              parallelism: 4
-              key_length: 32
-              salt_length: 16
+        ldap:
+          implementation: "activedirectory"
+          address: "ldap://ad.binarybraids.com:389"
+          start_tls: false
+          tls:
+            skip_verify: true
+            minimum_version: "TLS1.2"
+          base_dn: "DC=ad,DC=binarybraids,DC=com"
+          users_filter: "(&({username_attribute}={input})(objectClass=person))"
+          groups_filter: "(member={dn})"
+          user: "CN=Authelia,OU=Service Accounts,OU=BB Users,DC=ad,DC=binarybraids,DC=com"
+          password: "${AUTHELIA_LDAP_PASSWORD}"
+          attributes:
+            username: "sAMAccountName"
+            display_name: "displayName"
+            mail: "mail"
+            group_name: "cn"
 
       access_control:
-        default_policy: one_factor
+        default_policy: deny
+        rules:
+          - domain:
+              - "*.binarybraids.com"
+            policy: one_factor
+            subject:
+              - "group:Authelia Users"
 
       session:
         secret: "${AUTHELIA_SESSION_SECRET}"
@@ -100,14 +108,3 @@ configs:
         disable_startup_check: false
         filesystem:
           filename: /config/notification.txt
-
-  users_database.yml:
-    content: |
-      users:
-        authelia_admin:
-          disabled: false
-          displayname: "Authelia Administrator"
-          password: "${AUTHELIA_ADMIN_PASSWORD}"
-          groups:
-            - admin
-            - dev
