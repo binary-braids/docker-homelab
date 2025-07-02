@@ -5,14 +5,6 @@ networks:
     external: true
 
 volumes:
-  #ollama-data:
-    #name: ollama-data
-  #searxng-data:
-    #name: searxng-data
-  #open-webui-data:
-    #name: open-webui-data
-  #stable-diffusion-forge-webui-data:
-    #name: stable-diffusion-forge-webui-data
   invoke-ai-data:
     name: invoke-ai-data
   secure-invoke-ai-data:
@@ -21,83 +13,6 @@ volumes:
     name: swarm-ui-data
 
 services:
-  # ollama:
-  #   image: ollama/ollama:latest@sha256:5d2f63e9e6ba753c8774991d95cf9091b5c35a0f84e1801a530b4f3fcef0e329
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: all
-  #             capabilities: [gpu]
-  #   container_name: ollama
-  #   restart: unless-stopped
-  #   networks:
-  #     - proxy
-  #   volumes:
-  #     - /etc/localtime:/etc/localtime:ro
-  #     - /etc/timezone:/etc/timezone:ro
-  #     - ollama-data:/root/.ollama
-  #   environment:
-  #     - OLLAMA_KEEP_ALIVE=24h
-  #   labels:
-  #     - "traefik.enable=true"
-  #     - "traefik.http.routers.ollama.rule=Host(`ollama.binarybraids.com`)"
-  #     - "traefik.http.routers.ollama.entrypoints=https"
-  #     - "traefik.http.routers.ollama.tls=true"
-  #     - "traefik.http.routers.ollama.service=ollama"
-  #     - "traefik.http.services.ollama.loadbalancer.server.port=11434"
-  #     - "traefik.docker.network=proxy"
-
-  # searxng:
-  #   image: searxng/searxng:latest@sha256:50e190ecc036314a27a6c3a3655c23cc3af88175b2fb83f1ecc7209c98e74713
-  #   container_name: searxng
-  #   restart: unless-stopped
-  #   networks:
-  #     - proxy
-  #   volumes:
-  #     - /etc/localtime:/etc/localtime:ro
-  #     - /etc/timezone:/etc/timezone:ro
-  #     - searxng-data:/etc/searxng
-  #     - searxng-data:/var/cache/searxng
-  #   environment:
-  #     - SEARXNG_BASE_URL=https://searxng.binarybraids.com
-  #   labels:
-  #     - "traefik.enable=true"
-  #     - "traefik.http.routers.searxng.rule=Host(`searxng.binarybraids.com`)"
-  #     - "traefik.http.routers.searxng.entrypoints=https"
-  #     - "traefik.http.routers.searxng.tls=true"
-  #     - "traefik.http.routers.searxng.service=searxng"
-  #     - "traefik.http.services.searxng.loadbalancer.server.port=8080"
-  #     - "traefik.docker.network=proxy"
-
-  # open-webui:
-  #   image: ghcr.io/open-webui/open-webui:latest@sha256:01add1f7940bf57474055aaf34d4ea0ac762c05f309735e183b3712586f0befe
-  #   container_name: open-webui
-  #   restart: unless-stopped
-  #   networks:
-  #     - proxy
-  #   volumes:
-  #     - /etc/localtime:/etc/localtime:ro
-  #     - /etc/timezone:/etc/timezone:ro
-  #     - open-webui-data:/app/backend/data
-  #   environment:
-  #     - OLLAMA_BASE_URL=https://ollama.binarybraids.com
-  #     - RAG_WEB_SEARCH_ENGINE=searxng
-  #     - RAG_WEB_SEARCH_RESULT_COUNT=3
-  #     - RAG_WEB_SEARCH_CONCURRENT_REQUESTS=10
-  #     - SEARXNG_QUERY_URL=https://searxng.binarybraids.com/search?q=<query>
-  #     - ENABLE_IMAGE_GENERATION=True
-  #     - AUTOMATIC1111_BASE_URL=https://stable-diffusion-webui.binarybraids.com
-  #   labels:
-  #     - "traefik.enable=true"
-  #     - "traefik.http.routers.open-webui.rule=Host(`chat.binarybraids.com`)"
-  #     - "traefik.http.routers.open-webui.entrypoints=https"
-  #     - "traefik.http.routers.open-webui.tls=true"
-  #     - "traefik.http.routers.open-webui.service=open-webui"
-  #     - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
-  #     - "traefik.docker.network=proxy"  
-
   invoke-ai:
     image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
     container_name: invoke-ai
@@ -152,30 +67,3 @@ services:
       - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
-
-  secure-swarmui:
-    image: swarmui
-    container_name: secure-swarmui
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
-    restart: unless-stopped
-    networks:
-      - proxy
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-      - swarm-ui-data:/SwarmUI
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.secure-swarmui.rule=Host(`secure-swarmui.binarybraids.com`)"
-      - "traefik.http.routers.secure-swarmui.entrypoints=https"
-      - "traefik.http.routers.secure-swarmui.tls=true"
-      - "traefik.http.routers.secure-swarmui.service=secure-swarmui"
-      - "traefik.http.services.secure-swarmui.loadbalancer.server.port=7801"
-      - "traefik.docker.network=proxy"
-      - "traefik.http.routers.secure-swarmui.middlewares=authelia@docker"
