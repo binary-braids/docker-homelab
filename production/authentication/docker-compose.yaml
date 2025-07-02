@@ -67,7 +67,7 @@ configs:
           password: "${AUTHELIA_LDAP_PASSWORD}"
           attributes:
             username: "sAMAccountName"
-            display_name_attribute: "displayName"
+            display_name: "displayName"
             mail: "mail"
             group_name: "cn"
 
