@@ -17,6 +17,8 @@ volumes:
     name: invoke-ai-data
   secure-invoke-ai-data:
     name: secure-invoke-ai-data
+  swarm-ui-data:
+    name: swarm-ui-data
 
 services:
   # ollama:
@@ -151,31 +153,29 @@ services:
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
 
-  # swarm-ui:
-  #   image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
-  #   container_name: secure-invoke-ai
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: all
-  #             capabilities: [gpu]
-  #   restart: unless-stopped
-  #   environment:
-  #     - INVOKEAI_ENABLE_PARTIAL_LOADING=true
-  #   networks:
-  #     - proxy
-  #   volumes:
-  #     - /etc/localtime:/etc/localtime:ro
-  #     - /etc/timezone:/etc/timezone:ro
-  #     - secure-invoke-ai-data:/invokeai
-  #   labels:
-  #     - "traefik.enable=true"
-  #     - "traefik.http.routers.secure-invokeai.rule=Host(`secure-invokeai.binarybraids.com`)"
-  #     - "traefik.http.routers.secure-invokeai.entrypoints=https"
-  #     - "traefik.http.routers.secure-invokeai.tls=true"
-  #     - "traefik.http.routers.secure-invokeai.service=secure-invokeai"
-  #     - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
-  #     - "traefik.docker.network=proxy"
-  #     - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
+  swarm-ui:
+    image: swarmui
+    container_name: swarmui
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - swarm-ui-data:/SwarmUI
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.secure-swarm-ui.rule=Host(`secure-swarm-ui.binarybraids.com`)"
+      - "traefik.http.routers.secure-swarm-ui.entrypoints=https"
+      - "traefik.http.routers.secure-swarm-ui.tls=true"
+      - "traefik.http.routers.secure-swarm-ui.service=secure-swarm-ui"
+      - "traefik.http.services.secure-swarm-ui.loadbalancer.server.port=7801"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.secure-swarm-ui.middlewares=authelia@docker"
