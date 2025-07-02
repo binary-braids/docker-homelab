@@ -1,3 +1,12 @@
+## [0.14.1](https://github.com/binary-braids/docker-homelab/compare/v0.14.0...v0.14.1) (2025-07-02)
+
+
+### Bug Fixes
+
+* **docker-compose:** rename swarm-ui service to secure-swarmui and update Traefik labels ([ddb19c0](https://github.com/binary-braids/docker-homelab/commit/ddb19c08a5a0fe1c7ec56be17ebc69ff545d81c8))
+
+
+
 # [0.14.0](https://github.com/binary-braids/docker-homelab/compare/v0.13.2...v0.14.0) (2025-07-02)
 
 
@@ -118,15 +127,6 @@
 ### Bug Fixes
 
 * **docker-compose:** update MinIO image to RELEASE.2025-06-13T11-33-47Z-cpuv1 ([c11bcd9](https://github.com/binary-braids/docker-homelab/commit/c11bcd9c896bfc4004ff93f02bcfe74d867acd6f))
-
-
-
-## [0.10.3](https://github.com/binary-braids/docker-homelab/compare/v0.10.2...v0.10.3) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** enable insecure extension access for stable-diffusion-forge-webui ([ab36e30](https://github.com/binary-braids/docker-homelab/commit/ab36e302b4349b5d6620aec599d460023ba188c0))
 
 
 
