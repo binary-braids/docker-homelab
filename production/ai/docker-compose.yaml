@@ -153,9 +153,9 @@ services:
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
 
-  swarm-ui:
-    image: swarmui
-    container_name: swarmui
+  secure-swarmui:
+    image: secure-swarmui
+    container_name: secure-swarmui
     deploy:
       resources:
         reservations:
@@ -172,10 +172,10 @@ services:
       - swarm-ui-data:/SwarmUI
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.secure-swarm-ui.rule=Host(`secure-swarm-ui.binarybraids.com`)"
-      - "traefik.http.routers.secure-swarm-ui.entrypoints=https"
-      - "traefik.http.routers.secure-swarm-ui.tls=true"
-      - "traefik.http.routers.secure-swarm-ui.service=secure-swarm-ui"
-      - "traefik.http.services.secure-swarm-ui.loadbalancer.server.port=7801"
+      - "traefik.http.routers.secure-swarmui.rule=Host(`secure-swarmui.binarybraids.com`)"
+      - "traefik.http.routers.secure-swarmui.entrypoints=https"
+      - "traefik.http.routers.secure-swarmui.tls=true"
+      - "traefik.http.routers.secure-swarmui.service=secure-swarmui"
+      - "traefik.http.services.secure-swarmui.loadbalancer.server.port=7801"
       - "traefik.docker.network=proxy"
-      - "traefik.http.routers.secure-swarm-ui.middlewares=authelia@docker"
+      - "traefik.http.routers.secure-swarmui.middlewares=authelia@docker"
