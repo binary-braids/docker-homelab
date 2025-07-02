@@ -70,9 +70,30 @@ configs:
               parallelism: 4
               key_length: 32
               salt_length: 16
+        ldap:
+          implementation: "activedirectory"
+          address: "ldap://ad.binarybraids.com:389"
+          base_dn: "DC=ad,DC=binarybraids,DC=com"
+          additional_users_dn: "OU=End Users,OU=BB Users"
+          additional_groups_dn: "CN=Authelia Users,OU=User,OU=Security Groups"
+          username_attribute: "sAMAccountName"
+          users_filter: "(&(|({username_attribute}={input})({mail_attribute}={input}))(objectCategory=person)(objectClass=user)(!userAccountControl:1.2.840.113556.1.4.803:=2)(!pwdLastSet=0))"
+          group_search_mode "filter"
+          groups_filter: "(&(member:1.2.840.113556.1.4.1941:={dn})(objectClass=group)(objectCategory=group))"
+          group_name_attribute: "cn"
+          mail_attribute: "mail"
+          display_name_attribute: "displayname"
+          user: "CN=Authelia,OU=Service Accounts,OU=BB Users,DC=ad,DC=binarybraids,DC=com"
+          password: "${AUTHELIA_LDAP_PASSWORD}"
 
       access_control:
-        default_policy: one_factor
+        default_policy: deny
+        rules:
+          - domain:
+              - "binarybraids.com"
+            policy: one_factor
+            subjects:
+              - "group:CN=Authelia Users"
 
       session:
         secret: "${AUTHELIA_SESSION_SECRET}"
