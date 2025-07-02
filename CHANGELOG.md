@@ -1,3 +1,12 @@
+## [0.13.2](https://github.com/binary-braids/docker-homelab/compare/v0.13.1...v0.13.2) (2025-07-02)
+
+
+### Bug Fixes
+
+* **docker-compose:** remove INVOKEAI_ENABLE_PARTIAL_LOADING environment variable and clean up secure-invoke-ai service configuration ([940bbd3](https://github.com/binary-braids/docker-homelab/commit/940bbd3f8c2b57fdaa5f74d74a9a90fe9da2ba8a))
+
+
+
 ## [0.13.1](https://github.com/binary-braids/docker-homelab/compare/v0.13.0...v0.13.1) (2025-07-02)
 
 
@@ -118,15 +127,6 @@
 ### Bug Fixes
 
 * **docker-compose:** remove platform specification for pve-exporter service ([55bce30](https://github.com/binary-braids/docker-homelab/commit/55bce30aa5828dc6cbb952b20fc80aaf66e00030))
-
-
-
-## [0.10.1](https://github.com/binary-braids/docker-homelab/compare/v0.10.0...v0.10.1) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** add external volume definitions for prometheus, grafana, and alertmanager ([6e819f2](https://github.com/binary-braids/docker-homelab/commit/6e819f2428753c4a2cf7a35d9357aabeb7179272))
 
 
 
