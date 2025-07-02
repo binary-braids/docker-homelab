@@ -18,8 +18,6 @@ services:
     configs:
     - source: configuration.yml
       target: /config/configuration.yml
-    - source: users_database.yml
-      target: /config/users_database.yml
     networks:
       - proxy
     ports:
