@@ -165,6 +165,7 @@ configs:
             - vm-prod-kube-03.ad.binarybraids.com:9100
             - vm-prod-dkr-01.ad.binarybraids.com:9100
             - vm-prod-fs-01.ad.binarybraids.com:9100
+            - vm-br-prod-fra1-001.khatharsys.net.za:9100
           relabel_configs:
           - source_labels: [__address__]
             target_label: instance
