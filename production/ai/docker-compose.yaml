@@ -14,7 +14,7 @@ volumes:
 
 services:
   invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
+    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda@sha256:ce9727961347a68de341a0a52dfb65143b7421db755d1d44ba0c1cb1f20abcb9
     container_name: invoke-ai
     deploy:
       resources:
@@ -42,7 +42,7 @@ services:
       - "traefik.docker.network=proxy"
 
   secure-invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda
+    image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda@sha256:ce9727961347a68de341a0a52dfb65143b7421db755d1d44ba0c1cb1f20abcb9
     container_name: secure-invoke-ai
     deploy:
       resources:
