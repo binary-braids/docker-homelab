@@ -1,3 +1,12 @@
+# [0.15.0](https://github.com/binary-braids/docker-homelab/compare/v0.14.2...v0.15.0) (2025-07-12)
+
+
+### Features
+
+* **docker-compose:** add new Prometheus scrape target for vm-br-prod-fra1-001 ([43d4e3b](https://github.com/binary-braids/docker-homelab/commit/43d4e3b88c77a301219c72dcf9115ebd7510c94f))
+
+
+
 ## [0.14.2](https://github.com/binary-braids/docker-homelab/compare/v0.14.1...v0.14.2) (2025-07-02)
 
 
@@ -118,15 +127,6 @@
 * **docker-compose:** add INVOKE_DEVICE environment variable for CUDA support ([74bede2](https://github.com/binary-braids/docker-homelab/commit/74bede294bec9f313356fb4735b6b1f441087a49))
 * **docker-compose:** add invoke-ai service with necessary configurations ([e3670f4](https://github.com/binary-braids/docker-homelab/commit/e3670f4e6af9aea7eff7e56629e85d175ea0fe72))
 * **docker-compose:** update invoke-ai service configuration and add secure-invoke-ai service ([fdca03d](https://github.com/binary-braids/docker-homelab/commit/fdca03d928a7f9135372f58f7825c310ba017060))
-
-
-
-## [0.10.5](https://github.com/binary-braids/docker-homelab/compare/v0.10.4...v0.10.5) (2025-06-28)
-
-
-### Bug Fixes
-
-* **docker-compose:** add missing volume mapping for searxng service ([cf2ea52](https://github.com/binary-braids/docker-homelab/commit/cf2ea522a7f017e11b1259701b399a24bb4b062c))
 
 
 
