@@ -9,10 +9,83 @@ volumes:
     name: invoke-ai-data
   secure-invoke-ai-data:
     name: secure-invoke-ai-data
-  swarm-ui-data:
-    name: swarm-ui-data
 
 services:
+  ollama:
+    image: ollama/ollama:latest@sha256:5d2f63e9e6ba753c8774991d95cf9091b5c35a0f84e1801a530b4f3fcef0e329
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    container_name: ollama
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /mnt/data/docker/ollama:/root/.ollama
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ollama.rule=Host(`ollama.binarybraids.com`)"
+      - "traefik.http.routers.ollama.entrypoints=https"
+      - "traefik.http.routers.ollama.tls=true"
+      - "traefik.http.routers.ollama.service=ollama"
+      - "traefik.http.services.ollama.loadbalancer.server.port=11434"
+      - "traefik.docker.network=proxy"
+
+  searxng:
+    image: searxng/searxng:latest@sha256:50e190ecc036314a27a6c3a3655c23cc3af88175b2fb83f1ecc7209c98e74713
+    container_name: searxng
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /mnt/data/docker/searxng:/etc/searxng
+      - /mnt/data/docker/searxng:/var/cache/searxng
+    environment:
+      - SEARXNG_BASE_URL=https://searxng.binarybraids.com
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.searxng.rule=Host(`searxng.binarybraids.com`)"
+      - "traefik.http.routers.searxng.entrypoints=https"
+      - "traefik.http.routers.searxng.tls=true"
+      - "traefik.http.routers.searxng.service=searxng"
+      - "traefik.http.services.searxng.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy"
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:latest@sha256:01add1f7940bf57474055aaf34d4ea0ac762c05f309735e183b3712586f0befe
+    container_name: open-webui
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /mnt/data/docker/open-webui:/app/backend/data
+    environment:
+      - OLLAMA_BASE_URL=https://ollama.binarybraids.com
+      - RAG_WEB_SEARCH_ENGINE=searxng
+      - RAG_WEB_SEARCH_RESULT_COUNT=3
+      - RAG_WEB_SEARCH_CONCURRENT_REQUESTS=10
+      - SEARXNG_QUERY_URL=https://searxng.binarybraids.com/search?q=<query>
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.open-webui.rule=Host(`chat.binarybraids.com`)"
+      - "traefik.http.routers.open-webui.entrypoints=https"
+      - "traefik.http.routers.open-webui.tls=true"
+      - "traefik.http.routers.open-webui.service=open-webui"
+      - "traefik.http.services.open-webui.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy"  
+  
   invoke-ai:
     image: ghcr.io/invoke-ai/invokeai:sha-9066dc1-cuda@sha256:ce9727961347a68de341a0a52dfb65143b7421db755d1d44ba0c1cb1f20abcb9
     container_name: invoke-ai
