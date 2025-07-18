@@ -12,7 +12,7 @@ volumes:
 
 services:
   ollama:
-    image: ollama/ollama:latest@sha256:5d2f63e9e6ba753c8774991d95cf9091b5c35a0f84e1801a530b4f3fcef0e329
+    image: ollama/ollama:latest
     deploy:
       resources:
         reservations:
@@ -40,7 +40,7 @@ services:
       - "traefik.docker.network=proxy"
 
   searxng:
-    image: searxng/searxng:latest@sha256:50e190ecc036314a27a6c3a3655c23cc3af88175b2fb83f1ecc7209c98e74713
+    image: searxng/searxng:latest
     container_name: searxng
     restart: unless-stopped
     networks:
@@ -62,7 +62,7 @@ services:
       - "traefik.docker.network=proxy"
 
   open-webui:
-    image: ghcr.io/open-webui/open-webui:latest@sha256:01add1f7940bf57474055aaf34d4ea0ac762c05f309735e183b3712586f0befe
+    image: ghcr.io/open-webui/open-webui:latest
     container_name: open-webui
     restart: unless-stopped
     networks:
