@@ -32,6 +32,8 @@ services:
       - SEMAPHORE_DB_HOST=semaphore-db
       - SEMAPHORE_DB_PASS=${SEMAPHORE_DB_PASS}
       - SEMAPHORE_DB_PORT=3306
+      - SEMAPHORE_SLACK_ALERT=True
+      - SEMAPHORE_SLACK_URL=${SEMAPHORE_SLACK_URL}
     networks:
       - proxy
     volumes:
