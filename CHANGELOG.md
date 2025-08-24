@@ -1,3 +1,12 @@
+# [0.16.0](https://github.com/binary-braids/docker-homelab/compare/v0.15.1...v0.16.0) (2025-08-24)
+
+
+### Features
+
+* **semaphore:** add Slack alert configuration to environment variables ([1c740f3](https://github.com/binary-braids/docker-homelab/commit/1c740f38c05f3c4dcd412999e81a351c0d2f4db6))
+
+
+
 ## [0.15.1](https://github.com/binary-braids/docker-homelab/compare/v0.15.0...v0.15.1) (2025-08-07)
 
 
@@ -98,16 +107,6 @@
 ### Features
 
 * **docker-compose:** add stable-diffusion-forge-webui service configuration ([47f8d02](https://github.com/binary-braids/docker-homelab/commit/47f8d0265758f62db1c851800c560d69a8274a49))
-
-
-
-## [0.11.1](https://github.com/binary-braids/docker-homelab/compare/v0.11.0...v0.11.1) (2025-06-29)
-
-
-### Bug Fixes
-
-* **authentication:** remove port mapping and update server configuration in docker-compose ([89f09e1](https://github.com/binary-braids/docker-homelab/commit/89f09e10d78f4fa1f4040a4cc3de74da993facba))
-* **docker-compose:** add missing port mapping and update forwardAuth address for authelia service ([d4c9142](https://github.com/binary-braids/docker-homelab/commit/d4c91422cf5a93f0b922157c2c35bed90f92aef6))
 
 
 
