@@ -1,3 +1,21 @@
+# [0.16.0](https://github.com/binary-braids/docker-homelab/compare/v0.15.1...v0.16.0) (2025-08-24)
+
+
+### Features
+
+* **semaphore:** add Slack alert configuration to environment variables ([1c740f3](https://github.com/binary-braids/docker-homelab/commit/1c740f38c05f3c4dcd412999e81a351c0d2f4db6))
+
+
+
+## [0.15.1](https://github.com/binary-braids/docker-homelab/compare/v0.15.0...v0.15.1) (2025-08-07)
+
+
+### Bug Fixes
+
+* **alerts:** increase CPU, memory, and disk usage thresholds for Windows and Linux alerts ([d5abd2c](https://github.com/binary-braids/docker-homelab/commit/d5abd2cecf5bcdfb47ce1c4d9e5aa48f759d7d08))
+
+
+
 # [0.15.0](https://github.com/binary-braids/docker-homelab/compare/v0.14.2...v0.15.0) (2025-07-12)
 
 
@@ -89,44 +107,6 @@
 ### Features
 
 * **docker-compose:** add stable-diffusion-forge-webui service configuration ([47f8d02](https://github.com/binary-braids/docker-homelab/commit/47f8d0265758f62db1c851800c560d69a8274a49))
-
-
-
-## [0.11.1](https://github.com/binary-braids/docker-homelab/compare/v0.11.0...v0.11.1) (2025-06-29)
-
-
-### Bug Fixes
-
-* **authentication:** remove port mapping and update server configuration in docker-compose ([89f09e1](https://github.com/binary-braids/docker-homelab/commit/89f09e10d78f4fa1f4040a4cc3de74da993facba))
-* **docker-compose:** add missing port mapping and update forwardAuth address for authelia service ([d4c9142](https://github.com/binary-braids/docker-homelab/commit/d4c91422cf5a93f0b922157c2c35bed90f92aef6))
-
-
-
-# [0.11.0](https://github.com/binary-braids/docker-homelab/compare/v0.10.5...v0.11.0) (2025-06-29)
-
-
-### Bug Fixes
-
-* **authentication:** add quotes around AUTHELIA_ADMIN_PASSWORD in users_database.yml ([2663fcf](https://github.com/binary-braids/docker-homelab/commit/2663fcf3ba5eb593283ef0ed2eadbdbede0517c6))
-* **authentication:** change default access control policy from two_factor to one_factor ([e9c22eb](https://github.com/binary-braids/docker-homelab/commit/e9c22eb08d95d2dafc581d4dc1a7c7454feb7f43))
-* **authentication:** remove quotes around AUTHELIA_ADMIN_PASSWORD in users_database.yml ([d209f05](https://github.com/binary-braids/docker-homelab/commit/d209f0541440972377f2b26226f55376bc6d119a))
-* **docker-compose:** correct service reference for secure-invoke-ai in Traefik configuration ([715a9d9](https://github.com/binary-braids/docker-homelab/commit/715a9d94d5311c35156c2a0e95ab51a381a8bae0))
-* **docker-compose:** update invoke-ai image to specific version with CUDA support ([887320d](https://github.com/binary-braids/docker-homelab/commit/887320ded76c061cedd136f1215b7bf2d3cdcb3d))
-* **docker-compose:** update invoke-ai service to include GPU resource reservations ([e06537d](https://github.com/binary-braids/docker-homelab/commit/e06537dc7505f373c99706b43adb471e7307c8c0))
-
-
-### Features
-
-* **authentication:** add Authelia service with configuration and middleware support ([702aaea](https://github.com/binary-braids/docker-homelab/commit/702aaeab2e462d2815a43ffc30378fb99f0fbf41))
-* **authentication:** add JWT secret configuration and remove domain from session settings ([932a0b9](https://github.com/binary-braids/docker-homelab/commit/932a0b98974a0a23a08f504067d7e4506fa1b31c))
-* **authentication:** enhance authentication backend with Argon2 password hashing and search options ([f860dc1](https://github.com/binary-braids/docker-homelab/commit/f860dc11ad6fd5653fe5478fdbd83c6b7e334de5))
-* **authentication:** restructure JWT secret and session cookie configuration in Authelia ([5044d6d](https://github.com/binary-braids/docker-homelab/commit/5044d6d354fc1b1422b1b7fdcf91690f79c08b7f))
-* **authentication:** update Authelia configuration with server settings and session parameters ([3160bc1](https://github.com/binary-braids/docker-homelab/commit/3160bc16cd8e9b2c69367702cdd0a62a4b5f7fef))
-* **authentication:** update session configuration with domain and Authelia URL ([4401e13](https://github.com/binary-braids/docker-homelab/commit/4401e13ff92a319b1d27830e57098263745889f1))
-* **authentication:** update session configuration with domain and Authelia URL ([a62c159](https://github.com/binary-braids/docker-homelab/commit/a62c159df5ad39c19b129fcd824ee221aae36880))
-* **docker-compose:** add INVOKE_DEVICE environment variable for CUDA support ([74bede2](https://github.com/binary-braids/docker-homelab/commit/74bede294bec9f313356fb4735b6b1f441087a49))
-* **docker-compose:** add invoke-ai service with necessary configurations ([e3670f4](https://github.com/binary-braids/docker-homelab/commit/e3670f4e6af9aea7eff7e56629e85d175ea0fe72))
-* **docker-compose:** update invoke-ai service configuration and add secure-invoke-ai service ([fdca03d](https://github.com/binary-braids/docker-homelab/commit/fdca03d928a7f9135372f58f7825c310ba017060))
 
 
 

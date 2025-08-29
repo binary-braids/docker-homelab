@@ -221,56 +221,56 @@ configs:
       - name: windows
         rules:
         - alert: WindowsServerCpuUsage
-          expr: 100 - (avg by (instance) (rate(windows_cpu_time_total{mode="idle"}[2m])) * 100) > 90
+          expr: 100 - (avg by (instance) (rate(windows_cpu_time_total{mode="idle"}[2m])) * 100) > 95
           for: 0m
           labels:
             severity: warning
           annotations:
             summary: "Windows Server CPU Usage (instance {{ $$labels.instance }})"
-            description: "CPU Usage is more than 90%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "CPU Usage is more than 95%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
         - alert: WindowsServerMemoryUsage
-          expr: 100 - ((windows_os_physical_memory_free_bytes / windows_cs_physical_memory_bytes) * 100) > 90
+          expr: 100 - ((windows_os_physical_memory_free_bytes / windows_cs_physical_memory_bytes) * 100) > 95
           for: 2m
           labels:
             severity: warning
           annotations:
             summary: "Windows Server memory Usage (instance {{ $$labels.instance }})"
-            description: "Memory usage is more than 90%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "Memory usage is more than 95%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
         - alert: WindowsServerDiskSpaceUsage
-          expr: 100.0 - 100 * ((windows_logical_disk_free_bytes / 1024 / 1024 ) / (windows_logical_disk_size_bytes / 1024 / 1024)) > 90
+          expr: 100.0 - 100 * ((windows_logical_disk_free_bytes / 1024 / 1024 ) / (windows_logical_disk_size_bytes / 1024 / 1024)) > 95
           for: 2m
           labels:
             severity: critical
           annotations:
             summary: "Windows Server disk Space Usage (instance {{ $$labels.instance }})"
-            description: "Disk usage is more than 90%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "Disk usage is more than 95%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
 
       - name: linux
         rules:
         - alert: HostHighCpuLoad
-          expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.9) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.95) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
           for: 10m
           labels:
             severity: warning
           annotations:
             summary: Host high CPU load (instance {{ $$labels.instance }})
-            description: "CPU load is > 90%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "CPU load is > 95%\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
         - alert: HostOutOfMemory
-          expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 5) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
           for: 2m
           labels:
             severity: warning
           annotations:
             summary: Host out of memory (instance {{ $$labels.instance }})
-            description: "Node memory is filling up (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "Node memory is filling up (< 5% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
         - alert: HostOutOfDiskSpace
-          expr: ((node_filesystem_avail_bytes{fstype!="cifs"} * 100) / node_filesystem_size_bytes{fstype!="cifs"} < 10 and node_filesystem_readonly{fstype!="cifs"} == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
+          expr: ((node_filesystem_avail_bytes{fstype!="cifs"} * 100) / node_filesystem_size_bytes{fstype!="cifs"} < 5 and node_filesystem_readonly{fstype!="cifs"} == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
           for: 2m
           labels:
             severity: warning
           annotations:
             summary: Host out of disk space (instance {{ $$labels.instance }})
-            description: "Disk is almost full (< 10% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
+            description: "Disk is almost full (< 5% left)\n  VALUE = {{ $$value }}\n  LABELS = {{ $$labels }}"
 
       - name: kubernetes
         rules:
