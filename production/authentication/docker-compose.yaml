@@ -10,7 +10,7 @@ volumes:
 
 services:
   authelia:
-    image: "authelia/authelia@sha256:64b356c30fd817817a4baafb4dbc0f9f8702e46b49e1edb92ff42e19e487b517"
+    image: "authelia/authelia@sha256:08776367d54d4482c54ac8ca75b18f7db3287b751106e19736780c5f6811374d"
     container_name: authelia
     volumes:
       - authelia-data:/config
