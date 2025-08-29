@@ -1,3 +1,17 @@
+# [0.17.0](https://github.com/binary-braids/docker-homelab/compare/v0.16.0...v0.17.0) (2025-08-29)
+
+
+### Bug Fixes
+
+* **docker-compose:** update images to use latest tags without SHA256 references ([0db23ea](https://github.com/binary-braids/docker-homelab/commit/0db23ea37593bac56d30e06f8c8ced9dbd0034db))
+
+
+### Features
+
+* **docker-compose:** enhance services configuration with GPU support and Traefik labels ([a4a165d](https://github.com/binary-braids/docker-homelab/commit/a4a165d42a2fa11a24c44176a4246b0b4244a72e))
+
+
+
 # [0.16.0](https://github.com/binary-braids/docker-homelab/compare/v0.15.1...v0.16.0) (2025-08-24)
 
 
@@ -92,21 +106,6 @@
 ### Features
 
 * **authentication:** add LDAP configuration and update access control policy ([8568465](https://github.com/binary-braids/docker-homelab/commit/856846546e4039de0f9c9e1b1f44ebce1b408bce))
-
-
-
-# [0.12.0](https://github.com/binary-braids/docker-homelab/compare/v0.11.1...v0.12.0) (2025-07-02)
-
-
-### Bug Fixes
-
-* **authentication:** update session configuration for authelia service ([3d41a64](https://github.com/binary-braids/docker-homelab/commit/3d41a6428b8968d88f1d9b18ef3d20970fbfa279))
-* **docker-compose:** remove stable-diffusion-forge-webui service configuration ([eb777a4](https://github.com/binary-braids/docker-homelab/commit/eb777a4d950f2fd2e1a005be1ee40922d8b2ae1b))
-
-
-### Features
-
-* **docker-compose:** add stable-diffusion-forge-webui service configuration ([47f8d02](https://github.com/binary-braids/docker-homelab/commit/47f8d0265758f62db1c851800c560d69a8274a49))
 
 
 
