@@ -18,7 +18,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - ACCOUNT_TOKEN={FOLDING_AT_HOME_ACCOUNT_TOKEN}
+      - ACCOUNT_TOKEN=${FOLDING_AT_HOME_ACCOUNT_TOKEN}
       - MACHINE_NAME=folding-at-home
     volumes:
       - folding-at-home-data:/config
