@@ -29,8 +29,7 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
       - '--web.enable-remote-write-receiver'
-      - '--web.external-url=prometheus.binarybraids.com'
-      - '--web.route-prefix=/'
+      - '--web.external-url=https://prometheus.binarybraids.com'
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
@@ -58,6 +57,7 @@ services:
       - alertmanager-data:/alertmanager
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--web.external-url=https://prometheus.binarybraids.com'
     configs:
     - source: alertmanager.yml
       target: /etc/alertmanager/alertmanager.yml
