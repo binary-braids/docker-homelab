@@ -30,6 +30,7 @@ services:
       - '--storage.tsdb.retention.time=7d'
       - '--web.enable-remote-write-receiver'
       - '--web.external-url=prometheus.binarybraids.com'
+      - '--web.route-prefix=/'
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
