@@ -40,7 +40,7 @@ services:
       - "traefik.docker.network=proxy"
 
   searxng:
-    image: searxng/searxng:latest@sha256:7c0fd2e9d41ac5cb66d27e5703f5aaa3f7a2e5b09a4d0d5ce34151ab0e9a3054
+    image: searxng/searxng:latest@sha256:7914267d4a3b91132aa888b889dbe0657bdb9e1af5a13eb6fbab99a94990c235
     container_name: searxng
     restart: unless-stopped
     networks:
