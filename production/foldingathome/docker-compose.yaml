@@ -1,0 +1,28 @@
+name: folding-at-home
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  folding-at-home-data:
+    name: folding-at-home-data
+
+services:
+  foldingathome:
+    image: lscr.io/linuxserver/foldingathome:latest
+    container_name: folding-at-home
+    restart: unless-stopped
+    networks:
+      - proxy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - ACCOUNT_TOKEN=${FOLDING_AT_HOME_ACCOUNT_TOKEN}
+      - MACHINE_NAME=folding-at-home
+    volumes:
+      - folding-at-home-data:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - 7396:7396
