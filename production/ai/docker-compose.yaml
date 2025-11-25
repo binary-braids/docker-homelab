@@ -87,7 +87,7 @@ services:
       - "traefik.docker.network=proxy"  
   
   invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:sha-c6a9847-cuda
+    image: ghcr.io/invoke-ai/invokeai:6.9.0-cuda
     container_name: invoke-ai
     deploy:
       resources:
@@ -115,7 +115,7 @@ services:
       - "traefik.docker.network=proxy"
 
   secure-invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:sha-c6a9847-cuda
+    image: ghcr.io/invoke-ai/invokeai:6.9.0-cuda
     container_name: secure-invoke-ai
     deploy:
       resources:
