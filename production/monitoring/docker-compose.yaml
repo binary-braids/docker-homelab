@@ -15,7 +15,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:latest@sha256:3b1d5be5c3eef4f027665ddaa3b1a7de8a58d96a0a6de5dd45629afd267ecaf0
+    image: prom/prometheus:latest@sha256:49214755b6153f90a597adcbff0252cc61069f8ab69ce8411285cd4a560e8038
     container_name: prometheus
     restart: unless-stopped
     networks:
@@ -29,6 +29,7 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention.time=7d'
       - '--web.enable-remote-write-receiver'
+      - '--web.external-url=https://prometheus.binarybraids.com'
     configs:
     - source: prometheus.yml
       target: /etc/prometheus/prometheus.yml
@@ -56,6 +57,7 @@ services:
       - alertmanager-data:/alertmanager
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--web.external-url=https://prometheus.binarybraids.com'
     configs:
     - source: alertmanager.yml
       target: /etc/alertmanager/alertmanager.yml
