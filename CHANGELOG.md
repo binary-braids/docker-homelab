@@ -1,3 +1,12 @@
+## [0.18.2](https://github.com/binary-braids/docker-homelab/compare/v0.18.1...v0.18.2) (2025-11-25)
+
+
+### Bug Fixes
+
+* update invoke-ai images to specific version for consistency ([55b69ca](https://github.com/binary-braids/docker-homelab/commit/55b69cac0d049b5050f9e59c60ced3edf06c866b))
+
+
+
 ## [0.18.1](https://github.com/binary-braids/docker-homelab/compare/v0.18.0...v0.18.1) (2025-11-25)
 
 
@@ -86,15 +95,6 @@
 ### Features
 
 * **docker-compose:** add swarm-ui service configuration with Traefik labels ([53d4f3a](https://github.com/binary-braids/docker-homelab/commit/53d4f3ab08320ced4f37b320b365df76f762f7f0))
-
-
-
-## [0.13.2](https://github.com/binary-braids/docker-homelab/compare/v0.13.1...v0.13.2) (2025-07-02)
-
-
-### Bug Fixes
-
-* **docker-compose:** remove INVOKEAI_ENABLE_PARTIAL_LOADING environment variable and clean up secure-invoke-ai service configuration ([940bbd3](https://github.com/binary-braids/docker-homelab/commit/940bbd3f8c2b57fdaa5f74d74a9a90fe9da2ba8a))
 
 
 
