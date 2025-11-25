@@ -1,3 +1,17 @@
+# [0.18.0](https://github.com/binary-braids/docker-homelab/compare/v0.17.0...v0.18.0) (2025-11-25)
+
+
+### Bug Fixes
+
+* **docker:** correct syntax for ACCOUNT_TOKEN in docker-compose.yaml ([03d1509](https://github.com/binary-braids/docker-homelab/commit/03d1509faea2fb7a421d0f185d8cf28ae12abe73))
+
+
+### Features
+
+* **docker:** add initial docker-compose configuration for Folding@home ([88d2092](https://github.com/binary-braids/docker-homelab/commit/88d2092f206eb22ed926186896273515b625422d))
+
+
+
 # [0.17.0](https://github.com/binary-braids/docker-homelab/compare/v0.16.0...v0.17.0) (2025-08-29)
 
 
@@ -81,31 +95,6 @@
 ### Bug Fixes
 
 * **authentication:** remove users_database.yml configuration from docker-compose ([76b7985](https://github.com/binary-braids/docker-homelab/commit/76b7985d3388cefdfa79b40bde814930aff03e47))
-
-
-
-# [0.13.0](https://github.com/binary-braids/docker-homelab/compare/v0.12.0...v0.13.0) (2025-07-02)
-
-
-### Bug Fixes
-
-* **authentication:** correct access control subject key in LDAP configuration ([335d68f](https://github.com/binary-braids/docker-homelab/commit/335d68fcd900fe67d84e783d64cf6471934e35d8))
-* **authentication:** correct group name for access control rules ([2dc6da8](https://github.com/binary-braids/docker-homelab/commit/2dc6da8f16f16e2d3b34a777204d778d58db6896))
-* **authentication:** correct syntax for group search mode in LDAP configuration ([42940ee](https://github.com/binary-braids/docker-homelab/commit/42940eede12289d5885d903c1923ac4c1945a5cc))
-* **authentication:** remove file-based authentication configuration ([86fa9ff](https://github.com/binary-braids/docker-homelab/commit/86fa9ff6db55845f2d386219f66e3dce916aa883))
-* **authentication:** remove unnecessary logs_level configuration and clean up users_database.yml ([a7da4d2](https://github.com/binary-braids/docker-homelab/commit/a7da4d267b8f7db5fe887ae32249c6e4375afd59))
-* **authentication:** update access control rules to allow subdomains for binarybraids.com ([585fa22](https://github.com/binary-braids/docker-homelab/commit/585fa22a89621218222af9c9ffd552c63842ce7b))
-* **authentication:** update access control subject key for Authelia Users ([6f0b02c](https://github.com/binary-braids/docker-homelab/commit/6f0b02c1ba2e45bedb5d366d35e1a861b4a3d89f))
-* **authentication:** update access control subject key to include organizational unit for Authelia Users ([1a4ff24](https://github.com/binary-braids/docker-homelab/commit/1a4ff2427e2c675b76f08c85db60f23b6938e9cf))
-* **authentication:** update display name attribute key in LDAP configuration ([1e03ae2](https://github.com/binary-braids/docker-homelab/commit/1e03ae2f24fb8d07908ced937aec7b76f3bd6c2c))
-* **authentication:** update LDAP configuration to include TLS settings ([3e91d09](https://github.com/binary-braids/docker-homelab/commit/3e91d099af8347657d38e53c4f0e33bbb1faa292))
-* **authentication:** update LDAP configuration to simplify user and group filters ([edc3179](https://github.com/binary-braids/docker-homelab/commit/edc3179a13ad75b20c6d17ab41112f80d9440bd6))
-* **authentication:** update LDAP configuration to use structured attributes for user and group details ([bad2e15](https://github.com/binary-braids/docker-homelab/commit/bad2e151460a30592751e5077fa37c696622b9fb))
-
-
-### Features
-
-* **authentication:** add LDAP configuration and update access control policy ([8568465](https://github.com/binary-braids/docker-homelab/commit/856846546e4039de0f9c9e1b1f44ebce1b408bce))
 
 
 
