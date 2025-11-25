@@ -1,3 +1,12 @@
+## [0.18.1](https://github.com/binary-braids/docker-homelab/compare/v0.18.0...v0.18.1) (2025-11-25)
+
+
+### Bug Fixes
+
+* update service images to specific versions for stability ([af6d368](https://github.com/binary-braids/docker-homelab/commit/af6d3680a8d9ecdee9abc1568b6b2dd9d8ffca70))
+
+
+
 # [0.18.0](https://github.com/binary-braids/docker-homelab/compare/v0.17.0...v0.18.0) (2025-11-25)
 
 
@@ -86,15 +95,6 @@
 ### Bug Fixes
 
 * **docker-compose:** remove INVOKEAI_ENABLE_PARTIAL_LOADING environment variable and clean up secure-invoke-ai service configuration ([940bbd3](https://github.com/binary-braids/docker-homelab/commit/940bbd3f8c2b57fdaa5f74d74a9a90fe9da2ba8a))
-
-
-
-## [0.13.1](https://github.com/binary-braids/docker-homelab/compare/v0.13.0...v0.13.1) (2025-07-02)
-
-
-### Bug Fixes
-
-* **authentication:** remove users_database.yml configuration from docker-compose ([76b7985](https://github.com/binary-braids/docker-homelab/commit/76b7985d3388cefdfa79b40bde814930aff03e47))
 
 
 
