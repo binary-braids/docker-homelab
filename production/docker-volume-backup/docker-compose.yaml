@@ -13,6 +13,12 @@ volumes:
     external: true
   alertmanager-data:
     external: true
+  komodo-db-postgres-data:
+    external: true
+  komodo-db-ferretdb-data:
+    external: true
+  komodo-core-data:
+    external: true
 
 services:
   docker-volume-backup:
@@ -33,3 +39,6 @@ services:
       - prometheus-data:/backup/prometheus-data:ro
       - grafana-data:/backup/grafana-data:ro
       - alertmanager-data:/backup/alertmanager-data:ro
+      - komodo-db-postgres-data:/backup/komodo-db-postgres-data:ro
+      - komodo-db-ferretdb-data:/backup/komodo-db-ferretdb-data:ro
+      - komodo-core-data:/backup/komodo-core-data:ro
