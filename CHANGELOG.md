@@ -1,3 +1,12 @@
+## [0.18.3](https://github.com/binary-braids/docker-homelab/compare/v0.18.2...v0.18.3) (2025-11-26)
+
+
+### Bug Fixes
+
+* add external volumes for komodo database backups ([811a7ac](https://github.com/binary-braids/docker-homelab/commit/811a7ac435756e6f022add78dae4a0bfdd912220))
+
+
+
 ## [0.18.2](https://github.com/binary-braids/docker-homelab/compare/v0.18.1...v0.18.2) (2025-11-25)
 
 
@@ -86,15 +95,6 @@
 ### Bug Fixes
 
 * **docker-compose:** rename swarm-ui service to secure-swarmui and update Traefik labels ([ddb19c0](https://github.com/binary-braids/docker-homelab/commit/ddb19c08a5a0fe1c7ec56be17ebc69ff545d81c8))
-
-
-
-# [0.14.0](https://github.com/binary-braids/docker-homelab/compare/v0.13.2...v0.14.0) (2025-07-02)
-
-
-### Features
-
-* **docker-compose:** add swarm-ui service configuration with Traefik labels ([53d4f3a](https://github.com/binary-braids/docker-homelab/commit/53d4f3ab08320ced4f37b320b365df76f762f7f0))
 
 
 
