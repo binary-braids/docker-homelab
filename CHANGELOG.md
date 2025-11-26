@@ -1,3 +1,12 @@
+## [0.19.2](https://github.com/binary-braids/docker-homelab/compare/v0.19.1...v0.19.2) (2025-11-26)
+
+
+### Bug Fixes
+
+* add missing configs section for garage-webui service in docker-compose ([af7a47d](https://github.com/binary-braids/docker-homelab/commit/af7a47d9cd7f07878133eb3b25d31343f1568ce5))
+
+
+
 ## [0.19.1](https://github.com/binary-braids/docker-homelab/compare/v0.19.0...v0.19.1) (2025-11-26)
 
 
@@ -86,15 +95,6 @@
 ### Bug Fixes
 
 * **alerts:** increase CPU, memory, and disk usage thresholds for Windows and Linux alerts ([d5abd2c](https://github.com/binary-braids/docker-homelab/commit/d5abd2cecf5bcdfb47ce1c4d9e5aa48f759d7d08))
-
-
-
-# [0.15.0](https://github.com/binary-braids/docker-homelab/compare/v0.14.2...v0.15.0) (2025-07-12)
-
-
-### Features
-
-* **docker-compose:** add new Prometheus scrape target for vm-br-prod-fra1-001 ([43d4e3b](https://github.com/binary-braids/docker-homelab/commit/43d4e3b88c77a301219c72dcf9115ebd7510c94f))
 
 
 
