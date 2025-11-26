@@ -1,0 +1,81 @@
+name: garage
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  garage-meta-data:
+    name: garage-meta-data
+  garage-data:
+    name: garage-data
+
+services:
+
+  garage:
+    image: dxflrs/garage:v2.1.0
+    container_name: garage
+    restart: always
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - garage-meta-data:/var/lib/garage/meta
+      - garage-data:/var/lib/garage/data
+    configs:
+    - source: garage.toml
+      target: /etc/garage.toml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.garage.rule=Host(`garage.binarybraids.com`)"
+      - "traefik.http.routers.garage.entrypoints=https"
+      - "traefik.http.routers.garage.tls=true"
+      - "traefik.http.routers.garage.service=garage-api"
+      - "traefik.http.services.garage.loadbalancer.server.port=3900"
+      - "traefik.http.routers.garage-api.rule=Host(`garage-api.binarybraids.com`)"
+      - "traefik.http.routers.garage-api.entrypoints=https"
+      - "traefik.http.routers.garage-api.tls=true"
+      - "traefik.http.routers.garage-api.service=garage-api"
+      - "traefik.http.services.garage-api.loadbalancer.server.port=3903"
+      - "traefik.docker.network=proxy"
+
+  garage-webui:
+    image: khairul169/garage-webui:latest
+    container_name: garage-webui
+    restart: always
+    networks:
+      - proxy
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    configs:
+    - source: garage.toml
+      target: /etc/garage.toml
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.garage-webui.rule=Host(`garage-webui.binarybraids.com`)"
+      - "traefik.http.routers.garage-webui.entrypoints=https"
+      - "traefik.http.routers.garage-webui.tls=true"
+      - "traefik.http.routers.garage-webui.service=garage-webui"
+      - "traefik.http.services.garage-webui.loadbalancer.server.port=3909"
+      - "traefik.docker.network=proxy"
+
+configs:
+  garage.toml:
+    content: |
+      metadata_dir = "/var/lib/garage/meta"
+      data_dir = "/var/lib/garage/data"
+      db_engine = "lmdb"
+
+      replication_factor = 1
+
+      rpc_bind_addr = "0.0.0.0:3901"
+      rpc_public_addr = "127.0.0.1:3901"
+      rpc_secret = "${GARAGE_RPC_SECRET}"
+
+      [s3_api]
+      s3_region = "binarybraids"
+      api_bind_addr = "0.0.0.0:3900"
+
+      [admin]
+      api_bind_addr = "0.0.0.0:3903"
+      admin_token = "${GARAGE_ADMIN_TOKEN}"
