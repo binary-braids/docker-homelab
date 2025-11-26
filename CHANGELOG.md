@@ -1,3 +1,12 @@
+# [0.19.0](https://github.com/binary-braids/docker-homelab/compare/v0.18.3...v0.19.0) (2025-11-26)
+
+
+### Features
+
+* add docker-compose configuration for garage and garage-webui services ([033a91e](https://github.com/binary-braids/docker-homelab/commit/033a91e34f3984a3b294d766dc04fcfe813c4b93))
+
+
+
 ## [0.18.3](https://github.com/binary-braids/docker-homelab/compare/v0.18.2...v0.18.3) (2025-11-26)
 
 
@@ -86,15 +95,6 @@
 ### Bug Fixes
 
 * **docker-compose:** update image name for secure-swarmui service ([337eb58](https://github.com/binary-braids/docker-homelab/commit/337eb58732a2d984db1754edc3720b88e060c3af))
-
-
-
-## [0.14.1](https://github.com/binary-braids/docker-homelab/compare/v0.14.0...v0.14.1) (2025-07-02)
-
-
-### Bug Fixes
-
-* **docker-compose:** rename swarm-ui service to secure-swarmui and update Traefik labels ([ddb19c0](https://github.com/binary-braids/docker-homelab/commit/ddb19c08a5a0fe1c7ec56be17ebc69ff545d81c8))
 
 
 
