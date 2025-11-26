@@ -47,9 +47,10 @@ services:
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
-    configs:
-    - source: garage.toml
-      target: /etc/garage.toml
+    environment:
+      API_BASE_URL: "https://garage-api.binarybraids.com"
+      S3_ENDPOINT_URL: "https://garage.binarybraids.com"
+      API_ADMIN_KEY: "${GARAGE_ADMIN_TOKEN}"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.garage-webui.rule=Host(`garage-webui.binarybraids.com`)"
