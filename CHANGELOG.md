@@ -1,3 +1,12 @@
+## [0.19.1](https://github.com/binary-braids/docker-homelab/compare/v0.19.0...v0.19.1) (2025-11-26)
+
+
+### Bug Fixes
+
+* update garage-webui service to include environment variables for API configuration ([54108aa](https://github.com/binary-braids/docker-homelab/commit/54108aa2f3760be6b87d9fc32070414679f8c3dc))
+
+
+
 # [0.19.0](https://github.com/binary-braids/docker-homelab/compare/v0.18.3...v0.19.0) (2025-11-26)
 
 
@@ -86,15 +95,6 @@
 ### Features
 
 * **docker-compose:** add new Prometheus scrape target for vm-br-prod-fra1-001 ([43d4e3b](https://github.com/binary-braids/docker-homelab/commit/43d4e3b88c77a301219c72dcf9115ebd7510c94f))
-
-
-
-## [0.14.2](https://github.com/binary-braids/docker-homelab/compare/v0.14.1...v0.14.2) (2025-07-02)
-
-
-### Bug Fixes
-
-* **docker-compose:** update image name for secure-swarmui service ([337eb58](https://github.com/binary-braids/docker-homelab/commit/337eb58732a2d984db1754edc3720b88e060c3af))
 
 
 
