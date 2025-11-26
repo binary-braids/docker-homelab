@@ -47,6 +47,9 @@ services:
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
+    configs:
+    - source: garage.toml
+      target: /etc/garage.toml
     environment:
       API_BASE_URL: "https://garage-api.binarybraids.com"
       S3_ENDPOINT_URL: "https://garage.binarybraids.com"
