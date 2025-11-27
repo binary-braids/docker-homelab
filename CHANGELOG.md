@@ -1,3 +1,12 @@
+## [0.19.3](https://github.com/binary-braids/docker-homelab/compare/v0.19.2...v0.19.3) (2025-11-27)
+
+
+### Bug Fixes
+
+* correct garage service label in docker-compose configuration ([cef2857](https://github.com/binary-braids/docker-homelab/commit/cef285798768e373628c9dd2f19c0ee6d94c39f1))
+
+
+
 ## [0.19.2](https://github.com/binary-braids/docker-homelab/compare/v0.19.1...v0.19.2) (2025-11-26)
 
 
@@ -86,15 +95,6 @@
 ### Features
 
 * **semaphore:** add Slack alert configuration to environment variables ([1c740f3](https://github.com/binary-braids/docker-homelab/commit/1c740f38c05f3c4dcd412999e81a351c0d2f4db6))
-
-
-
-## [0.15.1](https://github.com/binary-braids/docker-homelab/compare/v0.15.0...v0.15.1) (2025-08-07)
-
-
-### Bug Fixes
-
-* **alerts:** increase CPU, memory, and disk usage thresholds for Windows and Linux alerts ([d5abd2c](https://github.com/binary-braids/docker-homelab/commit/d5abd2cecf5bcdfb47ce1c4d9e5aa48f759d7d08))
 
 
 
