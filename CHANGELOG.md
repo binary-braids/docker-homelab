@@ -1,3 +1,12 @@
+## [0.19.4](https://github.com/binary-braids/docker-homelab/compare/v0.19.3...v0.19.4) (2025-11-27)
+
+
+### Bug Fixes
+
+* update AWS endpoint and access keys in docker-compose configuration ([4f60388](https://github.com/binary-braids/docker-homelab/commit/4f603884a7223e2343432a67b8486cde06570288))
+
+
+
 ## [0.19.3](https://github.com/binary-braids/docker-homelab/compare/v0.19.2...v0.19.3) (2025-11-27)
 
 
@@ -86,15 +95,6 @@
 ### Features
 
 * **docker-compose:** enhance services configuration with GPU support and Traefik labels ([a4a165d](https://github.com/binary-braids/docker-homelab/commit/a4a165d42a2fa11a24c44176a4246b0b4244a72e))
-
-
-
-# [0.16.0](https://github.com/binary-braids/docker-homelab/compare/v0.15.1...v0.16.0) (2025-08-24)
-
-
-### Features
-
-* **semaphore:** add Slack alert configuration to environment variables ([1c740f3](https://github.com/binary-braids/docker-homelab/commit/1c740f38c05f3c4dcd412999e81a351c0d2f4db6))
 
 
 
