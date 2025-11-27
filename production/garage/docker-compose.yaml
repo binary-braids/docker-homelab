@@ -30,7 +30,7 @@ services:
       - "traefik.http.routers.garage.rule=Host(`garage.binarybraids.com`)"
       - "traefik.http.routers.garage.entrypoints=https"
       - "traefik.http.routers.garage.tls=true"
-      - "traefik.http.routers.garage.service=garage-api"
+      - "traefik.http.routers.garage.service=garage"
       - "traefik.http.services.garage.loadbalancer.server.port=3900"
       - "traefik.http.routers.garage-api.rule=Host(`garage-api.binarybraids.com`)"
       - "traefik.http.routers.garage-api.entrypoints=https"
