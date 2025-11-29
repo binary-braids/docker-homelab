@@ -50,6 +50,9 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /mnt/data/docker/searxng:/etc/searxng
       - /mnt/data/docker/searxng:/var/cache/searxng
+    configs:
+    - source: settings.yml
+      target: /etc/searxng/settings.yml
     environment:
       - SEARXNG_BASE_URL=https://searxng.binarybraids.com
     labels:
@@ -140,3 +143,14 @@ services:
       - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
+
+configs:
+  settings.yml:
+    content: |
+      server:
+        use_default_settings: true
+
+      search:
+        formats:
+          - html
+          - json
