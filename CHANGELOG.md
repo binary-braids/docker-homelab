@@ -1,3 +1,12 @@
+## [0.20.1](https://github.com/binary-braids/docker-homelab/compare/v0.20.0...v0.20.1) (2025-11-29)
+
+
+### Bug Fixes
+
+* simplify server settings in searxng configuration ([4d25777](https://github.com/binary-braids/docker-homelab/commit/4d25777f95733f5c7fe985ef7ee71f2a85de46f2))
+
+
+
 # [0.20.0](https://github.com/binary-braids/docker-homelab/compare/v0.19.4...v0.20.0) (2025-11-29)
 
 
@@ -76,20 +85,6 @@
 ### Bug Fixes
 
 * update service images to specific versions for stability ([af6d368](https://github.com/binary-braids/docker-homelab/commit/af6d3680a8d9ecdee9abc1568b6b2dd9d8ffca70))
-
-
-
-# [0.18.0](https://github.com/binary-braids/docker-homelab/compare/v0.17.0...v0.18.0) (2025-11-25)
-
-
-### Bug Fixes
-
-* **docker:** correct syntax for ACCOUNT_TOKEN in docker-compose.yaml ([03d1509](https://github.com/binary-braids/docker-homelab/commit/03d1509faea2fb7a421d0f185d8cf28ae12abe73))
-
-
-### Features
-
-* **docker:** add initial docker-compose configuration for Folding@home ([88d2092](https://github.com/binary-braids/docker-homelab/commit/88d2092f206eb22ed926186896273515b625422d))
 
 
 
