@@ -160,5 +160,8 @@ configs:
           - json
   invokeai.yaml:
     content: |
+      # Internal metadata - do not edit:
+      schema_version: 4.0.2
+      
       enable_partial_loading: true
       pytorch_cuda_alloc_conf: "backend:cudaMallocAsync"
