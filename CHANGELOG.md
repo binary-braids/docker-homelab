@@ -1,3 +1,12 @@
+# [0.23.0](https://github.com/binary-braids/docker-homelab/compare/v0.22.0...v0.23.0) (2025-11-29)
+
+
+### Features
+
+* add schema version metadata to invokeai configuration ([6ae162e](https://github.com/binary-braids/docker-homelab/commit/6ae162e39b97d45667712cbcc0b00628d67bda74))
+
+
+
 # [0.22.0](https://github.com/binary-braids/docker-homelab/compare/v0.21.0...v0.22.0) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add docker-compose configuration for garage and garage-webui services ([033a91e](https://github.com/binary-braids/docker-homelab/commit/033a91e34f3984a3b294d766dc04fcfe813c4b93))
-
-
-
-## [0.18.3](https://github.com/binary-braids/docker-homelab/compare/v0.18.2...v0.18.3) (2025-11-26)
-
-
-### Bug Fixes
-
-* add external volumes for komodo database backups ([811a7ac](https://github.com/binary-braids/docker-homelab/commit/811a7ac435756e6f022add78dae4a0bfdd912220))
 
 
 
