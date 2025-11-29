@@ -1,3 +1,12 @@
+# [0.20.0](https://github.com/binary-braids/docker-homelab/compare/v0.19.4...v0.20.0) (2025-11-29)
+
+
+### Features
+
+* add configuration for searxng service and update settings ([23496a3](https://github.com/binary-braids/docker-homelab/commit/23496a32e89671323b7fd7aa20b9bb30f864a7a8))
+
+
+
 ## [0.19.4](https://github.com/binary-braids/docker-homelab/compare/v0.19.3...v0.19.4) (2025-11-27)
 
 
@@ -81,20 +90,6 @@
 ### Features
 
 * **docker:** add initial docker-compose configuration for Folding@home ([88d2092](https://github.com/binary-braids/docker-homelab/commit/88d2092f206eb22ed926186896273515b625422d))
-
-
-
-# [0.17.0](https://github.com/binary-braids/docker-homelab/compare/v0.16.0...v0.17.0) (2025-08-29)
-
-
-### Bug Fixes
-
-* **docker-compose:** update images to use latest tags without SHA256 references ([0db23ea](https://github.com/binary-braids/docker-homelab/commit/0db23ea37593bac56d30e06f8c8ced9dbd0034db))
-
-
-### Features
-
-* **docker-compose:** enhance services configuration with GPU support and Traefik labels ([a4a165d](https://github.com/binary-braids/docker-homelab/commit/a4a165d42a2fa11a24c44176a4246b0b4244a72e))
 
 
 
