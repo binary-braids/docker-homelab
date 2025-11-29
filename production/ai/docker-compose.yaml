@@ -7,8 +7,6 @@ networks:
 volumes:
   invoke-ai-data:
     name: invoke-ai-data
-  secure-invoke-ai-data:
-    name: secure-invoke-ai-data
 
 services:
   ollama:
@@ -106,9 +104,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - invoke-ai-data:/invokeai
-    configs:
-    - source: invokeai.yaml
-      target: /invokeai/invokeai.yaml
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.invokeai.rule=Host(`invokeai.binarybraids.com`)"
@@ -117,36 +112,6 @@ services:
       - "traefik.http.routers.invokeai.service=invokeai"
       - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
       - "traefik.docker.network=proxy"
-
-  secure-invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:6.9.0-cuda
-    container_name: secure-invoke-ai
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
-    restart: unless-stopped
-    networks:
-      - proxy
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-      - secure-invoke-ai-data:/invokeai
-    configs:
-    - source: invokeai.yaml
-      target: /invokeai/invokeai.yaml
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.secure-invokeai.rule=Host(`secure-invokeai.binarybraids.com`)"
-      - "traefik.http.routers.secure-invokeai.entrypoints=https"
-      - "traefik.http.routers.secure-invokeai.tls=true"
-      - "traefik.http.routers.secure-invokeai.service=secure-invokeai"
-      - "traefik.http.services.secure-invokeai.loadbalancer.server.port=9090"
-      - "traefik.docker.network=proxy"
-      - "traefik.http.routers.secure-invokeai.middlewares=authelia@docker"
 
 configs:
   settings.yml:
@@ -158,9 +123,3 @@ configs:
         formats:
           - html
           - json
-  invokeai.yaml:
-    content: |
-      # Internal metadata - do not edit:
-      schema_version: 4.0.2
-      
-      enable_partial_loading: true
