@@ -1,3 +1,12 @@
+# [0.22.0](https://github.com/binary-braids/docker-homelab/compare/v0.21.0...v0.22.0) (2025-11-29)
+
+
+### Features
+
+* add invokeai configuration for partial loading and CUDA settings ([d0e1734](https://github.com/binary-braids/docker-homelab/commit/d0e17342527980cd74c52e1781c748f03934fdd7))
+
+
+
 # [0.21.0](https://github.com/binary-braids/docker-homelab/compare/v0.20.1...v0.21.0) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add external volumes for komodo database backups ([811a7ac](https://github.com/binary-braids/docker-homelab/commit/811a7ac435756e6f022add78dae4a0bfdd912220))
-
-
-
-## [0.18.2](https://github.com/binary-braids/docker-homelab/compare/v0.18.1...v0.18.2) (2025-11-25)
-
-
-### Bug Fixes
-
-* update invoke-ai images to specific version for consistency ([55b69ca](https://github.com/binary-braids/docker-homelab/commit/55b69cac0d049b5050f9e59c60ced3edf06c866b))
 
 
 
