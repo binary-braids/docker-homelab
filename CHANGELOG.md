@@ -1,3 +1,12 @@
+# [0.21.0](https://github.com/binary-braids/docker-homelab/compare/v0.20.1...v0.21.0) (2025-11-29)
+
+
+### Features
+
+* add server secret key configuration to searxng settings ([ac94ce9](https://github.com/binary-braids/docker-homelab/commit/ac94ce990583323a4caecbff64f4643bb1aacde4))
+
+
+
 ## [0.20.1](https://github.com/binary-braids/docker-homelab/compare/v0.20.0...v0.20.1) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update invoke-ai images to specific version for consistency ([55b69ca](https://github.com/binary-braids/docker-homelab/commit/55b69cac0d049b5050f9e59c60ced3edf06c866b))
-
-
-
-## [0.18.1](https://github.com/binary-braids/docker-homelab/compare/v0.18.0...v0.18.1) (2025-11-25)
-
-
-### Bug Fixes
-
-* update service images to specific versions for stability ([af6d368](https://github.com/binary-braids/docker-homelab/commit/af6d3680a8d9ecdee9abc1568b6b2dd9d8ffca70))
 
 
 
