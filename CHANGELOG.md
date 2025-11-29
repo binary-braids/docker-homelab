@@ -1,3 +1,12 @@
+# [0.24.0](https://github.com/binary-braids/docker-homelab/compare/v0.23.0...v0.24.0) (2025-11-29)
+
+
+### Features
+
+* update invokeai configuration to enable partial loading and remove CUDA allocation setting ([0dfa5aa](https://github.com/binary-braids/docker-homelab/commit/0dfa5aaed404b3523af94b9c07175a1d9268086b))
+
+
+
 # [0.23.0](https://github.com/binary-braids/docker-homelab/compare/v0.22.0...v0.23.0) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update garage-webui service to include environment variables for API configuration ([54108aa](https://github.com/binary-braids/docker-homelab/commit/54108aa2f3760be6b87d9fc32070414679f8c3dc))
-
-
-
-# [0.19.0](https://github.com/binary-braids/docker-homelab/compare/v0.18.3...v0.19.0) (2025-11-26)
-
-
-### Features
-
-* add docker-compose configuration for garage and garage-webui services ([033a91e](https://github.com/binary-braids/docker-homelab/commit/033a91e34f3984a3b294d766dc04fcfe813c4b93))
 
 
 
