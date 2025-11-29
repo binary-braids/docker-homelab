@@ -27,7 +27,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /mnt/data/docker/ollama:/root/.ollama
     environment:
-      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_KEEP_ALIVE=1h
+      - OLLAMA_MAX_LOADED_MODELS=1
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.ollama.rule=Host(`ollama.binarybraids.com`)"
