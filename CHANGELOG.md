@@ -1,3 +1,12 @@
+# [0.25.0](https://github.com/binary-braids/docker-homelab/compare/v0.24.0...v0.25.0) (2025-11-29)
+
+
+### Features
+
+* update ollama service configuration to adjust keep-alive duration and max loaded models ([5081c08](https://github.com/binary-braids/docker-homelab/commit/5081c08101da832cbf67a33a9d2de3d073ad38f8))
+
+
+
 # [0.24.0](https://github.com/binary-braids/docker-homelab/compare/v0.23.0...v0.24.0) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add missing configs section for garage-webui service in docker-compose ([af7a47d](https://github.com/binary-braids/docker-homelab/commit/af7a47d9cd7f07878133eb3b25d31343f1568ce5))
-
-
-
-## [0.19.1](https://github.com/binary-braids/docker-homelab/compare/v0.19.0...v0.19.1) (2025-11-26)
-
-
-### Bug Fixes
-
-* update garage-webui service to include environment variables for API configuration ([54108aa](https://github.com/binary-braids/docker-homelab/commit/54108aa2f3760be6b87d9fc32070414679f8c3dc))
 
 
 
