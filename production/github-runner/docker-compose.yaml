@@ -1,0 +1,29 @@
+name: github-runner
+
+networks:
+  github-runner:
+
+volumes:
+  github-runner-data:
+    name: github-runner-data
+
+services:
+  github-runner:
+    image: myoung34/github-runner:2.330.0-ubuntu-noble
+    container_name: github-runner
+    restart: unless-stopped
+    networks:
+      - github-runner
+    environment:
+      - RUNNER_NAME=github-runner
+      - APP_ID=${APP_ID}
+      - APP_PRIVATE_KEY=${APP_PRIVATE_KEY}
+      - APP_LOGIN=${APP_LOGIN}
+      - RUNNER_SCOPE=org
+      - ORG_NAME=binary-braids
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - github-runner-data:/runner/data
+      - /tmp/runner:/tmp/runner
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
