@@ -1,3 +1,12 @@
+# [0.26.0](https://github.com/binary-braids/docker-homelab/compare/v0.25.0...v0.26.0) (2025-11-30)
+
+
+### Features
+
+* add initial docker-compose configuration for github-runner service ([0e2e822](https://github.com/binary-braids/docker-homelab/commit/0e2e82205a9e29d76afb3460f4fe73a3e94d88b9))
+
+
+
 # [0.25.0](https://github.com/binary-braids/docker-homelab/compare/v0.24.0...v0.25.0) (2025-11-29)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct garage service label in docker-compose configuration ([cef2857](https://github.com/binary-braids/docker-homelab/commit/cef285798768e373628c9dd2f19c0ee6d94c39f1))
-
-
-
-## [0.19.2](https://github.com/binary-braids/docker-homelab/compare/v0.19.1...v0.19.2) (2025-11-26)
-
-
-### Bug Fixes
-
-* add missing configs section for garage-webui service in docker-compose ([af7a47d](https://github.com/binary-braids/docker-homelab/commit/af7a47d9cd7f07878133eb3b25d31343f1568ce5))
 
 
 
