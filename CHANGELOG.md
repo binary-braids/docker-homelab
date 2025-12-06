@@ -1,3 +1,12 @@
+# [0.27.0](https://github.com/binary-braids/docker-homelab/compare/v0.26.0...v0.27.0) (2025-12-06)
+
+
+### Features
+
+* add docker-compose configuration for steam-headless service ([4555395](https://github.com/binary-braids/docker-homelab/commit/45553958ce616c1ecc82d7d7b71a2ddb16213fdc))
+
+
+
 # [0.26.0](https://github.com/binary-braids/docker-homelab/compare/v0.25.0...v0.26.0) (2025-11-30)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update AWS endpoint and access keys in docker-compose configuration ([4f60388](https://github.com/binary-braids/docker-homelab/commit/4f603884a7223e2343432a67b8486cde06570288))
-
-
-
-## [0.19.3](https://github.com/binary-braids/docker-homelab/compare/v0.19.2...v0.19.3) (2025-11-27)
-
-
-### Bug Fixes
-
-* correct garage service label in docker-compose configuration ([cef2857](https://github.com/binary-braids/docker-homelab/commit/cef285798768e373628c9dd2f19c0ee6d94c39f1))
 
 
 
