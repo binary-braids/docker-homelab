@@ -1,3 +1,12 @@
+# [0.29.0](https://github.com/binary-braids/docker-homelab/compare/v0.28.0...v0.29.0) (2025-12-06)
+
+
+### Features
+
+* update docker-compose for steam-headless service to include GPU device reservations and fix extra_hosts entry ([54aa2c1](https://github.com/binary-braids/docker-homelab/commit/54aa2c1ad62f7201133b7070d08eefbb915dd0ec))
+
+
+
 # [0.28.0](https://github.com/binary-braids/docker-homelab/compare/v0.27.1...v0.28.0) (2025-12-06)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add server secret key configuration to searxng settings ([ac94ce9](https://github.com/binary-braids/docker-homelab/commit/ac94ce990583323a4caecbff64f4643bb1aacde4))
-
-
-
-## [0.20.1](https://github.com/binary-braids/docker-homelab/compare/v0.20.0...v0.20.1) (2025-11-29)
-
-
-### Bug Fixes
-
-* simplify server settings in searxng configuration ([4d25777](https://github.com/binary-braids/docker-homelab/commit/4d25777f95733f5c7fe985ef7ee71f2a85de46f2))
 
 
 
