@@ -78,11 +78,11 @@ services:
     # VOLUMES:
     volumes:
       # The location of your home directory.
-      - steam-headless-data/home/:/home/default/:rw
+      - steam-headless-data:/home/default/:rw
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
 
       # The Xorg socket.
-      - steam-headless-data/.X11-unix/:/tmp/.X11-unix/:rw
+      - steam-headless-data:/tmp/.X11-unix/:rw
 
       # Pulse audio socket.
-      - steam-headless-data/pulse/:/tmp/pulse/:rw
+      - steam-headless-data:/tmp/pulse/:rw
