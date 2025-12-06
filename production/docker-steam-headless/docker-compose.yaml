@@ -21,6 +21,13 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -38,7 +45,7 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=true
+      - WEB_UI_MODE=vnc
       - ENABLE_VNC_AUDIO=true
       - PORT_NOVNC_WEB=8083
       # Steam
