@@ -1,3 +1,12 @@
+## [0.27.1](https://github.com/binary-braids/docker-homelab/compare/v0.27.0...v0.27.1) (2025-12-06)
+
+
+### Bug Fixes
+
+* correct volume mappings in docker-compose for steam-headless service ([e5c8875](https://github.com/binary-braids/docker-homelab/commit/e5c8875a9306e298516334e770a281d041671a81))
+
+
+
 # [0.27.0](https://github.com/binary-braids/docker-homelab/compare/v0.26.0...v0.27.0) (2025-12-06)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add configuration for searxng service and update settings ([23496a3](https://github.com/binary-braids/docker-homelab/commit/23496a32e89671323b7fd7aa20b9bb30f864a7a8))
-
-
-
-## [0.19.4](https://github.com/binary-braids/docker-homelab/compare/v0.19.3...v0.19.4) (2025-11-27)
-
-
-### Bug Fixes
-
-* update AWS endpoint and access keys in docker-compose configuration ([4f60388](https://github.com/binary-braids/docker-homelab/commit/4f603884a7223e2343432a67b8486cde06570288))
 
 
 
