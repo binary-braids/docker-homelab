@@ -1,3 +1,12 @@
+# [0.28.0](https://github.com/binary-braids/docker-homelab/compare/v0.27.1...v0.28.0) (2025-12-06)
+
+
+### Features
+
+* update docker-compose for steam-headless service to include GPU resource reservations and change WEB_UI_MODE to vnc ([0f3afc0](https://github.com/binary-braids/docker-homelab/commit/0f3afc0c3b726a6884bfe911e6e2579bc0a33d3b))
+
+
+
 ## [0.27.1](https://github.com/binary-braids/docker-homelab/compare/v0.27.0...v0.27.1) (2025-12-06)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * simplify server settings in searxng configuration ([4d25777](https://github.com/binary-braids/docker-homelab/commit/4d25777f95733f5c7fe985ef7ee71f2a85de46f2))
-
-
-
-# [0.20.0](https://github.com/binary-braids/docker-homelab/compare/v0.19.4...v0.20.0) (2025-11-29)
-
-
-### Features
-
-* add configuration for searxng service and update settings ([23496a3](https://github.com/binary-braids/docker-homelab/commit/23496a32e89671323b7fd7aa20b9bb30f864a7a8))
 
 
 
