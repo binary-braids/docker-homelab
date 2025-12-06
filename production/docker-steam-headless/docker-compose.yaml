@@ -1,0 +1,88 @@
+
+volumes:
+  steam-headless-data:
+    name: steam-headless-data
+
+services:
+  steam-headless:
+    image: josh5/steam-headless:latest
+    restart: unless-stopped
+    shm_size: 2G
+    ipc: host
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 524288
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_NICE
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    runtime: nvidia
+    network_mode: host
+    hostname: steam-headless
+    extra_hosts:
+      - "${NAME}:127.0.0.1"
+    environment:
+      # System
+      - TZ=Africa/Johannesburg
+      - USER_LOCALES=en_US.UTF-8 UTF-8
+      - DISPLAY=:55
+      # User
+      - PUID=1000
+      - PGID=1000
+      - UMASK=000
+      - USER_PASSWORD=${USER_PASSWORD}
+      # Mode
+      - MODE=primary
+      # Web UI
+      - WEB_UI_MODE=true
+      - ENABLE_VNC_AUDIO=true
+      - PORT_NOVNC_WEB=8083
+      # Steam
+      - ENABLE_STEAM=true
+      - STEAM_ARGS=-silent
+      # Sunshine
+      - ENABLE_SUNSHINE=true
+      - SUNSHINE_USER=${SUNSHINE_USER}
+      - SUNSHINE_PASS=${SUNSHINE_PASS}
+      # Xorg
+      - ENABLE_EVDEV_INPUTS=true
+      - FORCE_X11_DUMMY_CONFIG=true
+      # Nvidia specific config
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+
+    # DEVICES:
+    devices:
+      # Use the host fuse device [REQUIRED].
+      - /dev/fuse
+      # Add the host uinput device [REQUIRED].
+      - /dev/uinput
+      # Add NVIDIA HW accelerated devices [OPTIONAL].
+      # NOTE: If you use the nvidia container toolkit, this is not needed.
+      #       Installing the nvidia container toolkit is the recommended method for running this container
+      #- /dev/nvidia0
+      #- /dev/nvidiactl
+      #- /dev/nvidia-modeset
+      #- /dev/nvidia-uvm
+      #- /dev/nvidia-uvm-tools
+      #- /dev/nvidia-caps/nvidia-cap1
+      #- /dev/nvidia-caps/nvidia-cap2
+    # Ensure container access to devices 13:*
+    device_cgroup_rules:
+      - 'c 13:* rmw'
+
+    # VOLUMES:
+    volumes:
+      # The location of your home directory.
+      - steam-headless-data/home/:/home/default/:rw
+      - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
+
+      # The Xorg socket.
+      - steam-headless-data/.X11-unix/:/tmp/.X11-unix/:rw
+
+      # Pulse audio socket.
+      - steam-headless-data/pulse/:/tmp/pulse/:rw
