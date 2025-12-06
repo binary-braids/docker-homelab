@@ -1,3 +1,4 @@
+name: steam-headless
 
 volumes:
   steam-headless-data:
@@ -21,17 +22,10 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     network_mode: host
     hostname: steam-headless
     extra_hosts:
-      - "${NAME}:127.0.0.1"
+      - "steam-headless:127.0.0.1"
     environment:
       # System
       - TZ=Africa/Johannesburg
@@ -71,13 +65,13 @@ services:
       # Add NVIDIA HW accelerated devices [OPTIONAL].
       # NOTE: If you use the nvidia container toolkit, this is not needed.
       #       Installing the nvidia container toolkit is the recommended method for running this container
-      #- /dev/nvidia0
-      #- /dev/nvidiactl
-      #- /dev/nvidia-modeset
-      #- /dev/nvidia-uvm
-      #- /dev/nvidia-uvm-tools
-      #- /dev/nvidia-caps/nvidia-cap1
-      #- /dev/nvidia-caps/nvidia-cap2
+      - /dev/nvidia0
+      - /dev/nvidiactl
+      - /dev/nvidia-modeset
+      - /dev/nvidia-uvm
+      - /dev/nvidia-uvm-tools
+      - /dev/nvidia-caps/nvidia-cap1
+      - /dev/nvidia-caps/nvidia-cap2
     # Ensure container access to devices 13:*
     device_cgroup_rules:
       - 'c 13:* rmw'
