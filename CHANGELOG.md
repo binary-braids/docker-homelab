@@ -1,3 +1,12 @@
+# [0.31.0](https://github.com/binary-braids/docker-homelab/compare/v0.30.0...v0.31.0) (2025-12-07)
+
+
+### Features
+
+* update docker-compose for steam-headless service to set network mode and expose port 8080 ([bca48ab](https://github.com/binary-braids/docker-homelab/commit/bca48ab4c5c9ef0a5ec77d723f968877b130be14))
+
+
+
 # [0.30.0](https://github.com/binary-braids/docker-homelab/compare/v0.29.0...v0.30.0) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add schema version metadata to invokeai configuration ([6ae162e](https://github.com/binary-braids/docker-homelab/commit/6ae162e39b97d45667712cbcc0b00628d67bda74))
-
-
-
-# [0.22.0](https://github.com/binary-braids/docker-homelab/compare/v0.21.0...v0.22.0) (2025-11-29)
-
-
-### Features
-
-* add invokeai configuration for partial loading and CUDA settings ([d0e1734](https://github.com/binary-braids/docker-homelab/commit/d0e17342527980cd74c52e1781c748f03934fdd7))
 
 
 
