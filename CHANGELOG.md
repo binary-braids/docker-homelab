@@ -1,3 +1,12 @@
+## [0.33.2](https://github.com/binary-braids/docker-homelab/compare/v0.33.1...v0.33.2) (2025-12-07)
+
+
+### Bug Fixes
+
+* remove host network mode ([0c3b9fd](https://github.com/binary-braids/docker-homelab/commit/0c3b9fdac5977baeed1497c84bb4a365b8316aa0))
+
+
+
 ## [0.33.1](https://github.com/binary-braids/docker-homelab/compare/v0.33.0...v0.33.1) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add docker-compose configuration for steam-headless service ([4555395](https://github.com/binary-braids/docker-homelab/commit/45553958ce616c1ecc82d7d7b71a2ddb16213fdc))
-
-
-
-# [0.26.0](https://github.com/binary-braids/docker-homelab/compare/v0.25.0...v0.26.0) (2025-11-30)
-
-
-### Features
-
-* add initial docker-compose configuration for github-runner service ([0e2e822](https://github.com/binary-braids/docker-homelab/commit/0e2e82205a9e29d76afb3460f4fe73a3e94d88b9))
 
 
 
