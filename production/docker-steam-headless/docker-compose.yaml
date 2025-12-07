@@ -12,6 +12,8 @@ services:
     runtime: nvidia
     tty: true
     network_mode: host
+    ports:
+    - 8080:8080
     deploy:
       resources:
         reservations:
