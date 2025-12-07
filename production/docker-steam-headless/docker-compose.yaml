@@ -6,33 +6,30 @@ volumes:
 
 services:
   steam-headless:
-    image: lscr.io/linuxserver/steamos:latest
+    image: ghcr.io/games-on-whales/wolf:stable
     restart: unless-stopped
-    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     hostname: steam-headless
-    ports:
-      - 3000:3000
-      - 3001:3001
-    cap_add:
-      - NET_ADMIN
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined #optional
+    device_cgroup_rules:
+      - 'c 13:* rmw'
     devices:
-      - /dev/dri:/dev/dri
-    shm_size: "1gb"
+      - /dev/dri
+      - /dev/uinput
+      - /dev/uhid
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Africa/Johannesburg
-      - DRINODE=/dev/dri/renderD128
-      - STARTUP=KDE #optional
-      - RESOLUTION=1920x1080 #optional
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
 
     # VOLUMES:
     volumes:
-      - steam-headless-data:/home/default/:rw
-      - steam-headless-data:/config
-      - steam-headless-data:/dev/input #optional
-      - steam-headless-data:/run/udev/data #optional
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
+      - steam-headless-data:/etc/wolf
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /dev/:/dev/:rw
+      - /run/udev:/run/udev:rw
