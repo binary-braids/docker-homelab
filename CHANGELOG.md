@@ -1,3 +1,12 @@
+## [0.33.1](https://github.com/binary-braids/docker-homelab/compare/v0.33.0...v0.33.1) (2025-12-07)
+
+
+### Bug Fixes
+
+* add network mode host for steam headless ([93312d3](https://github.com/binary-braids/docker-homelab/commit/93312d38a609ec644f62cd8cde07f362db726592))
+
+
+
 # [0.33.0](https://github.com/binary-braids/docker-homelab/compare/v0.32.0...v0.33.0) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add initial docker-compose configuration for github-runner service ([0e2e822](https://github.com/binary-braids/docker-homelab/commit/0e2e82205a9e29d76afb3460f4fe73a3e94d88b9))
-
-
-
-# [0.25.0](https://github.com/binary-braids/docker-homelab/compare/v0.24.0...v0.25.0) (2025-11-29)
-
-
-### Features
-
-* update ollama service configuration to adjust keep-alive duration and max loaded models ([5081c08](https://github.com/binary-braids/docker-homelab/commit/5081c08101da832cbf67a33a9d2de3d073ad38f8))
 
 
 
