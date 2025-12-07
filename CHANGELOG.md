@@ -1,3 +1,12 @@
+# [0.30.0](https://github.com/binary-braids/docker-homelab/compare/v0.29.0...v0.30.0) (2025-12-07)
+
+
+### Features
+
+* update docker-compose for steam-headless service to use nvidia-glx-desktop image and streamline environment variables ([50b2de5](https://github.com/binary-braids/docker-homelab/commit/50b2de5cb50516e003df0fb3c9e22a8db902231f))
+
+
+
 # [0.29.0](https://github.com/binary-braids/docker-homelab/compare/v0.28.0...v0.29.0) (2025-12-06)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add invokeai configuration for partial loading and CUDA settings ([d0e1734](https://github.com/binary-braids/docker-homelab/commit/d0e17342527980cd74c52e1781c748f03934fdd7))
-
-
-
-# [0.21.0](https://github.com/binary-braids/docker-homelab/compare/v0.20.1...v0.21.0) (2025-11-29)
-
-
-### Features
-
-* add server secret key configuration to searxng settings ([ac94ce9](https://github.com/binary-braids/docker-homelab/commit/ac94ce990583323a4caecbff64f4643bb1aacde4))
 
 
 
