@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: ghcr.io/selkies-project/nvidia-glx-desktop:latest
+    image: ghcr.io/selkies-project/nvidia-egl-desktop:latest
     restart: unless-stopped
     stdin_open: true
     runtime: nvidia
