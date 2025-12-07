@@ -1,3 +1,12 @@
+# [0.32.0](https://github.com/binary-braids/docker-homelab/compare/v0.31.0...v0.32.0) (2025-12-07)
+
+
+### Features
+
+* update docker-compose for steam-headless service to switch to linuxserver/steamos image and simplify environment variables ([5c5ceed](https://github.com/binary-braids/docker-homelab/commit/5c5ceedc6d4c5efa594d47873861a8750f96a763))
+
+
+
 # [0.31.0](https://github.com/binary-braids/docker-homelab/compare/v0.30.0...v0.31.0) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update invokeai configuration to enable partial loading and remove CUDA allocation setting ([0dfa5aa](https://github.com/binary-braids/docker-homelab/commit/0dfa5aaed404b3523af94b9c07175a1d9268086b))
-
-
-
-# [0.23.0](https://github.com/binary-braids/docker-homelab/compare/v0.22.0...v0.23.0) (2025-11-29)
-
-
-### Features
-
-* add schema version metadata to invokeai configuration ([6ae162e](https://github.com/binary-braids/docker-homelab/commit/6ae162e39b97d45667712cbcc0b00628d67bda74))
 
 
 
