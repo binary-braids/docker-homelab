@@ -1,3 +1,12 @@
+## [0.33.3](https://github.com/binary-braids/docker-homelab/compare/v0.33.2...v0.33.3) (2025-12-07)
+
+
+### Bug Fixes
+
+* change to els image ([50833a5](https://github.com/binary-braids/docker-homelab/commit/50833a58c6e600f795dcf8960439f448dc620552))
+
+
+
 ## [0.33.2](https://github.com/binary-braids/docker-homelab/compare/v0.33.1...v0.33.2) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct volume mappings in docker-compose for steam-headless service ([e5c8875](https://github.com/binary-braids/docker-homelab/commit/e5c8875a9306e298516334e770a281d041671a81))
-
-
-
-# [0.27.0](https://github.com/binary-braids/docker-homelab/compare/v0.26.0...v0.27.0) (2025-12-06)
-
-
-### Features
-
-* add docker-compose configuration for steam-headless service ([4555395](https://github.com/binary-braids/docker-homelab/commit/45553958ce616c1ecc82d7d7b71a2ddb16213fdc))
 
 
 
