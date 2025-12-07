@@ -1,3 +1,12 @@
+# [0.33.0](https://github.com/binary-braids/docker-homelab/compare/v0.32.0...v0.33.0) (2025-12-07)
+
+
+### Features
+
+* update docker-compose for steam-headless service to use wolf image and refine device configurations ([4452150](https://github.com/binary-braids/docker-homelab/commit/445215070486f6c1feb88ab59f45b16fbc158838))
+
+
+
 # [0.32.0](https://github.com/binary-braids/docker-homelab/compare/v0.31.0...v0.32.0) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update ollama service configuration to adjust keep-alive duration and max loaded models ([5081c08](https://github.com/binary-braids/docker-homelab/commit/5081c08101da832cbf67a33a9d2de3d073ad38f8))
-
-
-
-# [0.24.0](https://github.com/binary-braids/docker-homelab/compare/v0.23.0...v0.24.0) (2025-11-29)
-
-
-### Features
-
-* update invokeai configuration to enable partial loading and remove CUDA allocation setting ([0dfa5aa](https://github.com/binary-braids/docker-homelab/commit/0dfa5aaed404b3523af94b9c07175a1d9268086b))
 
 
 
