@@ -1,3 +1,12 @@
+## [0.33.4](https://github.com/binary-braids/docker-homelab/compare/v0.33.3...v0.33.4) (2025-12-07)
+
+
+### Bug Fixes
+
+* add gpu capabilities to folding@home ([c19fb25](https://github.com/binary-braids/docker-homelab/commit/c19fb25e2fc5b07a6648ebd6bfb0840241c6465a))
+
+
+
 ## [0.33.3](https://github.com/binary-braids/docker-homelab/compare/v0.33.2...v0.33.3) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to include GPU resource reservations and change WEB_UI_MODE to vnc ([0f3afc0](https://github.com/binary-braids/docker-homelab/commit/0f3afc0c3b726a6884bfe911e6e2579bc0a33d3b))
-
-
-
-## [0.27.1](https://github.com/binary-braids/docker-homelab/compare/v0.27.0...v0.27.1) (2025-12-06)
-
-
-### Bug Fixes
-
-* correct volume mappings in docker-compose for steam-headless service ([e5c8875](https://github.com/binary-braids/docker-homelab/commit/e5c8875a9306e298516334e770a281d041671a81))
 
 
 
