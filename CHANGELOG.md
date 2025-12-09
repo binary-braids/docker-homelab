@@ -1,3 +1,12 @@
+## [0.33.7](https://github.com/binary-braids/docker-homelab/compare/v0.33.6...v0.33.7) (2025-12-09)
+
+
+### Bug Fixes
+
+* add runner group env variable ([64d4986](https://github.com/binary-braids/docker-homelab/commit/64d498684506a42410d4ead4febd29e56ffa8127))
+
+
+
 ## [0.33.6](https://github.com/binary-braids/docker-homelab/compare/v0.33.5...v0.33.6) (2025-12-09)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to set network mode and expose port 8080 ([bca48ab](https://github.com/binary-braids/docker-homelab/commit/bca48ab4c5c9ef0a5ec77d723f968877b130be14))
-
-
-
-# [0.30.0](https://github.com/binary-braids/docker-homelab/compare/v0.29.0...v0.30.0) (2025-12-07)
-
-
-### Features
-
-* update docker-compose for steam-headless service to use nvidia-glx-desktop image and streamline environment variables ([50b2de5](https://github.com/binary-braids/docker-homelab/commit/50b2de5cb50516e003df0fb3c9e22a8db902231f))
 
 
 
