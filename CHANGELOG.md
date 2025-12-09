@@ -1,3 +1,12 @@
+## [0.33.8](https://github.com/binary-braids/docker-homelab/compare/v0.33.7...v0.33.8) (2025-12-09)
+
+
+### Bug Fixes
+
+* correct github-runner network name ([8d13315](https://github.com/binary-braids/docker-homelab/commit/8d13315efa1dd80420ce5023901637e29954524d))
+
+
+
 ## [0.33.7](https://github.com/binary-braids/docker-homelab/compare/v0.33.6...v0.33.7) (2025-12-09)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to switch to linuxserver/steamos image and simplify environment variables ([5c5ceed](https://github.com/binary-braids/docker-homelab/commit/5c5ceedc6d4c5efa594d47873861a8750f96a763))
-
-
-
-# [0.31.0](https://github.com/binary-braids/docker-homelab/compare/v0.30.0...v0.31.0) (2025-12-07)
-
-
-### Features
-
-* update docker-compose for steam-headless service to set network mode and expose port 8080 ([bca48ab](https://github.com/binary-braids/docker-homelab/commit/bca48ab4c5c9ef0a5ec77d723f968877b130be14))
 
 
 
