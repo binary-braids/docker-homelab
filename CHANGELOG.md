@@ -1,3 +1,12 @@
+## [0.33.9](https://github.com/binary-braids/docker-homelab/compare/v0.33.8...v0.33.9) (2025-12-09)
+
+
+### Bug Fixes
+
+* remove GPU capabilities from folding@home due to Docker host move ([2c68f17](https://github.com/binary-braids/docker-homelab/commit/2c68f17332b03637b5a88e66f3e801ae4f939155))
+
+
+
 ## [0.33.8](https://github.com/binary-braids/docker-homelab/compare/v0.33.7...v0.33.8) (2025-12-09)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to use wolf image and refine device configurations ([4452150](https://github.com/binary-braids/docker-homelab/commit/445215070486f6c1feb88ab59f45b16fbc158838))
-
-
-
-# [0.32.0](https://github.com/binary-braids/docker-homelab/compare/v0.31.0...v0.32.0) (2025-12-07)
-
-
-### Features
-
-* update docker-compose for steam-headless service to switch to linuxserver/steamos image and simplify environment variables ([5c5ceed](https://github.com/binary-braids/docker-homelab/commit/5c5ceedc6d4c5efa594d47873861a8750f96a763))
 
 
 
