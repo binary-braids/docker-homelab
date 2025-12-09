@@ -16,6 +16,7 @@ services:
       - github-runner
     environment:
       - RUNNER_NAME_PREFIX=bb-gh-runner
+      - RUNNER_GROUP=Self-Hosted
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
