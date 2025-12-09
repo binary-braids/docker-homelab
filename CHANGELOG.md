@@ -1,3 +1,12 @@
+## [0.33.5](https://github.com/binary-braids/docker-homelab/compare/v0.33.4...v0.33.5) (2025-12-09)
+
+
+### Bug Fixes
+
+* change github-runner container to use ACCESS_TOKEN env variable ([d83e382](https://github.com/binary-braids/docker-homelab/commit/d83e382743bc0e308e0092022bde9193ae4fefa0))
+
+
+
 ## [0.33.4](https://github.com/binary-braids/docker-homelab/compare/v0.33.3...v0.33.4) (2025-12-07)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to include GPU device reservations and fix extra_hosts entry ([54aa2c1](https://github.com/binary-braids/docker-homelab/commit/54aa2c1ad62f7201133b7070d08eefbb915dd0ec))
-
-
-
-# [0.28.0](https://github.com/binary-braids/docker-homelab/compare/v0.27.1...v0.28.0) (2025-12-06)
-
-
-### Features
-
-* update docker-compose for steam-headless service to include GPU resource reservations and change WEB_UI_MODE to vnc ([0f3afc0](https://github.com/binary-braids/docker-homelab/commit/0f3afc0c3b726a6884bfe911e6e2579bc0a33d3b))
 
 
 
