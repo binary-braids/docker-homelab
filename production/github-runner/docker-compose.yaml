@@ -2,6 +2,7 @@ name: github-runner
 
 networks:
   github-runner:
+    name: github-runner
 
 volumes:
   github-runner-data:
