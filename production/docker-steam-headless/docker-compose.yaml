@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: josh5/steam-headless:latest
+    image: josh5/steam-headless:latest@sha256:e1cfd819f331ebb24ac4948c2a633f469efa36ceb3909d7b06b87c7a9bfcf3c8
     restart: unless-stopped
     shm_size: 2G
     ipc: host

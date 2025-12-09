@@ -10,7 +10,7 @@ volumes:
 
 services:
   foldingathome:
-    image: lscr.io/linuxserver/foldingathome:8.4.9
+    image: lscr.io/linuxserver/foldingathome:8.4.9@sha256:562e542f00c784ab3d9c3b0f57171d27fba12af27a751a93027d00127b4b1f4f
     container_name: folding-at-home
     restart: unless-stopped
     deploy:
