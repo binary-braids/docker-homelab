@@ -1,3 +1,12 @@
+## [0.33.6](https://github.com/binary-braids/docker-homelab/compare/v0.33.5...v0.33.6) (2025-12-09)
+
+
+### Bug Fixes
+
+* change static runner name to randomised ([a6670cf](https://github.com/binary-braids/docker-homelab/commit/a6670cf1eb34ec6cf90b9919a94fd8ed622f7cc2))
+
+
+
 ## [0.33.5](https://github.com/binary-braids/docker-homelab/compare/v0.33.4...v0.33.5) (2025-12-09)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update docker-compose for steam-headless service to use nvidia-glx-desktop image and streamline environment variables ([50b2de5](https://github.com/binary-braids/docker-homelab/commit/50b2de5cb50516e003df0fb3c9e22a8db902231f))
-
-
-
-# [0.29.0](https://github.com/binary-braids/docker-homelab/compare/v0.28.0...v0.29.0) (2025-12-06)
-
-
-### Features
-
-* update docker-compose for steam-headless service to include GPU device reservations and fix extra_hosts entry ([54aa2c1](https://github.com/binary-braids/docker-homelab/commit/54aa2c1ad62f7201133b7070d08eefbb915dd0ec))
 
 
 
