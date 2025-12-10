@@ -1,3 +1,12 @@
+## [0.33.11](https://github.com/binary-braids/docker-homelab/compare/v0.33.10...v0.33.11) (2025-12-10)
+
+
+### Bug Fixes
+
+* configure semaphore network ([1b6ad77](https://github.com/binary-braids/docker-homelab/commit/1b6ad7707463b0e3b869708b1a57f04317f343af))
+
+
+
 ## [0.33.10](https://github.com/binary-braids/docker-homelab/compare/v0.33.9...v0.33.10) (2025-12-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove host network mode ([0c3b9fd](https://github.com/binary-braids/docker-homelab/commit/0c3b9fdac5977baeed1497c84bb4a365b8316aa0))
-
-
-
-## [0.33.1](https://github.com/binary-braids/docker-homelab/compare/v0.33.0...v0.33.1) (2025-12-07)
-
-
-### Bug Fixes
-
-* add network mode host for steam headless ([93312d3](https://github.com/binary-braids/docker-homelab/commit/93312d38a609ec644f62cd8cde07f362db726592))
 
 
 
