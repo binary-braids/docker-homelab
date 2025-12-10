@@ -3,26 +3,12 @@ name: semaphore
 networks:
   proxy:
     external: true
-  semaphore:
-    name: semaphore
+
+volumes:
+  semaphore-data:
+    name: semaphore-data
 
 services:
-
-  semaphore-db:
-    image: mysql:9.5.0@sha256:fe036967257bf11aab7184e371920c5b629f0dd36cbefdf4ccd2ae18cc900dbd
-    container_name: semaphore-db
-    restart: unless-stopped
-    environment:
-      - MYSQL_DATABASE=semaphore
-      - MYSQL_USER=semaphore
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    networks:
-      - semaphore
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-      - /docker/semaphore-db/var/lib/mysql:/var/lib/mysql
 
   semaphore:
     image: ghcr.io/binary-braids/ansible-semaphore:0.3.2
@@ -33,18 +19,13 @@ services:
       - SEMAPHORE_ADMIN=semaphore-admin
       - SEMAPHORE_ADMIN_NAME="Semaphore Admin"
       - SEMAPHORE_ADMIN_PASSWORD=${SEMAPHORE_ADMIN_PASSWORD}
-      - SEMAPHORE_DB=semaphore
-      - SEMAPHORE_DB_DIALECT=mysql
-      - SEMAPHORE_DB_HOST=semaphore-db
-      - SEMAPHORE_DB_USER=semaphore
-      - SEMAPHORE_DB_PASS=${SEMAPHORE_DB_PASS}
-      - SEMAPHORE_DB_PORT=3306
-      - SEMAPHORE_SLACK_ALERT=True
-      - SEMAPHORE_SLACK_URL=${SEMAPHORE_SLACK_URL}
+      - SEMAPHORE_DB_DIALECT=sqlite
     networks:
-      - semaphore
       - proxy
     volumes:
+      - semaphore-data:/var/lib/semaphore
+      - semaphore-data:/etc/semaphore
+      - semaphore-data:/tmp/semaphore
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     labels:
