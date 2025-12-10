@@ -10,7 +10,7 @@ volumes:
 
 services:
   ollama:
-    image: ollama/ollama:0.13.0@sha256:d4188c1dfa870386a14e299976aed96daeb83876b69e1a852c9d09ea76463b9f
+    image: ollama/ollama:0.13.2@sha256:ceaad0844eda02ddc59d9b40551de7264a564ba7a16a90e241d1c582f0df992d
     deploy:
       resources:
         reservations:
