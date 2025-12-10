@@ -1,3 +1,12 @@
+## [0.33.10](https://github.com/binary-braids/docker-homelab/compare/v0.33.9...v0.33.10) (2025-12-10)
+
+
+### Bug Fixes
+
+* update semaphore container version ([d961401](https://github.com/binary-braids/docker-homelab/commit/d9614017d8966434c9d3731c79a7c2ae414ac023))
+
+
+
 ## [0.33.9](https://github.com/binary-braids/docker-homelab/compare/v0.33.8...v0.33.9) (2025-12-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add network mode host for steam headless ([93312d3](https://github.com/binary-braids/docker-homelab/commit/93312d38a609ec644f62cd8cde07f362db726592))
-
-
-
-# [0.33.0](https://github.com/binary-braids/docker-homelab/compare/v0.32.0...v0.33.0) (2025-12-07)
-
-
-### Features
-
-* update docker-compose for steam-headless service to use wolf image and refine device configurations ([4452150](https://github.com/binary-braids/docker-homelab/commit/445215070486f6c1feb88ab59f45b16fbc158838))
 
 
 
