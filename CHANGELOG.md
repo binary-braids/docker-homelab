@@ -1,3 +1,12 @@
+## [0.33.13](https://github.com/binary-braids/docker-homelab/compare/v0.33.12...v0.33.13) (2025-12-10)
+
+
+### Bug Fixes
+
+* change semaphore to sqlite db ([d3560cb](https://github.com/binary-braids/docker-homelab/commit/d3560cbde49a43cc22f9001972919d5d82c30dd2))
+
+
+
 ## [0.33.12](https://github.com/binary-braids/docker-homelab/compare/v0.33.11...v0.33.12) (2025-12-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add gpu capabilities to folding@home ([c19fb25](https://github.com/binary-braids/docker-homelab/commit/c19fb25e2fc5b07a6648ebd6bfb0840241c6465a))
-
-
-
-## [0.33.3](https://github.com/binary-braids/docker-homelab/compare/v0.33.2...v0.33.3) (2025-12-07)
-
-
-### Bug Fixes
-
-* change to els image ([50833a5](https://github.com/binary-braids/docker-homelab/commit/50833a58c6e600f795dcf8960439f448dc620552))
 
 
 
