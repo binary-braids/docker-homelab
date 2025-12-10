@@ -1,3 +1,12 @@
+## [0.33.14](https://github.com/binary-braids/docker-homelab/compare/v0.33.13...v0.33.14) (2025-12-10)
+
+
+### Bug Fixes
+
+* correct traefik label for semaphore https ([bf74d7a](https://github.com/binary-braids/docker-homelab/commit/bf74d7a6188336c9a0fe5ffc8360e6b33e7010bf))
+
+
+
 ## [0.33.13](https://github.com/binary-braids/docker-homelab/compare/v0.33.12...v0.33.13) (2025-12-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change github-runner container to use ACCESS_TOKEN env variable ([d83e382](https://github.com/binary-braids/docker-homelab/commit/d83e382743bc0e308e0092022bde9193ae4fefa0))
-
-
-
-## [0.33.4](https://github.com/binary-braids/docker-homelab/compare/v0.33.3...v0.33.4) (2025-12-07)
-
-
-### Bug Fixes
-
-* add gpu capabilities to folding@home ([c19fb25](https://github.com/binary-braids/docker-homelab/commit/c19fb25e2fc5b07a6648ebd6bfb0840241c6465a))
 
 
 
