@@ -1,3 +1,12 @@
+## [0.33.12](https://github.com/binary-braids/docker-homelab/compare/v0.33.11...v0.33.12) (2025-12-10)
+
+
+### Bug Fixes
+
+* add db user for semaphore ([a0d2d2a](https://github.com/binary-braids/docker-homelab/commit/a0d2d2ac25d58ce919d92505c774aea3e3f325f2))
+
+
+
 ## [0.33.11](https://github.com/binary-braids/docker-homelab/compare/v0.33.10...v0.33.11) (2025-12-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change to els image ([50833a5](https://github.com/binary-braids/docker-homelab/commit/50833a58c6e600f795dcf8960439f448dc620552))
-
-
-
-## [0.33.2](https://github.com/binary-braids/docker-homelab/compare/v0.33.1...v0.33.2) (2025-12-07)
-
-
-### Bug Fixes
-
-* remove host network mode ([0c3b9fd](https://github.com/binary-braids/docker-homelab/commit/0c3b9fdac5977baeed1497c84bb4a365b8316aa0))
 
 
 
