@@ -1,5 +1,11 @@
 name: semaphore
 
+networks:
+  proxy:
+    external: true
+  semaphore:
+    name: semaphore
+
 services:
 
   semaphore-db:
@@ -12,7 +18,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     networks:
-      - proxy
+      - semaphore
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
@@ -35,6 +41,7 @@ services:
       - SEMAPHORE_SLACK_ALERT=True
       - SEMAPHORE_SLACK_URL=${SEMAPHORE_SLACK_URL}
     networks:
+      - semaphore
       - proxy
     volumes:
       - /etc/localtime:/etc/localtime:ro
@@ -54,6 +61,3 @@ configs:
       netaddr
       pywinrm
 
-networks:
-  proxy:
-    external: true
