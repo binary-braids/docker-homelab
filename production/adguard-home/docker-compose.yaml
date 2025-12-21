@@ -1,0 +1,37 @@
+name: adguard-home
+
+networks:
+  adguard-home:
+    name: adguard-home
+  proxy:
+    external: true
+
+volumes:
+  adguard-home-data:
+    name: adguard-home-data
+
+services:
+  adguardhome:
+    image: adguard/adguardhome:v0.107.71
+    restart: unless-stopped
+    networks:
+      - adguard-home
+      - proxy
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 784:784/udp
+      - 853:853/tcp
+      - 3000:3000/tcp
+    volumes:
+      - adguard-home-data:/opt/adguardhome/conf
+      - adguard-home-data:/opt/adguardhome/work
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.adguard.rule=Host(`${ADGUARD_HOSTNAME}`)"
+      - "traefik.http.routers.adguard.entrypoints=https"
+      - "traefik.http.routers.adguard.tls=true"
+      - "traefik.http.routers.adguard.service=adguard"
+      - "traefik.http.services.adguard.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
+
