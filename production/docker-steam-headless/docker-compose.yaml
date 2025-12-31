@@ -39,9 +39,10 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=vnc
-      - ENABLE_VNC_AUDIO=true
+      - WEB_UI_MODE=neko
+      - ENABLE_VNC_AUDIO=false
       - PORT_NOVNC_WEB=8083
+      - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
@@ -50,7 +51,7 @@ services:
       - SUNSHINE_USER=${SUNSHINE_USER}
       - SUNSHINE_PASS=${SUNSHINE_PASS}
       # Xorg
-      - ENABLE_EVDEV_INPUTS=true
+      - ENABLE_EVDEV_INPUTS=false
       - FORCE_X11_DUMMY_CONFIG=true
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
@@ -62,16 +63,6 @@ services:
       - /dev/fuse
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
-      # Add NVIDIA HW accelerated devices [OPTIONAL].
-      # NOTE: If you use the nvidia container toolkit, this is not needed.
-      #       Installing the nvidia container toolkit is the recommended method for running this container
-      - /dev/nvidia0
-      - /dev/nvidiactl
-      - /dev/nvidia-modeset
-      - /dev/nvidia-uvm
-      - /dev/nvidia-uvm-tools
-      - /dev/nvidia-caps/nvidia-cap1
-      - /dev/nvidia-caps/nvidia-cap2
     # Ensure container access to devices 13:*
     device_cgroup_rules:
       - 'c 13:* rmw'
