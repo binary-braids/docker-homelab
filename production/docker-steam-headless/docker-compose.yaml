@@ -41,7 +41,7 @@ services:
       # Web UI
       - WEB_UI_MODE=neko
       - ENABLE_VNC_AUDIO=false
-      - PORT_NOVNC_WEB=8083
+      - PORT_NOVNC_WEB=40083
       - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
