@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: josh5/steam-headless:latest@sha256:e1cfd819f331ebb24ac4948c2a633f469efa36ceb3909d7b06b87c7a9bfcf3c8
+    image: josh5/steam-headless:latest
     restart: unless-stopped
     shm_size: 2G
     ipc: host
@@ -39,9 +39,9 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=neko
-      - ENABLE_VNC_AUDIO=false
-      - PORT_NOVNC_WEB=40083
+      - WEB_UI_MODE=vnc
+      - ENABLE_VNC_AUDIO=true
+      - PORT_NOVNC_WEB=8083
       - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
