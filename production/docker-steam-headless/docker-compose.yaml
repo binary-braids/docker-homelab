@@ -4,6 +4,18 @@ volumes:
   steam-headless-data:
     name: steam-headless-data
 
+networks:
+  macvlan_network:
+    driver: macvlan
+    driver_opts:
+      parent: ens18
+    ipam:
+      driver: default
+      config:
+       - subnet: 10.4.20.0/24
+         ip_range: 10.4.20.60/29
+         gateway: 10.4.20.11
+
 services:
   steam-headless:
     image: josh5/steam-headless:latest
@@ -22,7 +34,9 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     runtime: nvidia
-    network_mode: host
+    networks:
+      macvlan_network:
+        ipv4_address: 10.4.20.65
     hostname: steam-headless
     extra_hosts:
       - "steam-headless:127.0.0.1"
