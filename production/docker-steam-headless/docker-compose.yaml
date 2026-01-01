@@ -61,9 +61,11 @@ services:
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
       # Sunshine
-      - ENABLE_SUNSHINE=false
+      - ENABLE_SUNSHINE=true
+      - SUNSHINE_USER=${SUNSHINE_USER}
+      - SUNSHINE_PASS=${SUNSHINE_PASS}
       # Xorg
-      - ENABLE_EVDEV_INPUTS=false
+      - ENABLE_EVDEV_INPUTS=true
       - FORCE_X11_DUMMY_CONFIG=true
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
