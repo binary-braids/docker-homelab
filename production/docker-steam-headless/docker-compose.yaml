@@ -61,9 +61,7 @@ services:
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
       # Sunshine
-      - ENABLE_SUNSHINE=true
-      - SUNSHINE_USER=${SUNSHINE_USER}
-      - SUNSHINE_PASS=${SUNSHINE_PASS}
+      - ENABLE_SUNSHINE=false
       # Xorg
       - ENABLE_EVDEV_INPUTS=false
       - FORCE_X11_DUMMY_CONFIG=true
