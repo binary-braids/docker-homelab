@@ -49,7 +49,6 @@ services:
       - WEB_UI_MODE=vnc
       - ENABLE_VNC_AUDIO=true
       - PORT_NOVNC_WEB=8083
-      - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
