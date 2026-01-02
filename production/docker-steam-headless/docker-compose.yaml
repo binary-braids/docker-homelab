@@ -11,8 +11,7 @@ services:
     stdin_open: true
     runtime: nvidia
     tty: true
-    ports:
-    - 8080:8080
+    network_mode: host
     deploy:
       resources:
         reservations:
