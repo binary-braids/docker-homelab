@@ -8,6 +8,7 @@ services:
   steam-headless:
     image: ghcr.io/games-on-whales/wolf:stable
     restart: unless-stopped
+    runtime: nvidia
     deploy:
       resources:
         reservations:
