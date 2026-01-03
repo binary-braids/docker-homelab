@@ -15,7 +15,13 @@ services:
       nofile:
         soft: 1024
         hard: 524288
-    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     network_mode: host
     hostname: steam-headless
     extra_hosts:
