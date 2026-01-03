@@ -1,3 +1,12 @@
+## [0.33.15](https://github.com/binary-braids/docker-homelab/compare/v0.33.14...v0.33.15) (2026-01-03)
+
+
+### Bug Fixes
+
+* change config for steam-headless back to vnc ([ffc158f](https://github.com/binary-braids/docker-homelab/commit/ffc158fe919e32cdc283e871e883cb0192a8d20e))
+
+
+
 ## [0.33.14](https://github.com/binary-braids/docker-homelab/compare/v0.33.13...v0.33.14) (2025-12-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change static runner name to randomised ([a6670cf](https://github.com/binary-braids/docker-homelab/commit/a6670cf1eb34ec6cf90b9919a94fd8ed622f7cc2))
-
-
-
-## [0.33.5](https://github.com/binary-braids/docker-homelab/compare/v0.33.4...v0.33.5) (2025-12-09)
-
-
-### Bug Fixes
-
-* change github-runner container to use ACCESS_TOKEN env variable ([d83e382](https://github.com/binary-braids/docker-homelab/commit/d83e382743bc0e308e0092022bde9193ae4fefa0))
 
 
 
