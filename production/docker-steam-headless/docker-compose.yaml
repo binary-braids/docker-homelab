@@ -8,26 +8,14 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    shm_size: 2G
+    privileged: true
+    shm_size: 6G
     ipc: host
     ulimits:
       nofile:
         soft: 1024
         hard: 524288
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_NICE
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+    runtime: nvidia
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -36,7 +24,7 @@ services:
       # System
       - TZ=Africa/Johannesburg
       - USER_LOCALES=en_US.UTF-8 UTF-8
-      - DISPLAY=:0
+      - DISPLAY=:55
       # User
       - PUID=1000
       - PGID=1000
@@ -46,7 +34,7 @@ services:
       - MODE=primary
       # Web UI
       - WEB_UI_MODE=vnc
-      - ENABLE_VNC_AUDIO=true
+      - ENABLE_VNC_AUDIO=false
       - PORT_NOVNC_WEB=8083
       # Steam
       - ENABLE_STEAM=true
@@ -61,6 +49,7 @@ services:
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_VERSION=
 
     # DEVICES:
     devices:
@@ -77,9 +66,6 @@ services:
       # The location of your home directory.
       - steam-headless-data:/home/default/:rw
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
-
-      # The Xorg socket.
-      - steam-headless-data:/tmp/.X11-unix/:rw
-
-      # Pulse audio socket.
-      - steam-headless-data:/tmp/pulse/:rw
+      - /tmp/.X11-unix/:/tmp/.X11-unix/:r/w
+      - /tmp/tmp/pulse/:/tmp/pulse/:r/w
+      - /dev/input/:/dev/input/:r/w
