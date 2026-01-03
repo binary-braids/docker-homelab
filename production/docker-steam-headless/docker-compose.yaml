@@ -8,7 +8,6 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    privileged: true
     shm_size: 2G
     ipc: host
     ulimits:
@@ -56,6 +55,20 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
 
+    # DEVICES:
+    devices:
+      # Use the host fuse device [REQUIRED].
+      - /dev/fuse
+      # Add the host uinput device [REQUIRED].
+      - /dev/uinput
+    # Ensure container access to devices 13:*
+    group_add:
+      - "993"
+      - "44"
+      - "990"
+    device_cgroup_rules:
+      - 'c 13:* rmw'
+
     # VOLUMES:
     volumes:
       # The location of your home directory.
@@ -67,6 +80,3 @@ services:
 
       # Pulse audio socket.
       - steam-headless-data:/tmp/pulse/:rw
-
-      # Input devices used for mouse and joypad support inside the container.
-      - /dev/input/:/dev/input/:ro
