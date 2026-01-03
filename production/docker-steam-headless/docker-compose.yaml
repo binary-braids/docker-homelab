@@ -36,7 +36,7 @@ services:
       # System
       - TZ=Africa/Johannesburg
       - USER_LOCALES=en_US.UTF-8 UTF-8
-      - DISPLAY=:55
+      - DISPLAY=:0
       # User
       - PUID=1000
       - PGID=1000
