@@ -27,7 +27,7 @@ services:
           devices:
             - driver: nvidia
               count: all
-              capabilities: [all]
+              capabilities: [gpu]
     network_mode: host
     hostname: steam-headless
     extra_hosts:
