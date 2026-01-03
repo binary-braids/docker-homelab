@@ -29,6 +29,8 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+          cpus: "6.0"
+          memory: "8G"
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -70,6 +72,10 @@ services:
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
     # Ensure container access to devices 13:*
+    group_add:
+      - "993"
+      - "44"
+      - "990"
     device_cgroup_rules:
       - 'c 13:* rmw'
 
