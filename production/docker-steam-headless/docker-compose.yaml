@@ -62,10 +62,6 @@ services:
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
     # Ensure container access to devices 13:*
-    group_add:
-      - "993"
-      - "44"
-      - "990"
     device_cgroup_rules:
       - 'c 13:* rmw'
 
