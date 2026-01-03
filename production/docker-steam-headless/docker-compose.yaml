@@ -8,7 +8,6 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    privileged: true
     shm_size: 2G
     ipc: host
     ulimits:
@@ -25,9 +24,10 @@ services:
     deploy:
       resources:
         reservations:
-          cpus: "6.0"
-          memory: "8G"
-    runtime: nvidia
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [all]
     network_mode: host
     hostname: steam-headless
     extra_hosts:
