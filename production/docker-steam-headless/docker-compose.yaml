@@ -8,19 +8,19 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
+    privileged: true
     shm_size: 2G
     ipc: host
     ulimits:
       nofile:
         soft: 1024
         hard: 524288
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_NICE
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
+    deploy:
+      resources:
+        reservations:
+          cpus: "6.0"
+          memory: "8G"
+    runtime: nvidia
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -38,9 +38,10 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=vnc
-      - ENABLE_VNC_AUDIO=true
+      - WEB_UI_MODE=neko
+      - ENABLE_VNC_AUDIO=false
       - PORT_NOVNC_WEB=8083
+      - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
@@ -54,28 +55,6 @@ services:
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
-      - NVIDIA_DRIVER_VERSION=590.48.01
-
-    # DEVICES:
-    devices:
-      # Use the host fuse device [REQUIRED].
-      - /dev/fuse
-      # Add the host uinput device [REQUIRED].
-      - /dev/uinput
-      - /dev/nvidia0 # Or nvidia1, etc.
-      - /dev/nvidiactl
-      - /dev/nvidia-modeset
-      - /dev/nvidia-uvm
-      - /dev/nvidia-uvm-tools
-      - /dev/nvidia-caps/nvidia-cap1
-      - /dev/nvidia-caps/nvidia-cap2
-    # Ensure container access to devices 13:*
-    group_add:
-      - "993"
-      - "44"
-      - "990"
-    device_cgroup_rules:
-      - 'c 13:* rmw'
 
     # VOLUMES:
     volumes:
@@ -88,3 +67,6 @@ services:
 
       # Pulse audio socket.
       - steam-headless-data:/tmp/pulse/:rw
+
+      # Input devices used for mouse and joypad support inside the container.
+      - /dev/input/:/dev/input/:ro
