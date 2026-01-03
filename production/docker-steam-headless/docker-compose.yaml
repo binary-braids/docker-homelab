@@ -44,10 +44,9 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=neko
-      - ENABLE_VNC_AUDIO=false
+      - WEB_UI_MODE=vnc
+      - ENABLE_VNC_AUDIO=true
       - PORT_NOVNC_WEB=8083
-      - NEKO_NAT1TO1=10.4.20.43
       # Steam
       - ENABLE_STEAM=true
       - STEAM_ARGS=-silent
@@ -77,9 +76,3 @@ services:
       # The location of your home directory.
       - steam-headless-data:/home/default/:rw
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
-
-      # The Xorg socket.
-      - steam-headless-data:/tmp/.X11-unix/:rw
-
-      # Pulse audio socket.
-      - steam-headless-data:/tmp/pulse/:rw
