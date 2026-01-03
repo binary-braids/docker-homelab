@@ -77,3 +77,9 @@ services:
       # The location of your home directory.
       - steam-headless-data:/home/default/:rw
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
+
+      # The Xorg socket.
+      - steam-headless-data:/tmp/.X11-unix/:rw
+
+      # Pulse audio socket.
+      - steam-headless-data:/tmp/pulse/:rw
