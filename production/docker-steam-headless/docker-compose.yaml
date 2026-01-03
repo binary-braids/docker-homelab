@@ -8,6 +8,7 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
+    privileged: true
     shm_size: 2G
     ipc: host
     ulimits:
