@@ -1,3 +1,12 @@
+## [0.33.19](https://github.com/binary-braids/docker-homelab/compare/v0.33.18...v0.33.19) (2026-01-04)
+
+
+### Bug Fixes
+
+* change network mode ([6c4677e](https://github.com/binary-braids/docker-homelab/commit/6c4677efc026bb786a4c305efd0374649e4b85e4))
+
+
+
 ## [0.33.18](https://github.com/binary-braids/docker-homelab/compare/v0.33.17...v0.33.18) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update semaphore container version ([d961401](https://github.com/binary-braids/docker-homelab/commit/d9614017d8966434c9d3731c79a7c2ae414ac023))
-
-
-
-## [0.33.9](https://github.com/binary-braids/docker-homelab/compare/v0.33.8...v0.33.9) (2025-12-09)
-
-
-### Bug Fixes
-
-* remove GPU capabilities from folding@home due to Docker host move ([2c68f17](https://github.com/binary-braids/docker-homelab/commit/2c68f17332b03637b5a88e66f3e801ae4f939155))
 
 
 
