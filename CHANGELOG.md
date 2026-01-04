@@ -1,3 +1,12 @@
+## [0.33.18](https://github.com/binary-braids/docker-homelab/compare/v0.33.17...v0.33.18) (2026-01-04)
+
+
+### Bug Fixes
+
+* change to selkies container ([5c4e09d](https://github.com/binary-braids/docker-homelab/commit/5c4e09dddcf45ab6b5ddcebd37ddc966178d88f8))
+
+
+
 ## [0.33.17](https://github.com/binary-braids/docker-homelab/compare/v0.33.16...v0.33.17) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove GPU capabilities from folding@home due to Docker host move ([2c68f17](https://github.com/binary-braids/docker-homelab/commit/2c68f17332b03637b5a88e66f3e801ae4f939155))
-
-
-
-## [0.33.8](https://github.com/binary-braids/docker-homelab/compare/v0.33.7...v0.33.8) (2025-12-09)
-
-
-### Bug Fixes
-
-* correct github-runner network name ([8d13315](https://github.com/binary-braids/docker-homelab/commit/8d13315efa1dd80420ce5023901637e29954524d))
 
 
 
