@@ -1,3 +1,12 @@
+## [0.33.25](https://github.com/binary-braids/docker-homelab/compare/v0.33.24...v0.33.25) (2026-01-04)
+
+
+### Bug Fixes
+
+* add ipc ([d5b175f](https://github.com/binary-braids/docker-homelab/commit/d5b175ff1e2cc2b1c7d05f790e74bc4494ba4744))
+
+
+
 ## [0.33.24](https://github.com/binary-braids/docker-homelab/compare/v0.33.23...v0.33.24) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change image version for steam-headless ([cb7cbd2](https://github.com/binary-braids/docker-homelab/commit/cb7cbd297dd0227b7fa959a93bbb1d10cdf6f5e0))
-
-
-
-## [0.33.15](https://github.com/binary-braids/docker-homelab/compare/v0.33.14...v0.33.15) (2026-01-03)
-
-
-### Bug Fixes
-
-* change config for steam-headless back to vnc ([ffc158f](https://github.com/binary-braids/docker-homelab/commit/ffc158fe919e32cdc283e871e883cb0192a8d20e))
 
 
 
