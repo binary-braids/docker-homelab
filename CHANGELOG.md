@@ -1,3 +1,12 @@
+## [0.33.16](https://github.com/binary-braids/docker-homelab/compare/v0.33.15...v0.33.16) (2026-01-04)
+
+
+### Bug Fixes
+
+* change image version for steam-headless ([cb7cbd2](https://github.com/binary-braids/docker-homelab/commit/cb7cbd297dd0227b7fa959a93bbb1d10cdf6f5e0))
+
+
+
 ## [0.33.15](https://github.com/binary-braids/docker-homelab/compare/v0.33.14...v0.33.15) (2026-01-03)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add runner group env variable ([64d4986](https://github.com/binary-braids/docker-homelab/commit/64d498684506a42410d4ead4febd29e56ffa8127))
-
-
-
-## [0.33.6](https://github.com/binary-braids/docker-homelab/compare/v0.33.5...v0.33.6) (2025-12-09)
-
-
-### Bug Fixes
-
-* change static runner name to randomised ([a6670cf](https://github.com/binary-braids/docker-homelab/commit/a6670cf1eb34ec6cf90b9919a94fd8ed622f7cc2))
 
 
 
