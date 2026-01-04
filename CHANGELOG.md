@@ -1,3 +1,12 @@
+## [0.33.22](https://github.com/binary-braids/docker-homelab/compare/v0.33.21...v0.33.22) (2026-01-04)
+
+
+### Bug Fixes
+
+* change port ([5d54cc5](https://github.com/binary-braids/docker-homelab/commit/5d54cc5bf18e21f5f97bce465865a6fd839a7703))
+
+
+
 ## [0.33.21](https://github.com/binary-braids/docker-homelab/compare/v0.33.20...v0.33.21) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change semaphore to sqlite db ([d3560cb](https://github.com/binary-braids/docker-homelab/commit/d3560cbde49a43cc22f9001972919d5d82c30dd2))
-
-
-
-## [0.33.12](https://github.com/binary-braids/docker-homelab/compare/v0.33.11...v0.33.12) (2025-12-10)
-
-
-### Bug Fixes
-
-* add db user for semaphore ([a0d2d2a](https://github.com/binary-braids/docker-homelab/commit/a0d2d2ac25d58ce919d92505c774aea3e3f325f2))
 
 
 
