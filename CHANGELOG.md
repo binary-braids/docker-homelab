@@ -1,3 +1,12 @@
+## [0.33.20](https://github.com/binary-braids/docker-homelab/compare/v0.33.19...v0.33.20) (2026-01-04)
+
+
+### Bug Fixes
+
+* add turn server configuration ([e7dabeb](https://github.com/binary-braids/docker-homelab/commit/e7dabeb77410e67eb9f5e69e2494b43f866d9d33))
+
+
+
 ## [0.33.19](https://github.com/binary-braids/docker-homelab/compare/v0.33.18...v0.33.19) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * configure semaphore network ([1b6ad77](https://github.com/binary-braids/docker-homelab/commit/1b6ad7707463b0e3b869708b1a57f04317f343af))
-
-
-
-## [0.33.10](https://github.com/binary-braids/docker-homelab/compare/v0.33.9...v0.33.10) (2025-12-10)
-
-
-### Bug Fixes
-
-* update semaphore container version ([d961401](https://github.com/binary-braids/docker-homelab/commit/d9614017d8966434c9d3731c79a7c2ae414ac023))
 
 
 
