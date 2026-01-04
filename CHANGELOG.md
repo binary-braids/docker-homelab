@@ -1,3 +1,12 @@
+## [0.33.27](https://github.com/binary-braids/docker-homelab/compare/v0.33.26...v0.33.27) (2026-01-04)
+
+
+### Bug Fixes
+
+* lessen permissons ([44f648f](https://github.com/binary-braids/docker-homelab/commit/44f648fd507bc83b57ad99d11b47dbd04a280f24))
+
+
+
 ## [0.33.26](https://github.com/binary-braids/docker-homelab/compare/v0.33.25...v0.33.26) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change to selkies container ([5c4e09d](https://github.com/binary-braids/docker-homelab/commit/5c4e09dddcf45ab6b5ddcebd37ddc966178d88f8))
-
-
-
-## [0.33.17](https://github.com/binary-braids/docker-homelab/compare/v0.33.16...v0.33.17) (2026-01-04)
-
-
-### Bug Fixes
-
-* change steam-headless image reference ([8c74429](https://github.com/binary-braids/docker-homelab/commit/8c7442980d9c42d00bf50198b78d8d989b3b033b))
 
 
 
