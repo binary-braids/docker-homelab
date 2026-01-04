@@ -6,10 +6,10 @@ volumes:
 
 services:
   steam-headless:
-    image: josh5/steam-headless:latest
+    image: josh5/steam-headless:debian-dev-frontend-revamp
     restart: unless-stopped
     privileged: true
-    shm_size: 6G
+    shm_size: 2G
     ipc: host
     ulimits:
       nofile:
