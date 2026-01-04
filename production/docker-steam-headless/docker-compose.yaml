@@ -10,8 +10,7 @@ services:
     restart: unless-stopped
     stdin_open: true
     tty: true
-    ports:
-    - 8080:8080
+    network_mode: host
     deploy:
       resources:
         reservations:
