@@ -15,11 +15,11 @@ services:
     stdin_open: true
     tty: true
     ports:
-    - 8083:8080
+    - 8080:8080
     - 3478:3478
-    - 65500-65535:65500-65535
+    - 65530-65535:65530-65535
     - 3478:3478/udp
-    - 65500-65535:65500-65535/udp
+    - 65530-65535:65530-65535/udp
     deploy:
       resources:
         reservations:
@@ -57,7 +57,7 @@ services:
       - SELKIES_ENABLE_HTTPS=false
       - SELKIES_TURN_PROTOCOL=udp
       - SELKIES_TURN_PORT=3478
-      - TURN_MIN_PORT=65500
+      - TURN_MIN_PORT=65530
       - TURN_MAX_PORT=65535
       - SELKIES_TURN_HOST=10.4.20.43
 
