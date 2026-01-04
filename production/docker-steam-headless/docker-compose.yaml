@@ -1,9 +1,5 @@
 name: steam-headless
 
-networks:
-  steam-headless:
-    name: steam-headless
-
 volumes:
   steam-headless-data:
     name: steam-headless-data
@@ -15,8 +11,7 @@ services:
     runtime: nvidia
     stdin_open: true
     tty: true
-    ports:
-    - 8080:8080
+    network_mode: host
     deploy:
       resources:
         reservations:
