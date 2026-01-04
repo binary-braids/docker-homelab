@@ -1,3 +1,12 @@
+## [0.33.23](https://github.com/binary-braids/docker-homelab/compare/v0.33.22...v0.33.23) (2026-01-04)
+
+
+### Bug Fixes
+
+* enabled KASMvnc ([792e99c](https://github.com/binary-braids/docker-homelab/commit/792e99c41efe71edd6cda8adcd9fdb97e4f9414b))
+
+
+
 ## [0.33.22](https://github.com/binary-braids/docker-homelab/compare/v0.33.21...v0.33.22) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct traefik label for semaphore https ([bf74d7a](https://github.com/binary-braids/docker-homelab/commit/bf74d7a6188336c9a0fe5ffc8360e6b33e7010bf))
-
-
-
-## [0.33.13](https://github.com/binary-braids/docker-homelab/compare/v0.33.12...v0.33.13) (2025-12-10)
-
-
-### Bug Fixes
-
-* change semaphore to sqlite db ([d3560cb](https://github.com/binary-braids/docker-homelab/commit/d3560cbde49a43cc22f9001972919d5d82c30dd2))
 
 
 
