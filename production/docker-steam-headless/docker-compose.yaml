@@ -15,7 +15,7 @@ services:
     stdin_open: true
     tty: true
     ports:
-    - 8080:8080
+    - 8083:8080
     deploy:
       resources:
         reservations:
@@ -23,13 +23,6 @@ services:
           - driver: nvidia
             count: all
             capabilities: [gpu]
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_NICE
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
     tmpfs:
     - '/dev/shm:rw'
     environment:
@@ -62,15 +55,9 @@ services:
 
     # DEVICES:
     devices:
-      # Use the host fuse device [REQUIRED].
-      - /dev/fuse
-      # Add the host uinput device [REQUIRED].
-      - /dev/uinput
       # Add NVIDIA HW accelerated devices [OPTIONAL].
       - /dev/dri:/dev/dri
     # Ensure container access to devices 13:*
-    device_cgroup_rules:
-      - 'c 13:* rmw'
 
     # VOLUMES:
     volumes:
