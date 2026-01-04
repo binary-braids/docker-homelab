@@ -34,7 +34,6 @@ services:
       # With driver versions lower than 550, change to `DP-0` or any other `DP-*` port for larger resolution support if NOT using datacenter GPUs
       - VIDEO_PORT=DFP
       - PASSWD=${USER_PASSWORD}
-      - KASMVNC_ENABLE=true
       - SELKIES_ENCODER=nvh265enc
       - SELKIES_ENABLE_RESIZE=false
       # Initial video bitrate in kilobits per second, may be changed later within web interface
