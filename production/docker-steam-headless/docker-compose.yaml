@@ -8,6 +8,7 @@ services:
   steam-headless:
     image: ghcr.io/selkies-project/nvidia-glx-desktop:latest
     restart: unless-stopped
+    shm_size: 2G
     runtime: nvidia
     stdin_open: true
     tty: true
@@ -19,8 +20,10 @@ services:
           - driver: nvidia
             count: all
             capabilities: [gpu]
-    tmpfs:
-    - '/dev/shm:rw'
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_NICE
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
@@ -50,6 +53,14 @@ services:
   #    - SELKIES_BASIC_AUTH_PASSWORD=mypasswd
       # Enable HTTPS web interface from inside the container
       - SELKIES_ENABLE_HTTPS=false
+
+    devices:
+      # Use the host fuse device [REQUIRED].
+      - /dev/fuse
+      # Add the host uinput device [REQUIRED].
+      - /dev/uinput
+    device_cgroup_rules:
+      - 'c 13:* rmw'
 
     # VOLUMES:
     volumes:
