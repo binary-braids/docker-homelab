@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: josh5/steam-headless:debian-dev-frontend-revamp
+    image: ghcr.io/steam-headless/steam-headless@sha256:e6b7d89ded636ae517201ff4a42dfd6ff08ace79a2071d6023723a839d8eadef
     restart: unless-stopped
     privileged: true
     shm_size: 2G
