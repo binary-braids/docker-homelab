@@ -1,3 +1,12 @@
+## [0.33.26](https://github.com/binary-braids/docker-homelab/compare/v0.33.25...v0.33.26) (2026-01-04)
+
+
+### Bug Fixes
+
+* change app running mode ([52c990a](https://github.com/binary-braids/docker-homelab/commit/52c990a60b64458f72378bd4a970ec0c8364d938))
+
+
+
 ## [0.33.25](https://github.com/binary-braids/docker-homelab/compare/v0.33.24...v0.33.25) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change steam-headless image reference ([8c74429](https://github.com/binary-braids/docker-homelab/commit/8c7442980d9c42d00bf50198b78d8d989b3b033b))
-
-
-
-## [0.33.16](https://github.com/binary-braids/docker-homelab/compare/v0.33.15...v0.33.16) (2026-01-04)
-
-
-### Bug Fixes
-
-* change image version for steam-headless ([cb7cbd2](https://github.com/binary-braids/docker-homelab/commit/cb7cbd297dd0227b7fa959a93bbb1d10cdf6f5e0))
 
 
 
