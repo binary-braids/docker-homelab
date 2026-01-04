@@ -9,10 +9,16 @@ services:
     image: ghcr.io/selkies-project/nvidia-glx-desktop:latest
     restart: unless-stopped
     shm_size: 2G
+    ipc: host
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 524288
     runtime: nvidia
     stdin_open: true
     tty: true
     network_mode: host
+    hostname: steam-headless
     deploy:
       resources:
         reservations:
