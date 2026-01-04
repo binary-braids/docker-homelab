@@ -1,3 +1,12 @@
+## [0.33.24](https://github.com/binary-braids/docker-homelab/compare/v0.33.23...v0.33.24) (2026-01-04)
+
+
+### Bug Fixes
+
+* add extra permissions ([ae77a7a](https://github.com/binary-braids/docker-homelab/commit/ae77a7ae45f9170613e8795fa7548ca0bb5815e6))
+
+
+
 ## [0.33.23](https://github.com/binary-braids/docker-homelab/compare/v0.33.22...v0.33.23) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change config for steam-headless back to vnc ([ffc158f](https://github.com/binary-braids/docker-homelab/commit/ffc158fe919e32cdc283e871e883cb0192a8d20e))
-
-
-
-## [0.33.14](https://github.com/binary-braids/docker-homelab/compare/v0.33.13...v0.33.14) (2025-12-10)
-
-
-### Bug Fixes
-
-* correct traefik label for semaphore https ([bf74d7a](https://github.com/binary-braids/docker-homelab/commit/bf74d7a6188336c9a0fe5ffc8360e6b33e7010bf))
 
 
 
