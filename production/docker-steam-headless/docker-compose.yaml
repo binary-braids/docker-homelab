@@ -12,10 +12,11 @@ services:
   steam-headless:
     image: ghcr.io/selkies-project/nvidia-glx-desktop:latest
     restart: unless-stopped
+    runtime: nvidia
     stdin_open: true
     tty: true
     ports:
-    - 8083:8080
+    - 8080:8080
     deploy:
       resources:
         reservations:
@@ -52,12 +53,6 @@ services:
   #    - SELKIES_BASIC_AUTH_PASSWORD=mypasswd
       # Enable HTTPS web interface from inside the container
       - SELKIES_ENABLE_HTTPS=false
-
-    # DEVICES:
-    devices:
-      # Add NVIDIA HW accelerated devices [OPTIONAL].
-      - /dev/dri:/dev/dri
-    # Ensure container access to devices 13:*
 
     # VOLUMES:
     volumes:
