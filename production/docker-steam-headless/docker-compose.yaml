@@ -64,6 +64,10 @@ services:
       - /dev/uinput
       - /dev/uhid
 
+    device_cgroup_rules:
+      - 'c 10:* rmw'   # UHID
+      - 'c 13:* rmw'   # uinput
+
     # VOLUMES:
     volumes:
       # The location of your home directory.
