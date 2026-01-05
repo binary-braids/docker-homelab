@@ -1,3 +1,12 @@
+## [0.33.33](https://github.com/binary-braids/docker-homelab/compare/v0.33.32...v0.33.33) (2026-01-05)
+
+
+### Bug Fixes
+
+* change config ([4fbf507](https://github.com/binary-braids/docker-homelab/commit/4fbf5072b37de575dde6955ccf129916235f20f9))
+
+
+
 ## [0.33.32](https://github.com/binary-braids/docker-homelab/compare/v0.33.31...v0.33.32) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add extra permissions ([ae77a7a](https://github.com/binary-braids/docker-homelab/commit/ae77a7ae45f9170613e8795fa7548ca0bb5815e6))
-
-
-
-## [0.33.23](https://github.com/binary-braids/docker-homelab/compare/v0.33.22...v0.33.23) (2026-01-04)
-
-
-### Bug Fixes
-
-* enabled KASMvnc ([792e99c](https://github.com/binary-braids/docker-homelab/commit/792e99c41efe71edd6cda8adcd9fdb97e4f9414b))
 
 
 
