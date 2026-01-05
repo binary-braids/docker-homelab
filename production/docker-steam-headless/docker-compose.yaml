@@ -62,6 +62,7 @@ services:
     devices:
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
+      - /dev/uhid
 
     # VOLUMES:
     volumes:
