@@ -1,3 +1,12 @@
+## [0.33.28](https://github.com/binary-braids/docker-homelab/compare/v0.33.27...v0.33.28) (2026-01-05)
+
+
+### Bug Fixes
+
+* change image ref for steam-headless ([d7fa1f1](https://github.com/binary-braids/docker-homelab/commit/d7fa1f120e4db49f80df8fc3e514d5eb5f37cdd0))
+
+
+
 ## [0.33.27](https://github.com/binary-braids/docker-homelab/compare/v0.33.26...v0.33.27) (2026-01-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change network mode ([6c4677e](https://github.com/binary-braids/docker-homelab/commit/6c4677efc026bb786a4c305efd0374649e4b85e4))
-
-
-
-## [0.33.18](https://github.com/binary-braids/docker-homelab/compare/v0.33.17...v0.33.18) (2026-01-04)
-
-
-### Bug Fixes
-
-* change to selkies container ([5c4e09d](https://github.com/binary-braids/docker-homelab/commit/5c4e09dddcf45ab6b5ddcebd37ddc966178d88f8))
 
 
 
