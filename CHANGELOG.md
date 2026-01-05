@@ -1,3 +1,12 @@
+## [0.33.29](https://github.com/binary-braids/docker-homelab/compare/v0.33.28...v0.33.29) (2026-01-05)
+
+
+### Bug Fixes
+
+* remove devices and groups ([ce3dbc9](https://github.com/binary-braids/docker-homelab/commit/ce3dbc94c9dac29c8b3ea5353fd6aca623f7adc3))
+
+
+
 ## [0.33.28](https://github.com/binary-braids/docker-homelab/compare/v0.33.27...v0.33.28) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add turn server configuration ([e7dabeb](https://github.com/binary-braids/docker-homelab/commit/e7dabeb77410e67eb9f5e69e2494b43f866d9d33))
-
-
-
-## [0.33.19](https://github.com/binary-braids/docker-homelab/compare/v0.33.18...v0.33.19) (2026-01-04)
-
-
-### Bug Fixes
-
-* change network mode ([6c4677e](https://github.com/binary-braids/docker-homelab/commit/6c4677efc026bb786a4c305efd0374649e4b85e4))
 
 
 
