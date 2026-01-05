@@ -60,7 +60,8 @@ services:
 
     devices:
       # Add the host uinput device [REQUIRED].
-      - /dev/uinput
+    - /dev/uinput:/dev/uinput:rw
+    - /dev/input:/dev/input:rw
 
     device_cgroup_rules:
       - 'c 13:* rmw'   # uinput
