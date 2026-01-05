@@ -1,3 +1,12 @@
+## [0.33.32](https://github.com/binary-braids/docker-homelab/compare/v0.33.31...v0.33.32) (2026-01-05)
+
+
+### Bug Fixes
+
+* add raw io access ([d468d92](https://github.com/binary-braids/docker-homelab/commit/d468d921b34070f3903ea58859c86650c33d5cb1))
+
+
+
 ## [0.33.31](https://github.com/binary-braids/docker-homelab/compare/v0.33.30...v0.33.31) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * enabled KASMvnc ([792e99c](https://github.com/binary-braids/docker-homelab/commit/792e99c41efe71edd6cda8adcd9fdb97e4f9414b))
-
-
-
-## [0.33.22](https://github.com/binary-braids/docker-homelab/compare/v0.33.21...v0.33.22) (2026-01-04)
-
-
-### Bug Fixes
-
-* change port ([5d54cc5](https://github.com/binary-braids/docker-homelab/commit/5d54cc5bf18e21f5f97bce465865a6fd839a7703))
 
 
 
