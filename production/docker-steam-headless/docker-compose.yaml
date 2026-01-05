@@ -8,12 +8,6 @@ services:
   steam-headless:
     image: ghcr.io/binary-braids/selkies-evolved:0.1.1
     restart: unless-stopped
-    shm_size: 2G
-    ipc: host
-    ulimits:
-      nofile:
-        soft: 1024
-        hard: 524288
     runtime: nvidia
     stdin_open: true
     tty: true
@@ -26,13 +20,6 @@ services:
           - driver: nvidia
             count: all
             capabilities: [gpu]
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-      - SYS_NICE
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
     environment:
       - TZ=Africa/Johannesburg
       - DISPLAY_SIZEW=1920
@@ -59,14 +46,6 @@ services:
   #    - SELKIES_BASIC_AUTH_PASSWORD=mypasswd
       # Enable HTTPS web interface from inside the container
       - SELKIES_ENABLE_HTTPS=false
-
-    devices:
-      # Use the host fuse device [REQUIRED].
-      - /dev/fuse
-      # Add the host uinput device [REQUIRED].
-      - /dev/uinput
-    device_cgroup_rules:
-      - 'c 13:* rmw'
 
     # VOLUMES:
     volumes:
