@@ -1,3 +1,12 @@
+## [0.33.31](https://github.com/binary-braids/docker-homelab/compare/v0.33.30...v0.33.31) (2026-01-05)
+
+
+### Bug Fixes
+
+* devices ([6588091](https://github.com/binary-braids/docker-homelab/commit/658809124bdf0116266e61a480665137642e5c74))
+
+
+
 ## [0.33.30](https://github.com/binary-braids/docker-homelab/compare/v0.33.29...v0.33.30) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change port ([5d54cc5](https://github.com/binary-braids/docker-homelab/commit/5d54cc5bf18e21f5f97bce465865a6fd839a7703))
-
-
-
-## [0.33.21](https://github.com/binary-braids/docker-homelab/compare/v0.33.20...v0.33.21) (2026-01-04)
-
-
-### Bug Fixes
-
-* change image and ports ([c4b0a72](https://github.com/binary-braids/docker-homelab/commit/c4b0a7221f05e617977d505bd34eaaf32a85d774))
 
 
 
