@@ -9,6 +9,7 @@ services:
     image: ghcr.io/binary-braids/selkies-evolved:0.1.1
     restart: unless-stopped
     shm_size: 2G
+    privileged: true
     ipc: host
     ulimits:
       nofile:
