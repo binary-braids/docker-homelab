@@ -60,13 +60,8 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
 
     devices:
-      # Use the host fuse device [REQUIRED].
-      - /dev/fuse
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
-      - /dev/uhid
-    device_cgroup_rules:
-      - 'c 13:* rmw'
 
     # VOLUMES:
     volumes:
@@ -74,3 +69,5 @@ services:
       - steam-headless-data:/cache
       - steam-headless-data:/home/ubuntu
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
+      - /dev/input:/dev/input:rw
+      - /run/udev:/run/udev:ro
