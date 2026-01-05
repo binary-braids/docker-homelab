@@ -1,3 +1,12 @@
+## [0.33.36](https://github.com/binary-braids/docker-homelab/compare/v0.33.35...v0.33.36) (2026-01-05)
+
+
+### Bug Fixes
+
+* add mounts ([bc1f182](https://github.com/binary-braids/docker-homelab/commit/bc1f18269f954534ac6488ba63c819c553f7aebe))
+
+
+
 ## [0.33.35](https://github.com/binary-braids/docker-homelab/compare/v0.33.34...v0.33.35) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * lessen permissons ([44f648f](https://github.com/binary-braids/docker-homelab/commit/44f648fd507bc83b57ad99d11b47dbd04a280f24))
-
-
-
-## [0.33.26](https://github.com/binary-braids/docker-homelab/compare/v0.33.25...v0.33.26) (2026-01-04)
-
-
-### Bug Fixes
-
-* change app running mode ([52c990a](https://github.com/binary-braids/docker-homelab/commit/52c990a60b64458f72378bd4a970ec0c8364d938))
 
 
 
