@@ -17,7 +17,7 @@ services:
     runtime: nvidia
     stdin_open: true
     tty: true
-    network_mode: host
+    network_mode: "host"
     hostname: steam-headless
     deploy:
       resources:
@@ -30,7 +30,6 @@ services:
       - NET_ADMIN
       - SYS_ADMIN
       - SYS_NICE
-      - SYS_RAWIO
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
@@ -61,11 +60,9 @@ services:
 
     devices:
       # Add the host uinput device [REQUIRED].
-      - /dev/uinput:rw
-      - /dev/uhid:rw
+      - /dev/uinput
 
     device_cgroup_rules:
-      - 'c 10:* rmw'   # UHID
       - 'c 13:* rmw'   # uinput
 
     # VOLUMES:
@@ -74,5 +71,3 @@ services:
       - steam-headless-data:/cache
       - steam-headless-data:/home/ubuntu
       - /mnt/data/docker/steam-headless/games/:/mnt/games/:rw
-      - /dev/input:/dev/input:rw
-      - /run/udev:/run/udev:ro
