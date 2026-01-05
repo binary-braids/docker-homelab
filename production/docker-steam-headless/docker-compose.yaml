@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: ghcr.io/binary-braids/selkies-evolved:0.1.1
+    image: ghcr.io/binary-braids/selkies-evolved:0.1.2
     restart: unless-stopped
     shm_size: 2G
     ipc: host
