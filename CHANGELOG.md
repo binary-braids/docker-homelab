@@ -1,3 +1,12 @@
+## [0.33.34](https://github.com/binary-braids/docker-homelab/compare/v0.33.33...v0.33.34) (2026-01-05)
+
+
+### Bug Fixes
+
+* modify env variables ([7cc9c6a](https://github.com/binary-braids/docker-homelab/commit/7cc9c6aaf8c572736bb8746dece60a1e3f3b7b08))
+
+
+
 ## [0.33.33](https://github.com/binary-braids/docker-homelab/compare/v0.33.32...v0.33.33) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add ipc ([d5b175f](https://github.com/binary-braids/docker-homelab/commit/d5b175ff1e2cc2b1c7d05f790e74bc4494ba4744))
-
-
-
-## [0.33.24](https://github.com/binary-braids/docker-homelab/compare/v0.33.23...v0.33.24) (2026-01-04)
-
-
-### Bug Fixes
-
-* add extra permissions ([ae77a7a](https://github.com/binary-braids/docker-homelab/commit/ae77a7ae45f9170613e8795fa7548ca0bb5815e6))
 
 
 
