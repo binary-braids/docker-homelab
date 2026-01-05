@@ -1,3 +1,12 @@
+## [0.33.30](https://github.com/binary-braids/docker-homelab/compare/v0.33.29...v0.33.30) (2026-01-05)
+
+
+### Bug Fixes
+
+* add SYS_RAWIO ([18dcee7](https://github.com/binary-braids/docker-homelab/commit/18dcee7fcd29c3b48a0710b8bbbed97cdd0b4b0a))
+
+
+
 ## [0.33.29](https://github.com/binary-braids/docker-homelab/compare/v0.33.28...v0.33.29) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change image and ports ([c4b0a72](https://github.com/binary-braids/docker-homelab/commit/c4b0a7221f05e617977d505bd34eaaf32a85d774))
-
-
-
-## [0.33.20](https://github.com/binary-braids/docker-homelab/compare/v0.33.19...v0.33.20) (2026-01-04)
-
-
-### Bug Fixes
-
-* add turn server configuration ([e7dabeb](https://github.com/binary-braids/docker-homelab/commit/e7dabeb77410e67eb9f5e69e2494b43f866d9d33))
 
 
 
