@@ -1,3 +1,12 @@
+## [0.33.35](https://github.com/binary-braids/docker-homelab/compare/v0.33.34...v0.33.35) (2026-01-05)
+
+
+### Bug Fixes
+
+* change turn to udp ([22fe51b](https://github.com/binary-braids/docker-homelab/commit/22fe51b677d79a88bc2b2e247665eb2cefe498b9))
+
+
+
 ## [0.33.34](https://github.com/binary-braids/docker-homelab/compare/v0.33.33...v0.33.34) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change app running mode ([52c990a](https://github.com/binary-braids/docker-homelab/commit/52c990a60b64458f72378bd4a970ec0c8364d938))
-
-
-
-## [0.33.25](https://github.com/binary-braids/docker-homelab/compare/v0.33.24...v0.33.25) (2026-01-04)
-
-
-### Bug Fixes
-
-* add ipc ([d5b175f](https://github.com/binary-braids/docker-homelab/commit/d5b175ff1e2cc2b1c7d05f790e74bc4494ba4744))
 
 
 
