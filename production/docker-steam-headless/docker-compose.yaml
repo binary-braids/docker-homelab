@@ -61,8 +61,8 @@ services:
 
     devices:
       # Add the host uinput device [REQUIRED].
-      - /dev/uinput
-      - /dev/uhid
+      - /dev/uinput:rw
+      - /dev/uhid:rw
 
     device_cgroup_rules:
       - 'c 10:* rmw'   # UHID
