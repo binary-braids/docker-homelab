@@ -24,7 +24,7 @@ services:
         reservations:
           devices:
           - driver: nvidia
-            count: all
+            count: 1
             capabilities: [gpu]
     cap_add:
       - NET_ADMIN
