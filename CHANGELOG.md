@@ -1,3 +1,12 @@
+## [0.33.37](https://github.com/binary-braids/docker-homelab/compare/v0.33.36...v0.33.37) (2026-01-06)
+
+
+### Bug Fixes
+
+* change to hevc ([cd72dfc](https://github.com/binary-braids/docker-homelab/commit/cd72dfcaad5a4177d585857c35e34c5932d3dc3d))
+
+
+
 ## [0.33.36](https://github.com/binary-braids/docker-homelab/compare/v0.33.35...v0.33.36) (2026-01-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change image ref for steam-headless ([d7fa1f1](https://github.com/binary-braids/docker-homelab/commit/d7fa1f120e4db49f80df8fc3e514d5eb5f37cdd0))
-
-
-
-## [0.33.27](https://github.com/binary-braids/docker-homelab/compare/v0.33.26...v0.33.27) (2026-01-04)
-
-
-### Bug Fixes
-
-* lessen permissons ([44f648f](https://github.com/binary-braids/docker-homelab/commit/44f648fd507bc83b57ad99d11b47dbd04a280f24))
 
 
 
