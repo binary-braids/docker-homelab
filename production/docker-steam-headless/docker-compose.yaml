@@ -9,7 +9,6 @@ services:
     image: ghcr.io/binary-braids/selkies-evolved:0.1.1
     restart: unless-stopped
     shm_size: 2G
-    privileged: true
     ipc: host
     ulimits:
       nofile:
@@ -60,9 +59,7 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
 
     devices:
-      # Add the host uinput device [REQUIRED].
-    - /dev/uinput:/dev/uinput:rw
-    - /dev/input:/dev/input:rw
+      - /dev/uinput
 
     device_cgroup_rules:
       - 'c 13:* rmw'   # uinput
