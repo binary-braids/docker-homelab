@@ -1,3 +1,12 @@
+## [0.33.38](https://github.com/binary-braids/docker-homelab/compare/v0.33.37...v0.33.38) (2026-01-06)
+
+
+### Bug Fixes
+
+* change image ([cb7c837](https://github.com/binary-braids/docker-homelab/commit/cb7c837fd78bafdac30afed219dcd361c3b38cba))
+
+
+
 ## [0.33.37](https://github.com/binary-braids/docker-homelab/compare/v0.33.36...v0.33.37) (2026-01-06)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove devices and groups ([ce3dbc9](https://github.com/binary-braids/docker-homelab/commit/ce3dbc94c9dac29c8b3ea5353fd6aca623f7adc3))
-
-
-
-## [0.33.28](https://github.com/binary-braids/docker-homelab/compare/v0.33.27...v0.33.28) (2026-01-05)
-
-
-### Bug Fixes
-
-* change image ref for steam-headless ([d7fa1f1](https://github.com/binary-braids/docker-homelab/commit/d7fa1f120e4db49f80df8fc3e514d5eb5f37cdd0))
 
 
 
