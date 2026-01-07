@@ -21,7 +21,6 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    runtime: nvidia
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -55,7 +54,8 @@ services:
       - FORCE_X11_DUMMY_CONFIG=true
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
-      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_VISIBLE_DEVICES=0
+      - NVIDIA_DRIVER_VERSION=535.183.01
 
     # DEVICES:
     devices:
@@ -63,6 +63,14 @@ services:
       - /dev/fuse
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
+      - /dev/nvidia0 # Or nvidia1, etc.
+      - /dev/nvidiactl
+      - /dev/nvidia-modeset
+      - /dev/nvidia-uvm
+      - /dev/nvidia-uvm-tools
+      - /dev/nvidia-caps/nvidia-cap1
+      - /dev/nvidia-caps/nvidia-cap2
+
     # Ensure container access to devices 13:*
     device_cgroup_rules:
       - 'c 13:* rmw'
