@@ -8,7 +8,7 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    shm_size: 2G
+    shm_size: 16G
     ipc: host
     ulimits:
       nofile:
@@ -21,13 +21,12 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    runtime: nvidia
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
+              count: all
               capabilities: [gpu]
     network_mode: host
     hostname: steam-headless
@@ -52,7 +51,7 @@ services:
 
       # Steam
       - ENABLE_STEAM=true
-      - STEAM_ARGS=-silent
+      - STEAM_ARGS=-silent -no-browser
       # Sunshine
       - ENABLE_SUNSHINE=true
       - SUNSHINE_USER=${SUNSHINE_USER}
@@ -61,8 +60,9 @@ services:
       - ENABLE_EVDEV_INPUTS=true
       - FORCE_X11_DUMMY_CONFIG=true
       # Nvidia specific config
-      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,compat32,graphics,utility,video
       - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_VERSION=550.127.05
 
     # DEVICES:
     devices:
