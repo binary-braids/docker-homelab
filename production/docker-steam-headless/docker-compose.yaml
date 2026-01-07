@@ -10,6 +10,7 @@ services:
     restart: unless-stopped
     shm_size: 16G
     ipc: host
+    runtime: nvidia
     ulimits:
       nofile:
         soft: 1024
@@ -63,13 +64,6 @@ services:
       - /dev/fuse
       # Add the host uinput device [REQUIRED].
       - /dev/uinput
-      - /dev/nvidia0 # Or nvidia1, etc.
-      - /dev/nvidiactl
-      - /dev/nvidia-modeset
-      - /dev/nvidia-uvm
-      - /dev/nvidia-uvm-tools
-      - /dev/nvidia-caps/nvidia-cap1
-      - /dev/nvidia-caps/nvidia-cap2
 
     # Ensure container access to devices 13:*
     device_cgroup_rules:
