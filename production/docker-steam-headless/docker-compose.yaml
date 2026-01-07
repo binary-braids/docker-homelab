@@ -21,13 +21,7 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+    runtime: nvidia
     network_mode: host
     hostname: steam-headless
     extra_hosts:
@@ -60,7 +54,7 @@ services:
       - ENABLE_EVDEV_INPUTS=true
       - FORCE_X11_DUMMY_CONFIG=true
       # Nvidia specific config
-      - NVIDIA_DRIVER_CAPABILITIES=compute,compat32,graphics,utility,video
+      - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
 
     # DEVICES:
