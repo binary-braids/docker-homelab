@@ -1,3 +1,12 @@
+## [0.33.41](https://github.com/binary-braids/docker-homelab/compare/v0.33.40...v0.33.41) (2026-01-13)
+
+
+### Bug Fixes
+
+* change dummy screen ratio ([728a29a](https://github.com/binary-braids/docker-homelab/commit/728a29a0e6f1c7d5790d0cc49c7334be0879cb43))
+
+
+
 ## [0.33.40](https://github.com/binary-braids/docker-homelab/compare/v0.33.39...v0.33.40) (2026-01-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add raw io access ([d468d92](https://github.com/binary-braids/docker-homelab/commit/d468d921b34070f3903ea58859c86650c33d5cb1))
-
-
-
-## [0.33.31](https://github.com/binary-braids/docker-homelab/compare/v0.33.30...v0.33.31) (2026-01-05)
-
-
-### Bug Fixes
-
-* devices ([6588091](https://github.com/binary-braids/docker-homelab/commit/658809124bdf0116266e61a480665137642e5c74))
 
 
 
