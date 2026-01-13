@@ -52,7 +52,7 @@ services:
 
       # Steam
       - ENABLE_STEAM=true
-      - STEAM_ARGS=-silent -no-browser
+      - STEAM_ARGS=-silent
       # Sunshine
       - ENABLE_SUNSHINE=true
       - SUNSHINE_USER=${SUNSHINE_USER}
@@ -63,7 +63,6 @@ services:
       # Nvidia specific config
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
-      - NVIDIA_DRIVER_VERSION=535.274.02
 
     # DEVICES:
     devices:
