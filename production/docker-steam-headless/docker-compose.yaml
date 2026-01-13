@@ -46,8 +46,8 @@ services:
       # Mode
       - MODE=primary
       # Web UI
-      - WEB_UI_MODE=none
-      - ENABLE_VNC_AUDIO=false
+      - WEB_UI_MODE=vnc
+      - ENABLE_VNC_AUDIO=true
       - PORT_NOVNC_WEB=8083
 
       # Steam
