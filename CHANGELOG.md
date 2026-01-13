@@ -1,3 +1,12 @@
+## [0.33.40](https://github.com/binary-braids/docker-homelab/compare/v0.33.39...v0.33.40) (2026-01-13)
+
+
+### Bug Fixes
+
+* remove nvidia driver version specification ([2c15212](https://github.com/binary-braids/docker-homelab/commit/2c15212a5873a9b60bf86cc0f059ef3ced1768ab))
+
+
+
 ## [0.33.39](https://github.com/binary-braids/docker-homelab/compare/v0.33.38...v0.33.39) (2026-01-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * devices ([6588091](https://github.com/binary-braids/docker-homelab/commit/658809124bdf0116266e61a480665137642e5c74))
-
-
-
-## [0.33.30](https://github.com/binary-braids/docker-homelab/compare/v0.33.29...v0.33.30) (2026-01-05)
-
-
-### Bug Fixes
-
-* add SYS_RAWIO ([18dcee7](https://github.com/binary-braids/docker-homelab/commit/18dcee7fcd29c3b48a0710b8bbbed97cdd0b4b0a))
 
 
 
