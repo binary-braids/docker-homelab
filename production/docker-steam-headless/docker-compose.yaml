@@ -38,8 +38,6 @@ services:
       - TZ=Africa/Johannesburg
       - USER_LOCALES=en_US.UTF-8 UTF-8
       - DISPLAY=:55
-      - DISPLAY_SIZEW="1920" 
-      - DISPLAY_SIZEH="1080"
       # User
       - PUID=1000
       - PGID=1000
