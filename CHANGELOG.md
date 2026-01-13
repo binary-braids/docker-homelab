@@ -1,3 +1,12 @@
+## [0.33.39](https://github.com/binary-braids/docker-homelab/compare/v0.33.38...v0.33.39) (2026-01-13)
+
+
+### Bug Fixes
+
+* enable vnc access ([efdba61](https://github.com/binary-braids/docker-homelab/commit/efdba61dc0c796237eb443f083e697ef12f3293d))
+
+
+
 ## [0.33.38](https://github.com/binary-braids/docker-homelab/compare/v0.33.37...v0.33.38) (2026-01-06)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add SYS_RAWIO ([18dcee7](https://github.com/binary-braids/docker-homelab/commit/18dcee7fcd29c3b48a0710b8bbbed97cdd0b4b0a))
-
-
-
-## [0.33.29](https://github.com/binary-braids/docker-homelab/compare/v0.33.28...v0.33.29) (2026-01-05)
-
-
-### Bug Fixes
-
-* remove devices and groups ([ce3dbc9](https://github.com/binary-braids/docker-homelab/commit/ce3dbc94c9dac29c8b3ea5353fd6aca623f7adc3))
 
 
 
