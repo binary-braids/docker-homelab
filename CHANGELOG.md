@@ -1,3 +1,12 @@
+## [0.34.4](https://github.com/binary-braids/docker-homelab/compare/v0.34.3...v0.34.4) (2026-01-17)
+
+
+### Bug Fixes
+
+* add disable xformers flag to comfyui ([7f08ec5](https://github.com/binary-braids/docker-homelab/commit/7f08ec5a66a82456410eca3d5dc602cc6bec125b))
+
+
+
 ## [0.34.3](https://github.com/binary-braids/docker-homelab/compare/v0.34.2...v0.34.3) (2026-01-17)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change to hevc ([cd72dfc](https://github.com/binary-braids/docker-homelab/commit/cd72dfcaad5a4177d585857c35e34c5932d3dc3d))
-
-
-
-## [0.33.36](https://github.com/binary-braids/docker-homelab/compare/v0.33.35...v0.33.36) (2026-01-05)
-
-
-### Bug Fixes
-
-* add mounts ([bc1f182](https://github.com/binary-braids/docker-homelab/commit/bc1f18269f954534ac6488ba63c819c553f7aebe))
 
 
 
