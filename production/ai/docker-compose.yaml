@@ -133,7 +133,7 @@ services:
     networks:
       - proxy
     environment:
-      - CLI_ARGS="--disable-xformers"
+      - CLI_ARGS=--disable-xformers
     volumes:
       - comfyui-data:/root
     labels:
