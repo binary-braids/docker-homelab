@@ -1,3 +1,12 @@
+## [0.34.3](https://github.com/binary-braids/docker-homelab/compare/v0.34.2...v0.34.3) (2026-01-17)
+
+
+### Bug Fixes
+
+* add runtime: nvidia to containers ([1433a62](https://github.com/binary-braids/docker-homelab/commit/1433a62218dc0119601d3bdfa358f4a4a2ab8c0e))
+
+
+
 ## [0.34.2](https://github.com/binary-braids/docker-homelab/compare/v0.34.1...v0.34.2) (2026-01-17)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add mounts ([bc1f182](https://github.com/binary-braids/docker-homelab/commit/bc1f18269f954534ac6488ba63c819c553f7aebe))
-
-
-
-## [0.33.35](https://github.com/binary-braids/docker-homelab/compare/v0.33.34...v0.33.35) (2026-01-05)
-
-
-### Bug Fixes
-
-* change turn to udp ([22fe51b](https://github.com/binary-braids/docker-homelab/commit/22fe51b677d79a88bc2b2e247665eb2cefe498b9))
 
 
 
