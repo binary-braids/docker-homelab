@@ -132,6 +132,8 @@ services:
               capabilities: [gpu]
     networks:
       - proxy
+    environment:
+      - CLI_ARGS="--disable-xformers"
     volumes:
       - comfyui-data:/root
     labels:
