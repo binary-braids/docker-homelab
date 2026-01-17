@@ -1,3 +1,12 @@
+## [0.34.2](https://github.com/binary-braids/docker-homelab/compare/v0.34.1...v0.34.2) (2026-01-17)
+
+
+### Bug Fixes
+
+* add comfyui in place of wan2gp ([df17cb7](https://github.com/binary-braids/docker-homelab/commit/df17cb796f3aef4356299064a290386d802abaaf))
+
+
+
 ## [0.34.1](https://github.com/binary-braids/docker-homelab/compare/v0.34.0...v0.34.1) (2026-01-17)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change turn to udp ([22fe51b](https://github.com/binary-braids/docker-homelab/commit/22fe51b677d79a88bc2b2e247665eb2cefe498b9))
-
-
-
-## [0.33.34](https://github.com/binary-braids/docker-homelab/compare/v0.33.33...v0.33.34) (2026-01-05)
-
-
-### Bug Fixes
-
-* modify env variables ([7cc9c6a](https://github.com/binary-braids/docker-homelab/commit/7cc9c6aaf8c572736bb8746dece60a1e3f3b7b08))
 
 
 
