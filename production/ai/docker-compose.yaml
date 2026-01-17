@@ -130,10 +130,7 @@ services:
     networks:
       - proxy
     volumes:
-      - wan2gp-data:/app/loras
-      - wan2gp-data:/app/ckpts
-      - wan2gp-data:/app/settings
-      - wan2gp-data:/app/outputs
+      - wan2gp-data:/app
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.wan2gp.rule=Host(`wan2gp.binarybraids.com`)"
