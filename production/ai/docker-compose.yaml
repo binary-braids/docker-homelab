@@ -13,6 +13,9 @@ volumes:
 services:
   ollama:
     image: ollama/ollama:0.13.2@sha256:ceaad0844eda02ddc59d9b40551de7264a564ba7a16a90e241d1c582f0df992d
+    container_name: ollama
+    restart: unless-stopped
+    runtime: nvidia
     deploy:
       resources:
         reservations:
@@ -20,8 +23,6 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    container_name: ollama
-    restart: unless-stopped
     networks:
       - proxy
     volumes:
@@ -93,6 +94,7 @@ services:
   invoke-ai:
     image: ghcr.io/invoke-ai/invokeai:6.9.0-cuda@sha256:594e935d0fea0b866fb5a853358cbb3adc78eb38317c2ce145e22c76b6bdec68
     container_name: invoke-ai
+    runtime: nvidia
     deploy:
       resources:
         reservations:
@@ -120,6 +122,7 @@ services:
     image: yanwk/comfyui-boot:cu128-slim
     container_name: comfyui
     restart: unless-stopped
+    runtime: nvidia
     deploy:
       resources:
         reservations:
