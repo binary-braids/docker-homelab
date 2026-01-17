@@ -1,3 +1,12 @@
+## [0.34.1](https://github.com/binary-braids/docker-homelab/compare/v0.34.0...v0.34.1) (2026-01-17)
+
+
+### Bug Fixes
+
+* change volume config ([b2096aa](https://github.com/binary-braids/docker-homelab/commit/b2096aa8884a5bde852c31f65c078f0e5d6a2bae))
+
+
+
 # [0.34.0](https://github.com/binary-braids/docker-homelab/compare/v0.33.41...v0.34.0) (2026-01-17)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * modify env variables ([7cc9c6a](https://github.com/binary-braids/docker-homelab/commit/7cc9c6aaf8c572736bb8746dece60a1e3f3b7b08))
-
-
-
-## [0.33.33](https://github.com/binary-braids/docker-homelab/compare/v0.33.32...v0.33.33) (2026-01-05)
-
-
-### Bug Fixes
-
-* change config ([4fbf507](https://github.com/binary-braids/docker-homelab/commit/4fbf5072b37de575dde6955ccf129916235f20f9))
 
 
 
