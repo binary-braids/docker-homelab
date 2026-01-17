@@ -1,3 +1,12 @@
+# [0.34.0](https://github.com/binary-braids/docker-homelab/compare/v0.33.41...v0.34.0) (2026-01-17)
+
+
+### Features
+
+* add wan2gp container ([ab43c43](https://github.com/binary-braids/docker-homelab/commit/ab43c431a4c60a1f8d4659a3fe75d4b4cff14e12))
+
+
+
 ## [0.33.41](https://github.com/binary-braids/docker-homelab/compare/v0.33.40...v0.33.41) (2026-01-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change config ([4fbf507](https://github.com/binary-braids/docker-homelab/commit/4fbf5072b37de575dde6955ccf129916235f20f9))
-
-
-
-## [0.33.32](https://github.com/binary-braids/docker-homelab/compare/v0.33.31...v0.33.32) (2026-01-05)
-
-
-### Bug Fixes
-
-* add raw io access ([d468d92](https://github.com/binary-braids/docker-homelab/commit/d468d921b34070f3903ea58859c86650c33d5cb1))
 
 
 
