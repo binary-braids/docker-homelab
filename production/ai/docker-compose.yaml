@@ -7,6 +7,8 @@ networks:
 volumes:
   invoke-ai-data:
     name: invoke-ai-data
+  wan2gp-data:
+    name: wan2gp-data
 
 services:
   ollama:
@@ -112,6 +114,33 @@ services:
       - "traefik.http.routers.invokeai.tls=true"
       - "traefik.http.routers.invokeai.service=invokeai"
       - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
+      - "traefik.docker.network=proxy"
+
+  wan2gp:
+    image: thankfulcarp/wan2gp-docker:local
+    container_name: wan2gp
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    networks:
+      - proxy
+    volumes:
+      - wan2gp-data:/app/loras
+      - wan2gp-data:/app/ckpts
+      - wan2gp-data:/app/settings
+      - wan2gp-data:/app/outputs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wan2gp.rule=Host(`wan2gp.binarybraids.com`)"
+      - "traefik.http.routers.wan2gp.entrypoints=https"
+      - "traefik.http.routers.wan2gp.tls=true"
+      - "traefik.http.routers.wan2gp.service=wan2gp"
+      - "traefik.http.services.wan2gp.loadbalancer.server.port=7860"
       - "traefik.docker.network=proxy"
 
 configs:
