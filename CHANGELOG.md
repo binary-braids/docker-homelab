@@ -1,3 +1,12 @@
+## [0.34.5](https://github.com/binary-braids/docker-homelab/compare/v0.34.4...v0.34.5) (2026-01-31)
+
+
+### Bug Fixes
+
+* remove comfyui container ([73b924f](https://github.com/binary-braids/docker-homelab/commit/73b924fb915f2ca8a241bb2058a74e9768f75217))
+
+
+
 ## [0.34.4](https://github.com/binary-braids/docker-homelab/compare/v0.34.3...v0.34.4) (2026-01-17)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change image ([cb7c837](https://github.com/binary-braids/docker-homelab/commit/cb7c837fd78bafdac30afed219dcd361c3b38cba))
-
-
-
-## [0.33.37](https://github.com/binary-braids/docker-homelab/compare/v0.33.36...v0.33.37) (2026-01-06)
-
-
-### Bug Fixes
-
-* change to hevc ([cd72dfc](https://github.com/binary-braids/docker-homelab/commit/cd72dfcaad5a4177d585857c35e34c5932d3dc3d))
 
 
 
