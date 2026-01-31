@@ -31,7 +31,7 @@ services:
       - "traefik.docker.network=proxy"
 
   alertmanager:
-    image: prom/alertmanager:latest@sha256:27c475db5fb156cab31d5c18a4251ac7ed567746a2483ff264516437a39b15ba
+    image: prom/alertmanager:latest@sha256:286ad8838533a5a01d89bd09643f43d2b68b65203123b5700e54a8f80ff9c1f4
     container_name: alertmanager
     restart: unless-stopped
     networks:
