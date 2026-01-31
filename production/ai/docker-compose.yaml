@@ -7,8 +7,6 @@ networks:
 volumes:
   invoke-ai-data:
     name: invoke-ai-data
-  comfyui-data:
-    name: comfyui-data
 
 services:
   ollama:
@@ -116,33 +114,6 @@ services:
       - "traefik.http.routers.invokeai.tls=true"
       - "traefik.http.routers.invokeai.service=invokeai"
       - "traefik.http.services.invokeai.loadbalancer.server.port=9090"
-      - "traefik.docker.network=proxy"
-
-  comfyui:
-    image: yanwk/comfyui-boot:cu128-slim
-    container_name: comfyui
-    restart: unless-stopped
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
-    networks:
-      - proxy
-    environment:
-      - CLI_ARGS=--disable-xformers
-    volumes:
-      - comfyui-data:/root
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.comfyui.rule=Host(`comfyui.binarybraids.com`)"
-      - "traefik.http.routers.comfyui.entrypoints=https"
-      - "traefik.http.routers.comfyui.tls=true"
-      - "traefik.http.routers.comfyui.service=comfyui"
-      - "traefik.http.services.comfyui.loadbalancer.server.port=8188"
       - "traefik.docker.network=proxy"
 
 configs:
