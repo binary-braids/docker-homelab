@@ -1,3 +1,12 @@
+## [0.34.6](https://github.com/binary-braids/docker-homelab/compare/v0.34.5...v0.34.6) (2026-02-01)
+
+
+### Bug Fixes
+
+* correct shm_size ([969bf3e](https://github.com/binary-braids/docker-homelab/commit/969bf3e5ba693dfed39e7fad41f78afa3f25ef7b))
+
+
+
 ## [0.34.5](https://github.com/binary-braids/docker-homelab/compare/v0.34.4...v0.34.5) (2026-01-31)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * enable vnc access ([efdba61](https://github.com/binary-braids/docker-homelab/commit/efdba61dc0c796237eb443f083e697ef12f3293d))
-
-
-
-## [0.33.38](https://github.com/binary-braids/docker-homelab/compare/v0.33.37...v0.33.38) (2026-01-06)
-
-
-### Bug Fixes
-
-* change image ([cb7c837](https://github.com/binary-braids/docker-homelab/commit/cb7c837fd78bafdac30afed219dcd361c3b38cba))
 
 
 
