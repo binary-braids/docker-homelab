@@ -1,3 +1,12 @@
+## [0.34.7](https://github.com/binary-braids/docker-homelab/compare/v0.34.6...v0.34.7) (2026-02-01)
+
+
+### Bug Fixes
+
+* add core isolation and increase shm size ([ae79164](https://github.com/binary-braids/docker-homelab/commit/ae79164c53a365ced4bdae894040f4a6b4e535b0))
+
+
+
 ## [0.34.6](https://github.com/binary-braids/docker-homelab/compare/v0.34.5...v0.34.6) (2026-02-01)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove nvidia driver version specification ([2c15212](https://github.com/binary-braids/docker-homelab/commit/2c15212a5873a9b60bf86cc0f059ef3ced1768ab))
-
-
-
-## [0.33.39](https://github.com/binary-braids/docker-homelab/compare/v0.33.38...v0.33.39) (2026-01-13)
-
-
-### Bug Fixes
-
-* enable vnc access ([efdba61](https://github.com/binary-braids/docker-homelab/commit/efdba61dc0c796237eb443f083e697ef12f3293d))
 
 
 
