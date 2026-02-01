@@ -8,9 +8,6 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    cpu_shares: 2048
-    cpuset: 0-5
-    shm_size: 16G
     ipc: host
     runtime: nvidia
     deploy:
@@ -18,8 +15,10 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: all
+              count: 1
               capabilities: [gpu]
+    tmpfs:
+    - '/dev/shm:rw'
     ulimits:
       nofile:
         soft: 1048576
