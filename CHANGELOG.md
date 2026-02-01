@@ -1,3 +1,12 @@
+## [0.34.9](https://github.com/binary-braids/docker-homelab/compare/v0.34.8...v0.34.9) (2026-02-01)
+
+
+### Bug Fixes
+
+* increase shm_size to 16G for steam-headless service ([9d9ee82](https://github.com/binary-braids/docker-homelab/commit/9d9ee824684ce80bb4af9eb5d89d0e508869130c))
+
+
+
 ## [0.34.8](https://github.com/binary-braids/docker-homelab/compare/v0.34.7...v0.34.8) (2026-02-01)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add wan2gp container ([ab43c43](https://github.com/binary-braids/docker-homelab/commit/ab43c431a4c60a1f8d4659a3fe75d4b4cff14e12))
-
-
-
-## [0.33.41](https://github.com/binary-braids/docker-homelab/compare/v0.33.40...v0.33.41) (2026-01-13)
-
-
-### Bug Fixes
-
-* change dummy screen ratio ([728a29a](https://github.com/binary-braids/docker-homelab/commit/728a29a0e6f1c7d5790d0cc49c7334be0879cb43))
 
 
 
