@@ -1,3 +1,12 @@
+## [0.34.8](https://github.com/binary-braids/docker-homelab/compare/v0.34.7...v0.34.8) (2026-02-01)
+
+
+### Bug Fixes
+
+* add display configuration for steam-headless service ([a2cdb60](https://github.com/binary-braids/docker-homelab/commit/a2cdb606d4ac9bbae13962fbc5a66fa4db1a0795))
+
+
+
 ## [0.34.7](https://github.com/binary-braids/docker-homelab/compare/v0.34.6...v0.34.7) (2026-02-01)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change dummy screen ratio ([728a29a](https://github.com/binary-braids/docker-homelab/commit/728a29a0e6f1c7d5790d0cc49c7334be0879cb43))
-
-
-
-## [0.33.40](https://github.com/binary-braids/docker-homelab/compare/v0.33.39...v0.33.40) (2026-01-13)
-
-
-### Bug Fixes
-
-* remove nvidia driver version specification ([2c15212](https://github.com/binary-braids/docker-homelab/commit/2c15212a5873a9b60bf86cc0f059ef3ced1768ab))
 
 
 
