@@ -1,3 +1,12 @@
+## [0.34.11](https://github.com/binary-braids/docker-homelab/compare/v0.34.10...v0.34.11) (2026-02-01)
+
+
+### Bug Fixes
+
+* update steam-headless service configuration for improved GPU resource management ([795894c](https://github.com/binary-braids/docker-homelab/commit/795894c629ca23abf28758a8eac6bd29b4d49436))
+
+
+
 ## [0.34.10](https://github.com/binary-braids/docker-homelab/compare/v0.34.9...v0.34.10) (2026-02-01)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add comfyui in place of wan2gp ([df17cb7](https://github.com/binary-braids/docker-homelab/commit/df17cb796f3aef4356299064a290386d802abaaf))
-
-
-
-## [0.34.1](https://github.com/binary-braids/docker-homelab/compare/v0.34.0...v0.34.1) (2026-01-17)
-
-
-### Bug Fixes
-
-* change volume config ([b2096aa](https://github.com/binary-braids/docker-homelab/commit/b2096aa8884a5bde852c31f65c078f0e5d6a2bae))
 
 
 
