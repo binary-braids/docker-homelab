@@ -10,15 +10,12 @@ services:
     restart: unless-stopped
     cpu_shares: 2048
     cpuset: 0-5
-    shm_size: 4G
+    shm_size: 16G
     ipc: host
     runtime: nvidia
     deploy:
       resources:
-        limits:
-          cpus: 6.0
         reservations:
-          cpus: 6.0
           devices:
             - driver: nvidia
               count: all
