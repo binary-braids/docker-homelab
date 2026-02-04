@@ -1,3 +1,12 @@
+## [0.34.12](https://github.com/binary-braids/docker-homelab/compare/v0.34.11...v0.34.12) (2026-02-04)
+
+
+### Bug Fixes
+
+* update github-runner service environment variables for improved configuration ([be6a0b9](https://github.com/binary-braids/docker-homelab/commit/be6a0b93c2d8a625a80cec504e328a19a5d65d1d))
+
+
+
 ## [0.34.11](https://github.com/binary-braids/docker-homelab/compare/v0.34.10...v0.34.11) (2026-02-01)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add runtime: nvidia to containers ([1433a62](https://github.com/binary-braids/docker-homelab/commit/1433a62218dc0119601d3bdfa358f4a4a2ab8c0e))
-
-
-
-## [0.34.2](https://github.com/binary-braids/docker-homelab/compare/v0.34.1...v0.34.2) (2026-01-17)
-
-
-### Bug Fixes
-
-* add comfyui in place of wan2gp ([df17cb7](https://github.com/binary-braids/docker-homelab/commit/df17cb796f3aef4356299064a290386d802abaaf))
 
 
 
