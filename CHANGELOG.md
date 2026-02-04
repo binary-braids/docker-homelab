@@ -1,3 +1,12 @@
+## [0.34.13](https://github.com/binary-braids/docker-homelab/compare/v0.34.12...v0.34.13) (2026-02-04)
+
+
+### Bug Fixes
+
+* update github-runner service to use environment variable for APP_PRIVATE_KEY ([715a3e6](https://github.com/binary-braids/docker-homelab/commit/715a3e6b5cabd80a87e10b5a2a29e489eb73bccf))
+
+
+
 ## [0.34.12](https://github.com/binary-braids/docker-homelab/compare/v0.34.11...v0.34.12) (2026-02-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add disable xformers flag to comfyui ([7f08ec5](https://github.com/binary-braids/docker-homelab/commit/7f08ec5a66a82456410eca3d5dc602cc6bec125b))
-
-
-
-## [0.34.3](https://github.com/binary-braids/docker-homelab/compare/v0.34.2...v0.34.3) (2026-01-17)
-
-
-### Bug Fixes
-
-* add runtime: nvidia to containers ([1433a62](https://github.com/binary-braids/docker-homelab/commit/1433a62218dc0119601d3bdfa358f4a4a2ab8c0e))
 
 
 
