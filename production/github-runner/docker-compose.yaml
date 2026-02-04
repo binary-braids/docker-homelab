@@ -20,7 +20,8 @@ services:
       - RANDOM_RUNNER_SUFFIX=true
       - RUNNER_GROUP=Self-Hosted
       - APP_ID=${APP_ID}
-      - APP_PRIVATE_KEY=${APP_PRIVATE_KEY}
+      - APP_PRIVATE_KEY=|
+            ${APP_PRIVATE_KEY}
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
       - RUN_AS_ROOT=false
