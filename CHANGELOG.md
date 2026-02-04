@@ -1,3 +1,12 @@
+## [0.34.15](https://github.com/binary-braids/docker-homelab/compare/v0.34.14...v0.34.15) (2026-02-04)
+
+
+### Bug Fixes
+
+* simplify APP_PRIVATE_KEY syntax in github-runner service ([c5488fa](https://github.com/binary-braids/docker-homelab/commit/c5488fa8dd56c110dfc70516698221bda5c08448))
+
+
+
 ## [0.34.14](https://github.com/binary-braids/docker-homelab/compare/v0.34.13...v0.34.14) (2026-02-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct shm_size ([969bf3e](https://github.com/binary-braids/docker-homelab/commit/969bf3e5ba693dfed39e7fad41f78afa3f25ef7b))
-
-
-
-## [0.34.5](https://github.com/binary-braids/docker-homelab/compare/v0.34.4...v0.34.5) (2026-01-31)
-
-
-### Bug Fixes
-
-* remove comfyui container ([73b924f](https://github.com/binary-braids/docker-homelab/commit/73b924fb915f2ca8a241bb2058a74e9768f75217))
 
 
 
