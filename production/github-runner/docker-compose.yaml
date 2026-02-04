@@ -17,11 +17,14 @@ services:
       - github-runner
     environment:
       - RUNNER_NAME_PREFIX=bb-gh-runner
+      - RANDOM_RUNNER_SUFFIX=true
       - RUNNER_GROUP=Self-Hosted
-      - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - APP_ID=${APP_ID}
+      - APP_PRIVATE_KEY=/var/lib/docker/secrets/github-runner/private-key.pem
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
       - RUN_AS_ROOT=false
+      - EPHEMERAL=1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - github-runner-data:/runner/data
