@@ -1,3 +1,12 @@
+## [0.34.14](https://github.com/binary-braids/docker-homelab/compare/v0.34.13...v0.34.14) (2026-02-04)
+
+
+### Bug Fixes
+
+* update github-runner service to use multiline syntax for APP_PRIVATE_KEY ([e30f8c6](https://github.com/binary-braids/docker-homelab/commit/e30f8c6d638e8bdd9b1c5f8a539e9537800d75d3))
+
+
+
 ## [0.34.13](https://github.com/binary-braids/docker-homelab/compare/v0.34.12...v0.34.13) (2026-02-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove comfyui container ([73b924f](https://github.com/binary-braids/docker-homelab/commit/73b924fb915f2ca8a241bb2058a74e9768f75217))
-
-
-
-## [0.34.4](https://github.com/binary-braids/docker-homelab/compare/v0.34.3...v0.34.4) (2026-01-17)
-
-
-### Bug Fixes
-
-* add disable xformers flag to comfyui ([7f08ec5](https://github.com/binary-braids/docker-homelab/commit/7f08ec5a66a82456410eca3d5dc602cc6bec125b))
 
 
 
