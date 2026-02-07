@@ -1,3 +1,12 @@
+## [0.34.20](https://github.com/binary-braids/docker-homelab/compare/v0.34.19...v0.34.20) (2026-02-07)
+
+
+### Bug Fixes
+
+* remove Digital Ocean node ([67d1cc0](https://github.com/binary-braids/docker-homelab/commit/67d1cc0ea5d5947afe1c61472846f257f0de28fc))
+
+
+
 ## [0.34.19](https://github.com/binary-braids/docker-homelab/compare/v0.34.18...v0.34.19) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless service configuration for improved GPU resource management ([795894c](https://github.com/binary-braids/docker-homelab/commit/795894c629ca23abf28758a8eac6bd29b4d49436))
-
-
-
-## [0.34.10](https://github.com/binary-braids/docker-homelab/compare/v0.34.9...v0.34.10) (2026-02-01)
-
-
-### Bug Fixes
-
-* adjust GPU resource allocation and remove unnecessary settings for steam-headless service ([934f610](https://github.com/binary-braids/docker-homelab/commit/934f61063939408266ae45910498fad64d1c4b63))
 
 
 
