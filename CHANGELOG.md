@@ -1,3 +1,12 @@
+## [0.34.22](https://github.com/binary-braids/docker-homelab/compare/v0.34.21...v0.34.22) (2026-02-07)
+
+
+### Bug Fixes
+
+* increase shm_size for steam-headless service ([a2b671f](https://github.com/binary-braids/docker-homelab/commit/a2b671f98d876fb44650c7822ec4f40e05aaa849))
+
+
+
 ## [0.34.21](https://github.com/binary-braids/docker-homelab/compare/v0.34.20...v0.34.21) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update github-runner service to use environment variable for APP_PRIVATE_KEY ([715a3e6](https://github.com/binary-braids/docker-homelab/commit/715a3e6b5cabd80a87e10b5a2a29e489eb73bccf))
-
-
-
-## [0.34.12](https://github.com/binary-braids/docker-homelab/compare/v0.34.11...v0.34.12) (2026-02-04)
-
-
-### Bug Fixes
-
-* update github-runner service environment variables for improved configuration ([be6a0b9](https://github.com/binary-braids/docker-homelab/commit/be6a0b93c2d8a625a80cec504e328a19a5d65d1d))
 
 
 
