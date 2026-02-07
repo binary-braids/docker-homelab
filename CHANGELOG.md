@@ -1,3 +1,12 @@
+## [0.34.16](https://github.com/binary-braids/docker-homelab/compare/v0.34.15...v0.34.16) (2026-02-07)
+
+
+### Bug Fixes
+
+* replace github app with access token based registration ([bbab1f7](https://github.com/binary-braids/docker-homelab/commit/bbab1f7ebadb59916c16852392e38d7ccf613031))
+
+
+
 ## [0.34.15](https://github.com/binary-braids/docker-homelab/compare/v0.34.14...v0.34.15) (2026-02-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add core isolation and increase shm size ([ae79164](https://github.com/binary-braids/docker-homelab/commit/ae79164c53a365ced4bdae894040f4a6b4e535b0))
-
-
-
-## [0.34.6](https://github.com/binary-braids/docker-homelab/compare/v0.34.5...v0.34.6) (2026-02-01)
-
-
-### Bug Fixes
-
-* correct shm_size ([969bf3e](https://github.com/binary-braids/docker-homelab/commit/969bf3e5ba693dfed39e7fad41f78afa3f25ef7b))
 
 
 
