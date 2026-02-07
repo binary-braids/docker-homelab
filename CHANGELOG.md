@@ -1,3 +1,12 @@
+## [0.34.17](https://github.com/binary-braids/docker-homelab/compare/v0.34.16...v0.34.17) (2026-02-07)
+
+
+### Bug Fixes
+
+* adjust shm_size and ipc settings for steam-headless service ([d21be63](https://github.com/binary-braids/docker-homelab/commit/d21be6353450ee6e455fafc8e7938a227b4c3d50))
+
+
+
 ## [0.34.16](https://github.com/binary-braids/docker-homelab/compare/v0.34.15...v0.34.16) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add display configuration for steam-headless service ([a2cdb60](https://github.com/binary-braids/docker-homelab/commit/a2cdb606d4ac9bbae13962fbc5a66fa4db1a0795))
-
-
-
-## [0.34.7](https://github.com/binary-braids/docker-homelab/compare/v0.34.6...v0.34.7) (2026-02-01)
-
-
-### Bug Fixes
-
-* add core isolation and increase shm size ([ae79164](https://github.com/binary-braids/docker-homelab/commit/ae79164c53a365ced4bdae894040f4a6b4e535b0))
 
 
 
