@@ -8,7 +8,7 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest@sha256:82fc73169df0aa52a020bef5f05a7bda47da7d9d5b499547be5c2965581de8c6
     restart: unless-stopped
-    shm_size: 2G
+    shm_size: 12G
     ipc: host
     runtime: nvidia
     deploy:
