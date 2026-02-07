@@ -22,7 +22,6 @@ services:
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
       - RUN_AS_ROOT=false
-      - EPHEMERAL=1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - github-runner-data:/runner/data
