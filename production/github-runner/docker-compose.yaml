@@ -10,7 +10,7 @@ volumes:
 
 services:
   github-runner:
-    image: myoung34/github-runner:2.331.0-ubuntu-noble
+    image: myoung34/github-runner:2.331.0-ubuntu-noble@sha256:22e82b9be59b84e84da818547fe1200bbe8603b07284cb85ae410e95d48a8b1b
     container_name: github-runner
     restart: unless-stopped
     networks:

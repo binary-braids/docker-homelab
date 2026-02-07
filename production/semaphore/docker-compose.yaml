@@ -11,7 +11,7 @@ volumes:
 services:
 
   semaphore:
-    image: ghcr.io/binary-braids/ansible-semaphore:0.3.2
+    image: ghcr.io/binary-braids/ansible-semaphore:0.3.2@sha256:832ba9a752deb5e22874779a3a937ab9fea3dfc6d9d77b3d9c0d755bddaa5742
     container_name: semaphore
     restart: unless-stopped
     environment:

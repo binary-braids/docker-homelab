@@ -15,7 +15,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:v3.8.1
+    image: prom/prometheus:v3.8.1@sha256:2b6f734e372c1b4717008f7d0a0152316aedd4d13ae17ef1e3268dbfaf68041b
     container_name: prometheus
     restart: unless-stopped
     networks:
@@ -45,7 +45,7 @@ services:
       - "traefik.docker.network=proxy"
 
   alertmanager:
-    image: prom/alertmanager:v0.30.0
+    image: prom/alertmanager:v0.30.0@sha256:abb750ac7b63116761c16dd481ae92496fbe04721686c0920f0fa4d0728cd4a6
     container_name: alertmanager
     restart: unless-stopped
     networks:
@@ -71,7 +71,7 @@ services:
       - "traefik.docker.network=proxy"
 
   grafana:
-    image: grafana/grafana:12.3
+    image: grafana/grafana:12.3@sha256:ba93c9d192e58b23e064c7f501d453426ccf4a85065bf25b705ab1e98602bfb1
     container_name: grafana
     restart: unless-stopped
     networks:
@@ -90,7 +90,7 @@ services:
       - "traefik.docker.network=proxy"
 
   pve-exporter:
-    image: prompve/prometheus-pve-exporter:3.7.0
+    image: prompve/prometheus-pve-exporter:3.7.0@sha256:f5266117e8b3db1fcf1cb3f9206cf7822d9db82fc1740b8f33f3140c9f24cca9
     container_name: pve-exporter
     restart: unless-stopped
     networks:
