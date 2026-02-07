@@ -1,3 +1,12 @@
+## [0.34.18](https://github.com/binary-braids/docker-homelab/compare/v0.34.17...v0.34.18) (2026-02-07)
+
+
+### Bug Fixes
+
+* add runner env variable ([607e91a](https://github.com/binary-braids/docker-homelab/commit/607e91a2f4d49c7a17c51b1cadd4b3f579951bbb))
+
+
+
 ## [0.34.17](https://github.com/binary-braids/docker-homelab/compare/v0.34.16...v0.34.17) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * increase shm_size to 16G for steam-headless service ([9d9ee82](https://github.com/binary-braids/docker-homelab/commit/9d9ee824684ce80bb4af9eb5d89d0e508869130c))
-
-
-
-## [0.34.8](https://github.com/binary-braids/docker-homelab/compare/v0.34.7...v0.34.8) (2026-02-01)
-
-
-### Bug Fixes
-
-* add display configuration for steam-headless service ([a2cdb60](https://github.com/binary-braids/docker-homelab/commit/a2cdb606d4ac9bbae13962fbc5a66fa4db1a0795))
 
 
 
