@@ -16,8 +16,7 @@ services:
     networks:
       - github-runner
     environment:
-      - RUNNER_NAME_PREFIX=bb-gh-runner
-      - RANDOM_RUNNER_SUFFIX=true
+      - RUNNER_NAME=${RUNNER_NAME}
       - RUNNER_GROUP=Self-Hosted
       - ACCESS_TOKEN=${ACCESS_TOKEN}
       - RUNNER_SCOPE=org
