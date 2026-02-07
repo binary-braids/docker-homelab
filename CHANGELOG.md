@@ -1,3 +1,12 @@
+## [0.34.19](https://github.com/binary-braids/docker-homelab/compare/v0.34.18...v0.34.19) (2026-02-07)
+
+
+### Bug Fixes
+
+* disable ephemeral runners ([d5785f6](https://github.com/binary-braids/docker-homelab/commit/d5785f66e8f767bf822359dde446a0a7e2c3e13a))
+
+
+
 ## [0.34.18](https://github.com/binary-braids/docker-homelab/compare/v0.34.17...v0.34.18) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * adjust GPU resource allocation and remove unnecessary settings for steam-headless service ([934f610](https://github.com/binary-braids/docker-homelab/commit/934f61063939408266ae45910498fad64d1c4b63))
-
-
-
-## [0.34.9](https://github.com/binary-braids/docker-homelab/compare/v0.34.8...v0.34.9) (2026-02-01)
-
-
-### Bug Fixes
-
-* increase shm_size to 16G for steam-headless service ([9d9ee82](https://github.com/binary-braids/docker-homelab/commit/9d9ee824684ce80bb4af9eb5d89d0e508869130c))
 
 
 
