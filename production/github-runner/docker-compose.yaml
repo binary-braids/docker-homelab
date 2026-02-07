@@ -10,7 +10,7 @@ volumes:
 
 services:
   github-runner:
-    image: myoung34/github-runner:2.330.0-ubuntu-noble@sha256:01a9c33bee135d9a7fb921150bfc3d249e8afd8c2ab359496ef9ed43d58d095b
+    image: myoung34/github-runner:2.331.0-ubuntu-noble
     container_name: github-runner
     restart: unless-stopped
     networks:
@@ -19,8 +19,7 @@ services:
       - RUNNER_NAME_PREFIX=bb-gh-runner
       - RANDOM_RUNNER_SUFFIX=true
       - RUNNER_GROUP=Self-Hosted
-      - APP_ID=${APP_ID}
-      - APP_PRIVATE_KEY=${APP_PRIVATE_KEY}
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
       - RUN_AS_ROOT=false
