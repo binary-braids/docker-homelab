@@ -1,3 +1,12 @@
+## [0.34.21](https://github.com/binary-braids/docker-homelab/compare/v0.34.20...v0.34.21) (2026-02-07)
+
+
+### Bug Fixes
+
+* deploy resources ([27ac0aa](https://github.com/binary-braids/docker-homelab/commit/27ac0aafb93fa733891928983f2e9565d5829efe))
+
+
+
 ## [0.34.20](https://github.com/binary-braids/docker-homelab/compare/v0.34.19...v0.34.20) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update github-runner service environment variables for improved configuration ([be6a0b9](https://github.com/binary-braids/docker-homelab/commit/be6a0b93c2d8a625a80cec504e328a19a5d65d1d))
-
-
-
-## [0.34.11](https://github.com/binary-braids/docker-homelab/compare/v0.34.10...v0.34.11) (2026-02-01)
-
-
-### Bug Fixes
-
-* update steam-headless service configuration for improved GPU resource management ([795894c](https://github.com/binary-braids/docker-homelab/commit/795894c629ca23abf28758a8eac6bd29b4d49436))
 
 
 
