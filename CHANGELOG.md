@@ -1,3 +1,12 @@
+## [0.34.24](https://github.com/binary-braids/docker-homelab/compare/v0.34.23...v0.34.24) (2026-02-10)
+
+
+### Bug Fixes
+
+* update steam-headless image to use binary-braids version ([4756683](https://github.com/binary-braids/docker-homelab/commit/4756683b604a0399470f0907f06572ca050c25fb))
+
+
+
 ## [0.34.23](https://github.com/binary-braids/docker-homelab/compare/v0.34.22...v0.34.23) (2026-02-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * simplify APP_PRIVATE_KEY syntax in github-runner service ([c5488fa](https://github.com/binary-braids/docker-homelab/commit/c5488fa8dd56c110dfc70516698221bda5c08448))
-
-
-
-## [0.34.14](https://github.com/binary-braids/docker-homelab/compare/v0.34.13...v0.34.14) (2026-02-04)
-
-
-### Bug Fixes
-
-* update github-runner service to use multiline syntax for APP_PRIVATE_KEY ([e30f8c6](https://github.com/binary-braids/docker-homelab/commit/e30f8c6d638e8bdd9b1c5f8a539e9537800d75d3))
 
 
 
