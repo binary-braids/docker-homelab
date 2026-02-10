@@ -1,3 +1,12 @@
+## [0.34.25](https://github.com/binary-braids/docker-homelab/compare/v0.34.24...v0.34.25) (2026-02-10)
+
+
+### Bug Fixes
+
+* update steam-headless image to latest version ([3b7bebf](https://github.com/binary-braids/docker-homelab/commit/3b7bebf42baf4395ad87e9ba7c50818c4389dbca))
+
+
+
 ## [0.34.24](https://github.com/binary-braids/docker-homelab/compare/v0.34.23...v0.34.24) (2026-02-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * replace github app with access token based registration ([bbab1f7](https://github.com/binary-braids/docker-homelab/commit/bbab1f7ebadb59916c16852392e38d7ccf613031))
-
-
-
-## [0.34.15](https://github.com/binary-braids/docker-homelab/compare/v0.34.14...v0.34.15) (2026-02-04)
-
-
-### Bug Fixes
-
-* simplify APP_PRIVATE_KEY syntax in github-runner service ([c5488fa](https://github.com/binary-braids/docker-homelab/commit/c5488fa8dd56c110dfc70516698221bda5c08448))
 
 
 
