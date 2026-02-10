@@ -1,3 +1,12 @@
+## [0.34.23](https://github.com/binary-braids/docker-homelab/compare/v0.34.22...v0.34.23) (2026-02-10)
+
+
+### Bug Fixes
+
+* disable steam in docker-compose for steam-headless service ([6e3325a](https://github.com/binary-braids/docker-homelab/commit/6e3325a2e3dfcba26435f4b657bf64786ec79343))
+
+
+
 ## [0.34.22](https://github.com/binary-braids/docker-homelab/compare/v0.34.21...v0.34.22) (2026-02-07)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update github-runner service to use multiline syntax for APP_PRIVATE_KEY ([e30f8c6](https://github.com/binary-braids/docker-homelab/commit/e30f8c6d638e8bdd9b1c5f8a539e9537800d75d3))
-
-
-
-## [0.34.13](https://github.com/binary-braids/docker-homelab/compare/v0.34.12...v0.34.13) (2026-02-04)
-
-
-### Bug Fixes
-
-* update github-runner service to use environment variable for APP_PRIVATE_KEY ([715a3e6](https://github.com/binary-braids/docker-homelab/commit/715a3e6b5cabd80a87e10b5a2a29e489eb73bccf))
 
 
 
