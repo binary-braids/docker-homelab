@@ -55,7 +55,7 @@ services:
       - PORT_NOVNC_WEB=8083
 
       # Steam
-      - ENABLE_STEAM=true
+      - ENABLE_STEAM=false
       - STEAM_ARGS=-silent
       # Sunshine
       - ENABLE_SUNSHINE=true
