@@ -1,3 +1,12 @@
+## [0.34.26](https://github.com/binary-braids/docker-homelab/compare/v0.34.25...v0.34.26) (2026-02-10)
+
+
+### Bug Fixes
+
+* update steam-headless image and enable Steam functionality ([ce4440f](https://github.com/binary-braids/docker-homelab/commit/ce4440fa06762f6ea7ae23b3d0c56b46ce3d11d0))
+
+
+
 ## [0.34.25](https://github.com/binary-braids/docker-homelab/compare/v0.34.24...v0.34.25) (2026-02-10)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * adjust shm_size and ipc settings for steam-headless service ([d21be63](https://github.com/binary-braids/docker-homelab/commit/d21be6353450ee6e455fafc8e7938a227b4c3d50))
-
-
-
-## [0.34.16](https://github.com/binary-braids/docker-homelab/compare/v0.34.15...v0.34.16) (2026-02-07)
-
-
-### Bug Fixes
-
-* replace github app with access token based registration ([bbab1f7](https://github.com/binary-braids/docker-homelab/commit/bbab1f7ebadb59916c16852392e38d7ccf613031))
 
 
 
