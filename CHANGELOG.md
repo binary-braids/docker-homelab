@@ -1,3 +1,12 @@
+## [0.34.30](https://github.com/binary-braids/docker-homelab/compare/v0.34.29...v0.34.30) (2026-02-11)
+
+
+### Bug Fixes
+
+* update steam-headless image to specific version for stability ([a6cbe63](https://github.com/binary-braids/docker-homelab/commit/a6cbe63291f8b17e872a5db0d17fbba876a0a5d7))
+
+
+
 ## [0.34.29](https://github.com/binary-braids/docker-homelab/compare/v0.34.28...v0.34.29) (2026-02-11)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * deploy resources ([27ac0aa](https://github.com/binary-braids/docker-homelab/commit/27ac0aafb93fa733891928983f2e9565d5829efe))
-
-
-
-## [0.34.20](https://github.com/binary-braids/docker-homelab/compare/v0.34.19...v0.34.20) (2026-02-07)
-
-
-### Bug Fixes
-
-* remove Digital Ocean node ([67d1cc0](https://github.com/binary-braids/docker-homelab/commit/67d1cc0ea5d5947afe1c61472846f257f0de28fc))
 
 
 
