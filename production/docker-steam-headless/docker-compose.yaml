@@ -6,7 +6,7 @@ volumes:
 
 services:
   steam-headless:
-    image: ghcr.io/binary-braids/docker-headless:f54bf2dee3a2a4c40ebe0bffe35713248c381a3c
+    image: ghcr.io/binary-braids/docker-headless:eb1a5529925e6e5207565b6d65fb42c237eb6e45
     restart: unless-stopped
     shm_size: 12G
     ipc: host
