@@ -1,3 +1,12 @@
+## [0.34.32](https://github.com/binary-braids/docker-homelab/compare/v0.34.31...v0.34.32) (2026-02-13)
+
+
+### Bug Fixes
+
+* update GitHub App token action to use official action ([8d13fa0](https://github.com/binary-braids/docker-homelab/commit/8d13fa04a38df43de10b258e0561595587d38569))
+
+
+
 ## [0.34.31](https://github.com/binary-braids/docker-homelab/compare/v0.34.30...v0.34.31) (2026-02-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * disable steam in docker-compose for steam-headless service ([6e3325a](https://github.com/binary-braids/docker-homelab/commit/6e3325a2e3dfcba26435f4b657bf64786ec79343))
-
-
-
-## [0.34.22](https://github.com/binary-braids/docker-homelab/compare/v0.34.21...v0.34.22) (2026-02-07)
-
-
-### Bug Fixes
-
-* increase shm_size for steam-headless service ([a2b671f](https://github.com/binary-braids/docker-homelab/commit/a2b671f98d876fb44650c7822ec4f40e05aaa849))
 
 
 
