@@ -90,7 +90,7 @@ services:
       - "traefik.docker.network=proxy"  
   
   invoke-ai:
-    image: ghcr.io/invoke-ai/invokeai:6.9.0-cuda@sha256:594e935d0fea0b866fb5a853358cbb3adc78eb38317c2ce145e22c76b6bdec68
+    image: ghcr.io/invoke-ai/invokeai:6.11.1-cuda@sha256:e7f9ec1d25c95eef2fd56ac94e582675fd8ea4a0a8e0a45e536c9cc3a64aab31
     container_name: invoke-ai
     runtime: nvidia
     deploy:
