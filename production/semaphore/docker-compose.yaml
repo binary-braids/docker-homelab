@@ -20,6 +20,9 @@ services:
       - SEMAPHORE_ADMIN_NAME="Semaphore Admin"
       - SEMAPHORE_ADMIN_PASSWORD=${SEMAPHORE_ADMIN_PASSWORD}
       - SEMAPHORE_DB_DIALECT=sqlite
+      - SEMAPHORE_GOTIFY_ALERT=True
+      - SEMAPHORE_GOTIFY_URL="gotify.binarybraids.com"
+      - SEMAPHORE_GOTIFY_TOKEN=${SEMAPHORE_GOTIFY_TOKEN}
     networks:
       - proxy
     volumes:
