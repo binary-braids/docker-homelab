@@ -1,3 +1,12 @@
+# [0.36.0](https://github.com/binary-braids/docker-homelab/compare/v0.35.0...v0.36.0) (2026-02-15)
+
+
+### Features
+
+* add Gotify notifications to Semaphore UI container ([8b86e27](https://github.com/binary-braids/docker-homelab/commit/8b86e2792c65ed276e4a7c05a31f0b8cc6dc45fe))
+
+
+
 # [0.35.0](https://github.com/binary-braids/docker-homelab/compare/v0.34.32...v0.35.0) (2026-02-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image to latest version ([3b7bebf](https://github.com/binary-braids/docker-homelab/commit/3b7bebf42baf4395ad87e9ba7c50818c4389dbca))
-
-
-
-## [0.34.24](https://github.com/binary-braids/docker-homelab/compare/v0.34.23...v0.34.24) (2026-02-10)
-
-
-### Bug Fixes
-
-* update steam-headless image to use binary-braids version ([4756683](https://github.com/binary-braids/docker-homelab/commit/4756683b604a0399470f0907f06572ca050c25fb))
 
 
 
