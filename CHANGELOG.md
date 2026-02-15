@@ -1,3 +1,12 @@
+# [0.35.0](https://github.com/binary-braids/docker-homelab/compare/v0.34.32...v0.35.0) (2026-02-15)
+
+
+### Features
+
+* add Gotify Docker Compose configuration ([d94b7d9](https://github.com/binary-braids/docker-homelab/commit/d94b7d973ae15787d73f8ea20b9d253596d4538f))
+
+
+
 ## [0.34.32](https://github.com/binary-braids/docker-homelab/compare/v0.34.31...v0.34.32) (2026-02-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image to use binary-braids version ([4756683](https://github.com/binary-braids/docker-homelab/commit/4756683b604a0399470f0907f06572ca050c25fb))
-
-
-
-## [0.34.23](https://github.com/binary-braids/docker-homelab/compare/v0.34.22...v0.34.23) (2026-02-10)
-
-
-### Bug Fixes
-
-* disable steam in docker-compose for steam-headless service ([6e3325a](https://github.com/binary-braids/docker-homelab/commit/6e3325a2e3dfcba26435f4b657bf64786ec79343))
 
 
 
