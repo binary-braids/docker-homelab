@@ -1,3 +1,12 @@
+# [0.37.0](https://github.com/binary-braids/docker-homelab/compare/v0.36.0...v0.37.0) (2026-02-21)
+
+
+### Features
+
+* add Renovate configuration for automated dependency management ([7b79086](https://github.com/binary-braids/docker-homelab/commit/7b79086ea8edbafb945fb8284dfc5ed68942b683))
+
+
+
 # [0.36.0](https://github.com/binary-braids/docker-homelab/compare/v0.35.0...v0.36.0) (2026-02-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image and enable Steam functionality ([ce4440f](https://github.com/binary-braids/docker-homelab/commit/ce4440fa06762f6ea7ae23b3d0c56b46ce3d11d0))
-
-
-
-## [0.34.25](https://github.com/binary-braids/docker-homelab/compare/v0.34.24...v0.34.25) (2026-02-10)
-
-
-### Bug Fixes
-
-* update steam-headless image to latest version ([3b7bebf](https://github.com/binary-braids/docker-homelab/commit/3b7bebf42baf4395ad87e9ba7c50818c4389dbca))
 
 
 
