@@ -10,7 +10,7 @@ volumes:
 
 services:
   gotify:
-    image: gotify/server:2.9.0
+    image: gotify/server:2.9.0@sha256:4df8c1bb23646b8d8b308e881866474bfae4a9a5b3980e5047f87eb84017e8a0
     container_name: gotify
     restart: unless-stopped
     networks:
