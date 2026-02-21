@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices"
+  ],
+  "assignees": [
+    "data-tangles"
+  ],
+  "reviewers": [
+    "data-tangles"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    }
+  ],
+  "kubernetes": {
+    "managerFilePatterns": [
+      "/apps/.+\\.yaml$/"
+    ]
+  },
+  "automergeSchedule": [
+    "after 2am",
+    "before 5am"
+  ]
+}

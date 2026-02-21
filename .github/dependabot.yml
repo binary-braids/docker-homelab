@@ -1,7 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "docker-compose" # See documentation for possible values
-    directories:
-      - "**/*"
-    schedule:
-      interval: "weekly"
