@@ -90,7 +90,7 @@ services:
       - "traefik.docker.network=proxy"
 
   pve-exporter:
-    image: prompve/prometheus-pve-exporter:3.7.0@sha256:f5266117e8b3db1fcf1cb3f9206cf7822d9db82fc1740b8f33f3140c9f24cca9
+    image: prompve/prometheus-pve-exporter:3.8.1@sha256:c0a6d578f116b6a26670f03a33f8949bc6036caa71d4ec3c199fd490c1b71644
     container_name: pve-exporter
     restart: unless-stopped
     networks:
