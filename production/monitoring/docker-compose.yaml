@@ -15,7 +15,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:v3.8.1@sha256:2b6f734e372c1b4717008f7d0a0152316aedd4d13ae17ef1e3268dbfaf68041b
+    image: prom/prometheus:v3.10.0@sha256:4a61322ac1103a0e3aea2a61ef1718422a48fa046441f299d71e660a3bc71ae9
     container_name: prometheus
     restart: unless-stopped
     networks:
