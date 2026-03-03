@@ -43,7 +43,7 @@ services:
       - DB_HOST=romm-db
       - DB_NAME=romm
       - DB_USER=romm-user
-      - DB_PASSWD=${MARIADB_ROOT_PASSWORD}
+      - DB_PASSWD=${MARIADB_PASSWORD}
       - ROMM_AUTH_SECRET_KEY=${ROMM_AUTH_SECRET_KEY}
       - HASHEOUS_API_ENABLED=true
     volumes:
