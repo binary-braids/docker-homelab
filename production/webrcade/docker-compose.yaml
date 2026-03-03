@@ -1,0 +1,32 @@
+name: webrcade
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  webrcade-data:
+    name: webrcade-data
+
+services:
+  webrcade:
+    image: webrcade/webrcade:0.1.8
+    restart: unless-stopped
+    networks:
+      - proxy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Johannesburg
+    volumes:
+      - webrcade-data:/var/www/html/content
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.webrcade.rule=Host(`webrcade.binarybraids.com`)"
+      - "traefik.http.routers.webrcade.entrypoints=https"
+      - "traefik.http.routers.webrcade.tls=true"
+      - "traefik.http.routers.webrcade.service=webrcade"
+      - "traefik.http.services.webrcade.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
