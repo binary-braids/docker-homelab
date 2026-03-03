@@ -1,3 +1,12 @@
+## [0.38.1](https://github.com/binary-braids/docker-homelab/compare/v0.38.0...v0.38.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* **emulatorjs:** specify exact image version for emulatorjs service ([ca50bff](https://github.com/binary-braids/docker-homelab/commit/ca50bff512875a12f7bb8a4bb448072ee7ae70b0))
+
+
+
 # [0.38.0](https://github.com/binary-braids/docker-homelab/compare/v0.37.0...v0.38.0) (2026-03-03)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image to specific version for stability ([21658f5](https://github.com/binary-braids/docker-homelab/commit/21658f54535d75f16a621e73867defa69b720288))
-
-
-
-## [0.34.27](https://github.com/binary-braids/docker-homelab/compare/v0.34.26...v0.34.27) (2026-02-10)
-
-
-### Bug Fixes
-
-* update steam-headless image to specific version for stability ([e0c7d81](https://github.com/binary-braids/docker-homelab/commit/e0c7d81d2a41b74e7401cb696e73e371620b1884))
 
 
 
