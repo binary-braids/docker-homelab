@@ -1,3 +1,12 @@
+# [0.39.0](https://github.com/binary-braids/docker-homelab/compare/v0.38.1...v0.39.0) (2026-03-03)
+
+
+### Features
+
+* **webrcade:** add docker-compose configuration for webrcade service ([035ff06](https://github.com/binary-braids/docker-homelab/commit/035ff0666012e2d5983d809bf1da106e3073cdcc))
+
+
+
 ## [0.38.1](https://github.com/binary-braids/docker-homelab/compare/v0.38.0...v0.38.1) (2026-03-03)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image to specific version for stability ([de5b23b](https://github.com/binary-braids/docker-homelab/commit/de5b23b368c35591eb6bc4aa4e30d8b1cc456bc7))
-
-
-
-## [0.34.28](https://github.com/binary-braids/docker-homelab/compare/v0.34.27...v0.34.28) (2026-02-10)
-
-
-### Bug Fixes
-
-* update steam-headless image to specific version for stability ([21658f5](https://github.com/binary-braids/docker-homelab/commit/21658f54535d75f16a621e73867defa69b720288))
 
 
 
