@@ -3,6 +3,8 @@ name: romm
 networks:
   proxy:
     external: true
+  romm:
+    name: romm
 
 volumes:
   romm-db-data:
@@ -14,6 +16,8 @@ services:
   romm-db:
     image: mariadb:12.2.2-noble
     restart: unless-stopped
+    networks:
+      - romm
     environment:
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       - MARIADB_DATABASE=romm
@@ -33,6 +37,7 @@ services:
     image: rommapp/romm:4.6.1
     restart: unless-stopped
     networks:
+      - romm
       - proxy
     environment:
       - DB_HOST=romm-db
