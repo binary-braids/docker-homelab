@@ -10,7 +10,7 @@ volumes:
 
 services:
   emulatorjs:
-    image: lscr.io/linuxserver/emulatorjs:latest
+    image: lscr.io/linuxserver/emulatorjs:amd64-1.9.2
     restart: unless-stopped
     networks:
       - proxy
