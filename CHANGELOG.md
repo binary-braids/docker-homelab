@@ -1,3 +1,12 @@
+## [0.41.1](https://github.com/binary-braids/docker-homelab/compare/v0.41.0...v0.41.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* **docker-compose:** correct environment variable for DB_PASSWD in romm service ([cd50ce9](https://github.com/binary-braids/docker-homelab/commit/cd50ce9a82ae9006f05d9916ac535f39f7709393))
+
+
+
 # [0.41.0](https://github.com/binary-braids/docker-homelab/compare/v0.40.0...v0.41.0) (2026-03-03)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update GitHub App token action to use official action ([8d13fa0](https://github.com/binary-braids/docker-homelab/commit/8d13fa04a38df43de10b258e0561595587d38569))
-
-
-
-## [0.34.31](https://github.com/binary-braids/docker-homelab/compare/v0.34.30...v0.34.31) (2026-02-13)
-
-
-### Bug Fixes
-
-* update steam-headless image to specific version for stability ([b2214ce](https://github.com/binary-braids/docker-homelab/commit/b2214cee3137b81d3f8048e27ae258d238c65fb2))
 
 
 
