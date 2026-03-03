@@ -1,3 +1,12 @@
+# [0.40.0](https://github.com/binary-braids/docker-homelab/compare/v0.39.0...v0.40.0) (2026-03-03)
+
+
+### Features
+
+* **romm:** add docker-compose configuration for romm service ([ffad6a7](https://github.com/binary-braids/docker-homelab/commit/ffad6a7caa14922b0995967e6fcae4a85b4086f5))
+
+
+
 # [0.39.0](https://github.com/binary-braids/docker-homelab/compare/v0.38.1...v0.39.0) (2026-03-03)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update steam-headless image to specific version for stability ([a6cbe63](https://github.com/binary-braids/docker-homelab/commit/a6cbe63291f8b17e872a5db0d17fbba876a0a5d7))
-
-
-
-## [0.34.29](https://github.com/binary-braids/docker-homelab/compare/v0.34.28...v0.34.29) (2026-02-11)
-
-
-### Bug Fixes
-
-* update steam-headless image to specific version for stability ([de5b23b](https://github.com/binary-braids/docker-homelab/commit/de5b23b368c35591eb6bc4aa4e30d8b1cc456bc7))
 
 
 
