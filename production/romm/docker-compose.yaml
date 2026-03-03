@@ -1,0 +1,56 @@
+name: romm
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  romm-db-data:
+    name: romm-db-data
+  romm-data:
+    name: romm-data
+
+services:
+  romm-db:
+    image: mariadb:12.2.2-noble
+    restart: unless-stopped
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=romm
+      - MARIADB_USER=romm-user
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}   
+    volumes:
+      - romm-db-data:/var/lib/mysql
+    healthcheck:
+        test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+        start_period: 30s
+        start_interval: 10s
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+  romm:
+    image: rommapp/romm:4.6.1
+    restart: unless-stopped
+    networks:
+      - proxy
+    environment:
+      - DB_HOST=romm-db
+      - DB_NAME=romm
+      - DB_USER=romm-user
+      - DB_PASSWD=${MARIADB_ROOT_PASSWORD}
+      - ROMM_AUTH_SECRET_KEY=${ROMM_AUTH_SECRET_KEY}
+      - HASHEOUS_API_ENABLED=true
+    volumes:
+      - romm-data:/romm/resources
+      - romm-data:/romm/library
+      - romm-data:/romm/assets
+      - romm-data:/romm/config
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.romm.rule=Host(`romm.binarybraids.com`)"
+      - "traefik.http.routers.romm.entrypoints=https"
+      - "traefik.http.routers.romm.tls=true"
+      - "traefik.http.routers.romm.service=romm"
+      - "traefik.http.services.romm.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
