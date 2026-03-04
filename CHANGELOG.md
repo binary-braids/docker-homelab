@@ -1,3 +1,12 @@
+## [0.41.2](https://github.com/binary-braids/docker-homelab/compare/v0.41.1...v0.41.2) (2026-03-04)
+
+
+### Bug Fixes
+
+* **docker-compose:** update Traefik load balancer port to 8080 for romm service ([b8db56f](https://github.com/binary-braids/docker-homelab/commit/b8db56f5a5fcf358d3fa4f057c7222bd8c7d1ee2))
+
+
+
 ## [0.41.1](https://github.com/binary-braids/docker-homelab/compare/v0.41.0...v0.41.1) (2026-03-03)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Gotify Docker Compose configuration ([d94b7d9](https://github.com/binary-braids/docker-homelab/commit/d94b7d973ae15787d73f8ea20b9d253596d4538f))
-
-
-
-## [0.34.32](https://github.com/binary-braids/docker-homelab/compare/v0.34.31...v0.34.32) (2026-02-13)
-
-
-### Bug Fixes
-
-* update GitHub App token action to use official action ([8d13fa0](https://github.com/binary-braids/docker-homelab/commit/8d13fa04a38df43de10b258e0561595587d38569))
 
 
 
