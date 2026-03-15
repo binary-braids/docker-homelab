@@ -1,3 +1,12 @@
+## [0.41.4](https://github.com/binary-braids/docker-homelab/compare/v0.41.3...v0.41.4) (2026-03-15)
+
+
+### Bug Fixes
+
+* **docker-compose:** add DISABLE_AUTOMATIC_DEREGISTRATION environment variable for github-runner service ([3548b61](https://github.com/binary-braids/docker-homelab/commit/3548b61a43051b4ba39ef6a8c74ba59cd07be63e))
+
+
+
 ## [0.41.3](https://github.com/binary-braids/docker-homelab/compare/v0.41.2...v0.41.3) (2026-03-15)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Renovate configuration for automated dependency management ([7b79086](https://github.com/binary-braids/docker-homelab/commit/7b79086ea8edbafb945fb8284dfc5ed68942b683))
-
-
-
-# [0.36.0](https://github.com/binary-braids/docker-homelab/compare/v0.35.0...v0.36.0) (2026-02-15)
-
-
-### Features
-
-* add Gotify notifications to Semaphore UI container ([8b86e27](https://github.com/binary-braids/docker-homelab/commit/8b86e2792c65ed276e4a7c05a31f0b8cc6dc45fe))
 
 
 
