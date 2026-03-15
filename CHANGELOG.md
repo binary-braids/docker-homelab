@@ -1,3 +1,12 @@
+## [0.41.3](https://github.com/binary-braids/docker-homelab/compare/v0.41.2...v0.41.3) (2026-03-15)
+
+
+### Bug Fixes
+
+* **docker-compose:** add CONFIGURED_ACTIONS_RUNNER_FILES_DIR environment variable for github-runner service ([6938ced](https://github.com/binary-braids/docker-homelab/commit/6938cedd7d8c0b1e50ce5865e3047371598fc819))
+
+
+
 ## [0.41.2](https://github.com/binary-braids/docker-homelab/compare/v0.41.1...v0.41.2) (2026-03-04)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Gotify notifications to Semaphore UI container ([8b86e27](https://github.com/binary-braids/docker-homelab/commit/8b86e2792c65ed276e4a7c05a31f0b8cc6dc45fe))
-
-
-
-# [0.35.0](https://github.com/binary-braids/docker-homelab/compare/v0.34.32...v0.35.0) (2026-02-15)
-
-
-### Features
-
-* add Gotify Docker Compose configuration ([d94b7d9](https://github.com/binary-braids/docker-homelab/commit/d94b7d973ae15787d73f8ea20b9d253596d4538f))
 
 
 
