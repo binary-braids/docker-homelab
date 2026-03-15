@@ -19,6 +19,7 @@ services:
       - RUNNER_NAME=${RUNNER_NAME}
       - RUNNER_GROUP=Self-Hosted
       - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - CONFIGURED_ACTIONS_RUNNER_FILES_DIR=/runner/data
       - RUNNER_SCOPE=org
       - ORG_NAME=binary-braids
       - RUN_AS_ROOT=false
