@@ -14,7 +14,7 @@ volumes:
 
 services:
   romm-db:
-    image: mariadb:12.2.2-noble
+    image: mariadb:12.2.2-noble@sha256:e16f61b8f6ed25111adbb1c5c19bbc2904efc8ed14029999af0cbe1c7ae18bf1
     restart: unless-stopped
     networks:
       - romm
@@ -34,7 +34,7 @@ services:
         retries: 5
 
   romm:
-    image: rommapp/romm:4.6.1
+    image: rommapp/romm:4.6.1@sha256:7f8b04e2e7652ae3121f19e712373bc021530b3c500e0c077c69a9cfe431395c
     restart: unless-stopped
     networks:
       - romm
