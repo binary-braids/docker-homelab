@@ -1,3 +1,12 @@
+# [0.42.0](https://github.com/binary-braids/docker-homelab/compare/v0.41.4...v0.42.0) (2026-04-18)
+
+
+### Features
+
+* update romm to version 4.8.1 ([71dd803](https://github.com/binary-braids/docker-homelab/commit/71dd8036d53b494df54d832f94ffec95e3edc822))
+
+
+
 ## [0.41.4](https://github.com/binary-braids/docker-homelab/compare/v0.41.3...v0.41.4) (2026-03-15)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **emulatorjs:** add docker-compose configuration for emulatorjs service ([fbffa15](https://github.com/binary-braids/docker-homelab/commit/fbffa1595f34448f6cc2ea2092d73e4e536ed23f))
-
-
-
-# [0.37.0](https://github.com/binary-braids/docker-homelab/compare/v0.36.0...v0.37.0) (2026-02-21)
-
-
-### Features
-
-* add Renovate configuration for automated dependency management ([7b79086](https://github.com/binary-braids/docker-homelab/commit/7b79086ea8edbafb945fb8284dfc5ed68942b683))
 
 
 
