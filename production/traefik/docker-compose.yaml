@@ -8,7 +8,7 @@ volumes:
 
 services:
   traefik:
-    image: "traefik:latest@sha256:82d2e26705a570b6d6778879d471cb3324687e77a6fd6883745a76c04563397a"
+    image: "traefik:latest@sha256:8cb20d16e01a53d8d7f7696ac2f1af7d200d5c9984d226ce2299731d9eab6d6c"
     container_name: "traefik"
     environment:
       - "CF_API_EMAIL=${CLOUDFLARE_EMAIL}"
