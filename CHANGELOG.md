@@ -1,3 +1,12 @@
+# [0.43.0](https://github.com/binary-braids/docker-homelab/compare/v0.42.0...v0.43.0) (2026-06-05)
+
+
+### Features
+
+* update invoke-ai image to version 6.13.0-cuda ([d6c5a24](https://github.com/binary-braids/docker-homelab/commit/d6c5a24fba867c909de95a83a9464410c2f41e18))
+
+
+
 # [0.42.0](https://github.com/binary-braids/docker-homelab/compare/v0.41.4...v0.42.0) (2026-04-18)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **emulatorjs:** specify exact image version for emulatorjs service ([ca50bff](https://github.com/binary-braids/docker-homelab/commit/ca50bff512875a12f7bb8a4bb448072ee7ae70b0))
-
-
-
-# [0.38.0](https://github.com/binary-braids/docker-homelab/compare/v0.37.0...v0.38.0) (2026-03-03)
-
-
-### Features
-
-* **emulatorjs:** add docker-compose configuration for emulatorjs service ([fbffa15](https://github.com/binary-braids/docker-homelab/commit/fbffa1595f34448f6cc2ea2092d73e4e536ed23f))
 
 
 
