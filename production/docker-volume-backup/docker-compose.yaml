@@ -22,7 +22,7 @@ volumes:
 
 services:
   docker-volume-backup:
-    image: "offen/docker-volume-backup:v2.47.0@sha256:2017b0e180cfe7f896117e2c10a05d6036c396de426112875456b808d8a51c6b"
+    image: "offen/docker-volume-backup:v2.48.0@sha256:8eaf987d83e7b5f7c4edd8d177c2ca74b49a0d015d241e99a260c19a043b46aa"
     container_name: docker-volume-backup
     restart: always
     networks:
