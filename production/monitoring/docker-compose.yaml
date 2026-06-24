@@ -71,7 +71,7 @@ services:
       - "traefik.docker.network=proxy"
 
   grafana:
-    image: grafana/grafana:12.3@sha256:f02eb8dfe2cd57c1d4cdfaa18394403e2df31e3150efc0fcd7981567958f8364
+    image: grafana/grafana:12.3@sha256:b1bfd4d07801edb308c2578a1161acfc75bc580501f5d80d866b1b9a3809d004
     container_name: grafana
     restart: unless-stopped
     networks:
