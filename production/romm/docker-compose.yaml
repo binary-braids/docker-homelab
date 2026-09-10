@@ -14,7 +14,7 @@ volumes:
 
 services:
   romm-db:
-    image: mariadb:12.2.2-noble@sha256:6a4c4bbf0447c2247801309513fcc0dd17c3f35390368139ce419387fdd1144d
+    image: mariadb:12.3.3-noble@sha256:ab1c3dd381940233af12512b97d47b508fd3a0f17fbe3ba388739b7bc17cbc0b
     restart: unless-stopped
     networks:
       - romm
