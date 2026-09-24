@@ -10,7 +10,7 @@ volumes:
 
 services:
   ollama:
-    image: ollama/ollama:0.30.8@sha256:05b6fe5143ed006d6d4abd39bdd575f962a5822bdf81e6fbb5e6894eb984ab9c
+    image: ollama/ollama:0.34.4@sha256:8262851b2846b87c649eddf3e76beb270c52f4d1bc94559f47efde16b0841551
     container_name: ollama
     restart: unless-stopped
     runtime: nvidia
