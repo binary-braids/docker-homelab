@@ -1,3 +1,12 @@
+# [0.44.0](https://github.com/binary-braids/docker-homelab/compare/v0.43.0...v0.44.0) (2026-10-17)
+
+
+### Features
+
+* add initial docker-compose configuration for xen-orchestra ([#138](https://github.com/binary-braids/docker-homelab/issues/138)) ([2cb8c39](https://github.com/binary-braids/docker-homelab/commit/2cb8c3941d959683c4dfe1d95ebf663e8e4f000e))
+
+
+
 # [0.43.0](https://github.com/binary-braids/docker-homelab/compare/v0.42.0...v0.43.0) (2026-06-05)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **webrcade:** add docker-compose configuration for webrcade service ([035ff06](https://github.com/binary-braids/docker-homelab/commit/035ff0666012e2d5983d809bf1da106e3073cdcc))
-
-
-
-## [0.38.1](https://github.com/binary-braids/docker-homelab/compare/v0.38.0...v0.38.1) (2026-03-03)
-
-
-### Bug Fixes
-
-* **emulatorjs:** specify exact image version for emulatorjs service ([ca50bff](https://github.com/binary-braids/docker-homelab/commit/ca50bff512875a12f7bb8a4bb448072ee7ae70b0))
 
 
 
