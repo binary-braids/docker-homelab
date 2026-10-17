@@ -1,0 +1,28 @@
+name: xen-orchestra
+
+networks:
+  proxy:
+    external: true
+  xen-orchestra:
+    name: xen-orchestra
+
+volumes:
+  xen-orchestra-data:
+    name: xen-orchestra-db-data
+  xen-orchestra-redis-data:
+    name: xen-orchestra-redis-data
+  xen-orchestra-vddk-lib:
+    name: xen-orchestra-vddk-lib
+
+services:
+  xen-orchestra:
+    image: ronivay/xen-orchestra:5.211.1
+    restart: unless-stopped
+    networks:
+      - xen-orchestra
+    environment:
+      - HTTP_PORT=80
+    volumes:
+      - xen-orchestra-data:/var/lib/xo-server
+      - xen-orchestra-redis-data:/var/lib/redis
+      - xen-orchestra-vddk-lib:/usr/local/lib/vddk
