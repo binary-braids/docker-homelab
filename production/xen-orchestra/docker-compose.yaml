@@ -3,8 +3,6 @@ name: xen-orchestra
 networks:
   proxy:
     external: true
-  xen-orchestra:
-    name: xen-orchestra
 
 volumes:
   xen-orchestra-data:
@@ -19,7 +17,7 @@ services:
     image: ronivay/xen-orchestra:5.211.1
     restart: unless-stopped
     networks:
-      - xen-orchestra
+      - proxy
     environment:
       - HTTP_PORT=80
     volumes:
