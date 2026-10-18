@@ -26,3 +26,11 @@ services:
       - xen-orchestra-data:/var/lib/xo-server
       - xen-orchestra-redis-data:/var/lib/redis
       - xen-orchestra-vddk-lib:/usr/local/lib/vddk
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.xen-orchestra.rule=Host(`xen-orchestra.binarybraids.com`)"
+      - "traefik.http.routers.xen-orchestra.entrypoints=https"
+      - "traefik.http.routers.xen-orchestra.tls=true"
+      - "traefik.http.routers.xen-orchestra.service=xen-orchestra"
+      - "traefik.http.services.xen-orchestra.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
