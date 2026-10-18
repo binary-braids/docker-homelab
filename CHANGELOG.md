@@ -1,3 +1,12 @@
+## [0.45.1](https://github.com/binary-braids/docker-homelab/compare/v0.45.0...v0.45.1) (2026-10-18)
+
+
+### Bug Fixes
+
+* remove unnecessary xen-orchestra network and ensure service uses proxy network ([6fb20de](https://github.com/binary-braids/docker-homelab/commit/6fb20de449c9a11f9a07be677d713d0464967c3a))
+
+
+
 # [0.45.0](https://github.com/binary-braids/docker-homelab/compare/v0.44.0...v0.45.0) (2026-10-18)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **docker-compose:** add romm network to services in docker-compose configuration ([06e782c](https://github.com/binary-braids/docker-homelab/commit/06e782cb851e371c8cfea6e4d14b573761355017))
-
-
-
-# [0.40.0](https://github.com/binary-braids/docker-homelab/compare/v0.39.0...v0.40.0) (2026-03-03)
-
-
-### Features
-
-* **romm:** add docker-compose configuration for romm service ([ffad6a7](https://github.com/binary-braids/docker-homelab/commit/ffad6a7caa14922b0995967e6fcae4a85b4086f5))
 
 
 
