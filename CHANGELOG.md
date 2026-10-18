@@ -1,3 +1,12 @@
+# [0.45.0](https://github.com/binary-braids/docker-homelab/compare/v0.44.0...v0.45.0) (2026-10-18)
+
+
+### Features
+
+* add Traefik labels for xen-orchestra service in docker-compose ([0cc6ca6](https://github.com/binary-braids/docker-homelab/commit/0cc6ca6924671d56c0af28d391e43f1cb0de9f75))
+
+
+
 # [0.44.0](https://github.com/binary-braids/docker-homelab/compare/v0.43.0...v0.44.0) (2026-10-17)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **romm:** add docker-compose configuration for romm service ([ffad6a7](https://github.com/binary-braids/docker-homelab/commit/ffad6a7caa14922b0995967e6fcae4a85b4086f5))
-
-
-
-# [0.39.0](https://github.com/binary-braids/docker-homelab/compare/v0.38.1...v0.39.0) (2026-03-03)
-
-
-### Features
-
-* **webrcade:** add docker-compose configuration for webrcade service ([035ff06](https://github.com/binary-braids/docker-homelab/commit/035ff0666012e2d5983d809bf1da106e3073cdcc))
 
 
 
