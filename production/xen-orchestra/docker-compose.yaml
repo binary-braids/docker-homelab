@@ -20,6 +20,11 @@ services:
       - proxy
     environment:
       - HTTP_PORT=80
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
+    security_opt:
+      - apparmor:unconfined
     volumes:
       - xen-orchestra-data:/var/lib/xo-server
       - xen-orchestra-redis-data:/var/lib/redis
