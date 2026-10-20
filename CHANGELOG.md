@@ -1,3 +1,12 @@
+## [0.45.2](https://github.com/binary-braids/docker-homelab/compare/v0.45.1...v0.45.2) (2026-10-20)
+
+
+### Bug Fixes
+
+* add missing capabilities and security options for xen-orchestra service ([dc67219](https://github.com/binary-braids/docker-homelab/commit/dc67219fac09ebd3f51f2465d144d2a2a491193e))
+
+
+
 ## [0.45.1](https://github.com/binary-braids/docker-homelab/compare/v0.45.0...v0.45.1) (2026-10-18)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **docker-compose:** correct environment variable for DB_PASSWD in romm service ([cd50ce9](https://github.com/binary-braids/docker-homelab/commit/cd50ce9a82ae9006f05d9916ac535f39f7709393))
-
-
-
-# [0.41.0](https://github.com/binary-braids/docker-homelab/compare/v0.40.0...v0.41.0) (2026-03-03)
-
-
-### Features
-
-* **docker-compose:** add romm network to services in docker-compose configuration ([06e782c](https://github.com/binary-braids/docker-homelab/commit/06e782cb851e371c8cfea6e4d14b573761355017))
 
 
 
