@@ -14,7 +14,7 @@ volumes:
 
 services:
   xen-orchestra:
-    image: ronivay/xen-orchestra:5.211.1
+    image: ronivay/xen-orchestra:5.211.1@sha256:04f224ceefc7cfb16a872441caa5c663534bc338d0c2512ae2f1301f59a439d7
     restart: unless-stopped
     networks:
       - proxy
