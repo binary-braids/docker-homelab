@@ -1,3 +1,12 @@
+# [0.46.0](https://github.com/binary-braids/docker-homelab/compare/v0.45.2...v0.46.0) (2026-10-22)
+
+
+### Features
+
+* **monitoring:** add Xen Orchestra metrics job configuration ([6c7d888](https://github.com/binary-braids/docker-homelab/commit/6c7d8888865ef108c95c2fee1aacbcfafe379a71))
+
+
+
 ## [0.45.2](https://github.com/binary-braids/docker-homelab/compare/v0.45.1...v0.45.2) (2026-10-20)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **docker-compose:** update Traefik load balancer port to 8080 for romm service ([b8db56f](https://github.com/binary-braids/docker-homelab/commit/b8db56f5a5fcf358d3fa4f057c7222bd8c7d1ee2))
-
-
-
-## [0.41.1](https://github.com/binary-braids/docker-homelab/compare/v0.41.0...v0.41.1) (2026-03-03)
-
-
-### Bug Fixes
-
-* **docker-compose:** correct environment variable for DB_PASSWD in romm service ([cd50ce9](https://github.com/binary-braids/docker-homelab/commit/cd50ce9a82ae9006f05d9916ac535f39f7709393))
 
 
 
