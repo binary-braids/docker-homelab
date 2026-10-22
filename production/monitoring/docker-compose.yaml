@@ -140,6 +140,19 @@ configs:
           - targets:
             - kube-state-metrics.binarybraids.com
 
+        - job_name: 'xen-orchestra'
+          metrics_path: '/openmetrics/metrics'
+          static_configs:
+            - targets: ['10.4.20.15'] 
+          relabel_configs:
+          - source_labels: ['Xen Orchestra']
+            target_label: instance
+            regex: "([^:]+).*"
+            replacement: '$${1}'
+          authorization:
+            type: Bearer
+            credentials: '${XO_API_KEY}'
+
   rules.yml:
     content: |
       groups:
