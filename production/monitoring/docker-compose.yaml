@@ -89,28 +89,6 @@ services:
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.docker.network=proxy"
 
-  pve-exporter:
-    image: prompve/prometheus-pve-exporter:3.9.0@sha256:78a58df7a31c9fbee94962cd06422672668529de6421892df9aed4b6cee0757f
-    container_name: pve-exporter
-    restart: unless-stopped
-    networks:
-      - proxy
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-      - /docker/pve-exporter:/etc/prometheus/  
-    configs:
-    - source: pve.yml
-      target: /etc/prometheus/pve.yml
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.pve-exporter.rule=Host(`pve-exporter.binarybraids.com`)"
-      - "traefik.http.routers.pve-exporter.entrypoints=https"
-      - "traefik.http.routers.pve-exporter.tls=true"
-      - "traefik.http.routers.pve-exporter.service=pve-exporter"
-      - "traefik.http.services.pve-exporter.loadbalancer.server.port=9221"
-      - "traefik.docker.network=proxy"      
-
 configs:
   prometheus.yml:
     content: |
@@ -130,22 +108,6 @@ configs:
         - job_name: 'prometheus'
           static_configs:
             - targets: ['prometheus.binarybraids.com']
-
-        - job_name: 'pve'
-          static_configs:
-          - targets:
-            - prod-host-01.binarybraids.com
-            - prod-host-02.binarybraids.com 
-          metrics_path: /pve
-          params:
-            module: [default]
-          relabel_configs:
-          - source_labels: [__address__]
-            target_label: __param_target
-          - source_labels: [__param_target]
-            target_label: instance
-          - target_label: __address__
-            replacement: pve-exporter.binarybraids.com
 
         - job_name: 'windows'
           static_configs:
@@ -335,12 +297,6 @@ configs:
         - name: "discord"
           discord_configs:
           - webhook_url: ${ALERTMANAGER_WEBHOOK_URI}
-
-  pve.yml:
-    content: |
-      default:
-          user: monitor@pve
-          password: "${PROXMOX_EXPORTER_PASSWORD}"
 
 
 
