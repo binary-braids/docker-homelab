@@ -30,7 +30,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik.rule=Host(`pi-traefik.${DOMAIN_NAME}`)"
-      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.entrypoints=https"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
       - "traefik.http.routers.traefik.tls.domains[0].main=${DOMAIN_NAME}"
@@ -43,22 +43,21 @@ configs:
         dashboard: true
 
       entryPoints:
-        web:
+        http:
           address: ":80"
           http:
             redirections:
               entryPoint:
-                to: websecure
+                to: https
                 scheme: https
 
-        websecure:
+        https:
           address: ":443"
 
       providers:
         docker:
           endpoint: "unix:///var/run/docker.sock"
           exposedByDefault: false
-
 
       certificatesResolvers:
         letsencrypt:
