@@ -29,7 +29,7 @@ services:
         target: /etc/traefik/traefik.yaml
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`pi-traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik.rule=Host(`${TRAEFIK_HOST}-traefik.${DOMAIN_NAME}`)"
       - "traefik.http.routers.traefik.entrypoints=https"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
