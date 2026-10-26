@@ -31,41 +31,6 @@ services:
     tty: true
     network_mode: host
     hostname: steam-headless
-    extra_hosts:
-      - "steam-headless:127.0.0.1"
-      # System
-      - TZ=Africa/Johannesburg
-      - USER_LOCALES=en_US.UTF-8 UTF-8
-      - DISPLAY=:55
-      - DISPLAY_SIZEW=1920
-      - DISPLAY_SIZEH=1080
-      - DISPLAY_REFRESH=60
-      - DISPLAY_CDEPTH=24
-      # User
-      - PUID=1000
-      - PGID=1000
-      - UMASK=000
-      - USER_PASSWORD=${USER_PASSWORD}
-      # Mode
-      - MODE=primary
-      # Web UI
-      - WEB_UI_MODE=vnc
-      - ENABLE_VNC_AUDIO=true
-      - PORT_NOVNC_WEB=8083
-
-      # Steam
-      - ENABLE_STEAM=true
-      - STEAM_ARGS=-silent
-      # Sunshine
-      - ENABLE_SUNSHINE=true
-      - SUNSHINE_USER=${SUNSHINE_USER}
-      - SUNSHINE_PASS=${SUNSHINE_PASS}
-      # Xorg
-      - ENABLE_EVDEV_INPUTS=true
-      - FORCE_X11_DUMMY_CONFIG=true
-      # Nvidia specific config
-      - NVIDIA_DRIVER_CAPABILITIES=all
-      - NVIDIA_VISIBLE_DEVICES=all
 
     # DEVICES:
     devices:
