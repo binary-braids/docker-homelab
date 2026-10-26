@@ -8,7 +8,6 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
-    ipc: host
     ulimits:
       nofile:
         soft: 1024
