@@ -8,6 +8,14 @@ services:
   steam-headless:
     image: josh5/steam-headless:latest
     restart: unless-stopped
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     ulimits:
       nofile:
         soft: 1024
@@ -31,6 +39,16 @@ services:
     tty: true
     network_mode: host
     hostname: steam-headless
+    environment:
+        # System
+        - TZ=Africa/Johannesburg
+        - USER_LOCALES=en_US.UTF-8 UTF-8
+        # User
+        - PUID=1000
+        - PGID=1000
+        # Nvidia specific config
+        - NVIDIA_DRIVER_CAPABILITIES=all
+        - NVIDIA_VISIBLE_DEVICES=all
 
     # DEVICES:
     devices:
